@@ -1,27 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+:root {
+	font-family: "Lato", sans-serif;
+	font-weight: 300;
+	font-style: normal;
+}
+
 html {
 	height: 100%;
 }
 
+#logo {
+    position: absolute;
+    width: 20%;
+    top: 0;
+}
+
 body {
-	background-image: url("https://assets.nflxext.com/ffe/siteui/vlv3/563192ea-ac0e-4906-a865-ba9899ffafad/6b2842d1-2339-4f08-84f6-148e9fcbe01b/IN-en-20231218-popsignuptwoweeks-perspective_alpha_website_large.jpg");
+	background-image: url("https://static.vecteezy.com/system/resources/previews/001/254/680/original/cinema-background-concept-vector.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: center; 
+	background-position: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+    height: 100%;
+}
+
+#main {
+	display: flex;
+	justify-content: center;
 }
 
 #login {
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    border-radius: 4px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding-bottom: 30px;
-    width: 100%;
-
+	background-color: #393e469c;
+	color: white;
+	border-radius: 4px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	padding-bottom: 30px;
+	width: 50%;
+	align-items: center;
+	border-radius: 15px;
+	flex-wrap: wrap;
 }
 
-.netflix-logo-svg {
-    height: 2.5rem;
-  }
+button {
+	margin-top: 4%;
+	width: 50%;
+	height: 5vh;
+	background-color: #00adb5;
+	border-radius: 5px;
+}
+
+button:hover {
+	background-color: #00acb5d2;
+}
+
+button:focus {
+	background-color: #00acb580;
+}
+
+#remember {
+	display: flex;
+}
+
+a {
+	text-decoration: none;
+	color: #eeeeee;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #eeeeee;
+}
+
+input {
+	margin-top: 3%;
+	height: 5vh;
+	width: 80%;
+	background-color: #393e46;
+}
+input::placeholder {
+	color: #eeeeee;
+    font-size: larger;
+    font-weight: bold;
+}
