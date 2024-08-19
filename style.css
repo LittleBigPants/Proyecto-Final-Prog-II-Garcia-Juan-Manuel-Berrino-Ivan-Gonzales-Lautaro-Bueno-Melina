@@ -1,4 +1,9 @@
-html {
+:root{
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+}
+
+html{
 	height: 100%;
 }
 
@@ -24,4 +29,61 @@ body {
 
 .netflix-logo-svg {
     height: 2.5rem;
-  }
+}
+
+footer {
+    text-align: left;
+    padding: 20px 40px;
+    background-color: #222831ee;
+    min-height: 150px;
+}
+
+
+.footer-contacto{
+    margin-bottom: 15px;
+    color: #EEEEEE;
+}
+
+.footer-contacto p{
+    font-size: 14px;
+    margin: 0;
+}
+
+.footer-contacto a:hover{
+    text-decoration: underline;
+}
+
+.footer-contacto a{
+    color: #EEEEEE;
+    text-decoration: none;
+}
+
+.footer-links ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    display: inline-block;
+    margin: 0 20px 10px 0; 
+}
+
+.footer-links ul li a{
+    font-size: 14px;
+    color: #EEEEEE;
+}
+
+.footer-lenguaje{
+    margin-top: 20px;
+}
+
+.footer-lenguaje select{
+    padding: 6px 36px 6px 34px;
+    font-size: 14px;
+    border-radius: 4px;
+    color: white;
+    border: 0.1px solid #EEEEEE;
+    background-color: #222831be;
+    cursor: pointer;
+}
