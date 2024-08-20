@@ -1,149 +1,161 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
 :root {
 	font-family: "Lato", sans-serif;
 	font-weight: 300;
 	font-style: normal;
 }
 
-html {
-	height: 100%;
-}
-
-#logo {
-	position: absolute;
-	width: 20%;
-	top: 0;
-}
-
-body {
-	background-image: url("https://static.vecteezy.com/system/resources/previews/001/254/680/original/cinema-background-concept-vector.jpg");
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	height: 100%;
+body{
 	width: 100%;
-	margin: 0;
+	background-color: #1c1c1c;
 }
 
-#main {
-	display: flex;
-	justify-content: center;
+/* estilo logo */
+.logo h1{
+	color: rgb(67, 33, 160);
+	font-weight: bold;
+}
+.logo h1, #login{
+	margin: 20px 0 0 20px;
 }
 
-#login {
-	background-color: #393e469c;
-	color: white;
-	border-radius: 4px;
-	box-sizing: border-box;
+/* estilo al login */
+
+#login{
+	width: 90%;
 	display: flex;
 	flex-direction: column;
-	margin: 0;
-	padding-bottom: 30px;
-	width: 50%;
-	align-items: center;
-	border-radius: 15px;
-	flex-wrap: wrap;
+	color: #fff;
+	margin-bottom: 150px;
+}
+#login h2{
+	font-size: 32px;
+	margin-bottom: 40px;
 }
 
-button {
-	margin-top: 4%;
-	width: 50%;
-	height: 5vh;
-	background-color: #00adb5;
-	border-radius: 5px;
+#login input{
+	padding: 16px;
+	margin-bottom: 16px;
+	border-radius: 4px;
+	outline: none;
 }
 
-button:hover {
-	background-color: #00acb5d2;
+.ipt{
+	width: 100%;
+	height: 60px;
+	color: #fff;
+	font-size: 16px;
+	background-color:#1c1c1c;
+	border: 2px solid #ccc;
+}
+::placeholder{
+	color: #fff;
 }
 
-button:focus {
-	background-color: #00acb580;
+:focus::placeholder{
+	color: rgba(255,255,255,0.5);
 }
 
-#remember {
-	display: flex;
-}
-
-a {
+#login a{
+	text-align: center;
+	color: #fff;
 	text-decoration: none;
-	color: #eeeeee;
-}
-
-a:hover {
-	text-decoration: underline;
-	color: #eeeeee;
-}
-
-input {
-	margin-top: 3%;
-	height: 5vh;
-	width: 80%;
-	background-color: #222831be;
-}
-input::placeholder {
-	color: #eeeeee;
-	font-size: larger;
 	font-weight: bold;
 }
 
-footer {
-	width: 100%;	
-	text-align: left;
-	padding: 20px 40px;
-	background-color: #393e469c;
-	min-height: 150px;
+span{
+	color: rgb(67, 33, 160);
+	font-weight: bold;
 }
 
-.footer-contacto {
-	margin-bottom: 15px;
-	color: #eeeeee;
+/* estilo al input de checkbox */
+#remember{
+	display: flex;
+	align-items: center;
+	margin-top: 10px;
+}
+#remember input{
+	margin-top: 16px;
+}
+#remember input[type="checkbox"] {
+	margin-right: 8px; 
 }
 
-.footer-contacto p {
-	font-size: 14px;
-	margin: 0;
+/* wstilos al boton */
+#btn{
+	width: 100%;
+	height: 45px;
+	color: #fff;
+	font-weight: bold;
+	background-color: rgb(67, 33, 160);
+	border: none;
 }
 
-.footer-contacto a:hover {
-	text-decoration: underline;
+#btn:hover{
+	cursor: pointer;
 }
 
-.footer-contacto a {
-	color: #eeeeee;
+#hr{
+	color: rgba(255,255,255,0.3);
+	border: 1px solid;
+}
+
+/*  estilos al footer */
+
+footer{
+	width: 360px;
+	height: auto;
+	margin: 32px 0px;
+}
+
+.footer-contacto, .footer-contacto a, .footer-links a{
+	color: #fff;
+}
+.footer-contacto{
+	margin: 20px 0 20px 20px;
+}
+.footer-contacto a{
 	text-decoration: none;
 }
 
-.footer-links ul {
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
+.footer-links{
+	width: 100%;
+	height: auto;
+	margin-left: 12px;
 }
 
-.footer-links ul li {
-	display: inline-block;
-	margin: 0 20px 10px 0;
+
+.footer-links ul{
+	width: 100%;
+	display: inline-flex;
+	flex-wrap: wrap;
+	
 }
 
-.footer-links ul li a {
+.footer-links li{
+	width: 180px;
+	list-style: none;
 	font-size: 14px;
-	color: #eeeeee;
+	padding: 8px;
 }
 
-.footer-lenguaje {
-	margin-top: 20px;
+.footer-links a{
+	text-decoration: underline rgba(255,255, 255,0.5);
+}
+.footer-lenguaje{
+	margin: 20px 0 10px 20px;
 }
 
-.footer-lenguaje select {
-	padding: 6px 36px 6px 34px;
-	font-size: 14px;
+.footer-lenguaje select{
+	padding: 4px;
+	background-color: rgba(0,0,0,0.5);
+	color: #fff;
 	border-radius: 4px;
-	color: white;
-	border: 0.1px solid #eeeeee;
-	background-color: #222831be;
-	cursor: pointer;
 }
