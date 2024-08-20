@@ -23,8 +23,9 @@ body {
 	background-position: center;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-between;
 	height: 100%;
+	margin: 0;
 }
 
 #main {
@@ -81,7 +82,7 @@ input {
 	margin-top: 3%;
 	height: 5vh;
 	width: 80%;
-	background-color: #393e46;
+	background-color: #222831be;
 }
 input::placeholder {
 	color: #eeeeee;
@@ -90,9 +91,10 @@ input::placeholder {
 }
 
 footer {
+	width: 100%;	
 	text-align: left;
 	padding: 20px 40px;
-	background-color: #222831ee;
+	background-color: #393e469c;
 	min-height: 150px;
 }
 
