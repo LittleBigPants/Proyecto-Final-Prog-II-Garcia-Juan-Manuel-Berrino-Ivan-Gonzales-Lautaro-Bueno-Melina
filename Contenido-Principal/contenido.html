@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flix Fusion</title>
+    <link rel="stylesheet" href="contenido.css">
+
+    <!-- Usamos iconos de font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header class="logo">
+        <h1>FlixFusion</h1>
+    </header>
+    <nav id="navbar">
+        <ul id="cont-nav">
+            <a href="#"><i class="fas fa-home"></i></a>
+            <a href="#"><i class="fas fa-search search-icon"></i></a>
+            <a href="#"><i class="fas fa-download download-icon"></i></a>
+            <a href=""><i class="fa-solid fa-gear"></i></a>
+        </ul>
+    </nav>
+
+    <main>
+        <div id="cont-slider">
+            <div id="slider">
+                <div class="sliders">
+                    <img src="/Imagenes-proyecto/batman-rojo.jpg" alt="Batman Rojo">
+                </div>
+                <div class="sliders">
+                    <img src="/Imagenes-proyecto/leon.jpg" alt="León">
+                </div>
+                <div class="sliders">
+                    <img src="/Imagenes-proyecto/joker.jpg" alt="Joker">
+                </div>
+                <div class="sliders">
+                    <img src="/Imagenes-proyecto/mujer-gato.jpg" alt="Mujer Gato">
+                </div>
+                <div class="sliders">
+                    <img src="/Imagenes-proyecto/spiderman.jpg" alt="Spiderman">
+                </div>
+            </div>
+        </div>
+
+        <section id="categorias">
+            <h2>Categorias</h2>
+            <div class="container">
+                <div class="clases-categorias">
+                    <h3>Comedia</h3>
+                </div>
+                <div class="clases-categorias">
+                    <h3>Terror</h3>
+                </div>
+                <div class="clases-categorias">
+                    <h3>Suspenso</h3>
+                </div>
+                <div class="clases-categorias">
+                    <h3>Accion</h3>
+                </div>
+                <div class="clases-categorias">
+                    <h3>Amor</h3>
+                </div>
+                <div class="clases-categorias">
+                    <h3>Documental</h3>
+                </div>
+            </div>
+        </section>
+
+        <section id="principales">
+            <!-- <div class="scroll-boton">
+                <span id="izquierda"></span>
+                <span id="derecha"></span>
+            </div> -->
+
+            <h4>Peliculas principales</h4>
+
+            <div class="scroll-contenido">
+                <div class="peliculas-principales">
+                    <img src="/Imagenes-proyecto/vikingo.jpg" alt="Película 1">
+                </div>
+                <div class="peliculas-principales">
+                    <img src="/Imagenes-proyecto/mujerangel.jpg" alt="Película 2">
+                </div>
+                <div class="peliculas-principales">
+                    <img src="/Imagenes-proyecto/mujerfuego.jpg" alt="Película 3">
+                </div>
+                <div class="peliculas-principales">
+                    <img src="/Imagenes-proyecto/mujerloba.jpg" alt="Película 4">
+                </div>
+                <div class="peliculas-principales">
+                    <img src="/Imagenes-proyecto/pareja.jpg" alt="Película 5">
+                </div>
+                <div class="peliculas-principales">
+                    <img src="/Imagenes-proyecto/piloto.jpg" alt="Película 6">
+                </div>
+                <div class="peliculas-principales">
+                    <img src="/Imagenes-proyecto/hombreaccion.jpg" alt="Película 7">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>hola</p>
+    </footer>
+
+   <!--  <script>
+        const btnDerecho = document.querySelector("derecha"); //Creamos una variable que agarre en este caso los id de los botones
+        const btnIzquierdo = document.querySelector("izquierda");  //Creamos una variable que agarre en este caso los id de los botones
+
+        const content = document.querySelector(".scroll-contenido"); //Creamos una variable que agarre en este caso la clase del contenido de las peliculas
+
+        btnDerecho.addEventListener("click", ()=>{
+            content.scrollLeft += 800;
+        }) // Funcion para que cuando hagamos click scrolle
+
+        btnIzquierdo.addEventListener("click", ()=>{
+            content.scrollLeft -= 800;
+        })
+
+    </script> -->
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+body{
+    background-color:#1c1c1c;
+    height: auto;
+}
+
+.inicio{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 250px;
+    color: rgb(18, 159, 152)
+}
+
+
+.inicio a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+
+.inicio a:hover{
+    text-decoration: underline;
+}
+
+/* Maquetado tablet*/
+
+@media (min-width:768px){
+
+    .inicio{
+        margin-top: 350px;
+    }
+   .inicio h1{
+        font-size: 60px;
+    }
+
+    .inicio a{
+        font-size: 40px;
+    }
+}

@@ -2,57 +2,115 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    text-decoration: none;
 }
 
-body{
-    color: #fff;
-    background-color:#1c1c1c
-}
-
-.inicio{
+header, body, main,footer{
     width: 100%;
     height: auto;
 }
 
-.inicio h1{
-    text-align: center;
+body{
+    background-color: #1c1c1c;
+    color: #fff;
+}
+
+
+.container{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 16px;
+}
+
+.contenido{
     padding: 16px;
+}
+
+.contenido h1, .container h2, .motivos h3{
     color: rgb(18, 159, 152);
-    font-weight: bold;
+    text-align: center;
 }
 
-.inicio p{
-
-    padding: 25px;
-    font-size: 18px;
-}
-
-.imagen-banner img{
-    width: 100%;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.contenido p{
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: center;
 }
 
 .crear-cuenta{
-    height: 300px;
+    margin-top: 30px;
 }
 
 .boton{
+    max-width: 350px;
+    margin: auto;
     display: block;
-    background-color: rgb(18, 159, 152);
-    padding: 16px;
-    text-decoration: none;
-    color:#fff;
-    font-weight: bold;
+    margin-top: 16px;
+    padding: 8px;
     text-align: center;
-    margin: 25px;
-    border-radius: 8px;
-    font-size: 18px;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: rgb(18, 159, 152);
 }
 
+
+.motivos{
+    margin: 24px;
+}
+
+.motivos section{
+    margin-top: 24px;
+    border: 1px solid;
+    padding: 16px;
+    max-width: 300px;
+    height: 130px;
+    margin: 32px auto;
+}
+
+.motivos section p{
+    text-align: center;
+    margin-top: 10px;
+}
+
+
 .boton:hover{
-    cursor: pointer;
-    background-color:rgb(37, 197, 189);
+    background-color: rgb(75, 184, 178);
+}
+
+@media (min-width:768px){
+
+    .container h2{
+        font-size: 40px;
+    }
+    .motivos section{
+        height: auto;
+    }
+
+    .container{
+        margin-top: 100px;
+    }
+}
+
+@media (min-width:1200px){
+    .motivos{
+        display: flex;
+        margin: auto;
+    }
+
+
+    .motivos section{
+        max-width: 300px;
+        height: 150px;
+        margin: 32px;
+        transition: 0.5s ease;
+    }
+    .motivos section:hover{
+        transform: scale(1.1) 
+    }
+
+
 }
 
