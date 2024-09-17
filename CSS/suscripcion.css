@@ -1,9 +1,4 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-}
+/* Maquetado celular */
 
 header, body, main,footer{
     width: 100%;
@@ -15,6 +10,8 @@ body{
     color: #fff;
 }
 
+/* Estilos al header */
+
 
 .container{
     height: auto;
@@ -23,9 +20,7 @@ body{
     margin: 16px;
 }
 
-.contenido{
-    padding: 16px;
-}
+.contenido{padding: 16px;}
 
 .contenido h1, .container h2, .motivos h3{
     color: rgb(18, 159, 152);
@@ -38,9 +33,9 @@ body{
     text-align: center;
 }
 
-.crear-cuenta{
-    margin-top: 30px;
-}
+.crear-cuenta{margin-top: 30px;}
+
+/* Estilos a los botones */
 
 .boton{
     max-width: 350px;
@@ -56,10 +51,12 @@ body{
     background-color: rgb(18, 159, 152);
 }
 
+.boton:hover{background-color: rgb(75, 184, 178);}
 
-.motivos{
-    margin: 24px;
-}
+/* Estilos al contenido principal */
+
+
+.motivos{margin: 24px;}
 
 .motivos section{
     margin-top: 24px;
@@ -76,25 +73,26 @@ body{
 }
 
 
-.boton:hover{
-    background-color: rgb(75, 184, 178);
-}
+
+/* Maquetado tablet */
 
 @media (min-width:768px){
 
-    .container h2{
-        font-size: 40px;
+    .boton{
+        height: 50px;
+        line-height: 30px;
     }
-    .motivos section{
-        height: auto;
-    }
+    .container h2{font-size: 40px;}
 
-    .container{
-        margin-top: 100px;
-    }
+    .motivos section{height: auto;}
+
+    .container{margin-top: 100px;}
 }
 
+/* Maquetado Escritorio */
+
 @media (min-width:1200px){
+    /*Ponemos los section uno al lado del otro */
     .motivos{
         display: flex;
         margin: auto;
@@ -107,10 +105,10 @@ body{
         margin: 32px;
         transition: 0.5s ease;
     }
+
+    /* Cuando pasamos el mouse por encima crece cada una */
     .motivos section:hover{
         transform: scale(1.1) 
     }
-
-
 }
 

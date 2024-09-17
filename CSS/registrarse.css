@@ -1,0 +1,103 @@
+/* Maquetado celular */
+body {
+    height: auto;
+    background-color: #1c1c1c;
+    color: #fff;
+}
+
+h1 {color: rgb(18, 159, 152);}
+
+.container p,h1 {text-align: center;}
+
+.container{margin-top: 20px;}
+
+#descripcion{
+    margin: 20px 0 20px 0;
+}
+
+/* Estilos al login de registro */
+
+.registro {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    align-items: center;
+}
+
+.registro input {
+    margin: 0 10px 0 10px;
+    height: 40px;
+    outline: none;
+    padding: 8px;
+}
+
+/* Color de fondo de las letras del input */
+::placeholder {color: #000;}
+
+/* Cambiamos el color de las letras del input cuando hacemos click */
+
+:focus::placeholder {color: rgba(22, 15, 15, 0.5);}
+
+/* Centramos el boton y el "Ya tengo cuenta" */
+
+#btn-registro,
+#cuenta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    margin: 24px auto;
+    border-radius: 4px;
+}
+
+#btn-registro a,
+#cuenta a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Estilos al boton */
+
+#btn-registro {
+    background-color: rgb(18, 159, 152);
+    width: 300px;
+}
+
+#btn-registro:hover {cursor: pointer;}
+
+/*  Estilos "Ya tengo cuenta" */
+
+#cuenta {margin-top: 100px;}
+
+#cuenta:hover {
+    text-decoration: underline;
+    color: #ccc;
+}
+
+#hr {
+    color: rgba(255, 255, 255, 0.3);
+    border: 1px solid;
+}
+
+
+/* Maquetado tablet */
+
+@media (min-width:768px) {
+
+    .registro {
+        grid-template-columns: auto auto;
+        justify-content: center;
+    }
+
+    .registro input {
+        width: 250px;
+        height: 40px;
+    }
+
+    #hr {margin-top: 150px;}
+
+    #cuenta a {font-size: 30px;}
+
+}

@@ -1,9 +1,3 @@
-*{
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
-
 /* Maquetado Celular */
 body{
 	width: 100%;
@@ -11,19 +5,17 @@ body{
 	background-color: #1c1c1c;
 }
 
-main{
+ main{
 	width: 100%;
 	height: auto;
-}
+} 
 
 /* estilo logo */
 .logo h1{
 	color: rgb(18, 159, 152);
 	font-weight: bold;
 }
-.logo h1, #login{
-	margin: 20px 0 0 20px;
-}
+.logo h1, #login{margin: 20px 0 0 20px;}
 
 /* estilo al login */
 
@@ -46,9 +38,7 @@ main{
 	outline: none;
 }
 
-#login p a:hover{
-	text-decoration: underline;
-}
+#login p a:hover{text-decoration: underline;}
 
 .ipt{
 	width: 100%;
@@ -58,13 +48,9 @@ main{
 	background-color:#1c1c1c;
 	border: 2px solid #ccc;
 }
-::placeholder{
-	color: #fff;
-}
+::placeholder{color: #fff;}
 
-:focus::placeholder{
-	color: rgba(255,255,255,0.5);
-}
+:focus::placeholder{color: rgba(255,255,255,0.5);}
 
 #login a{
 	text-align: center;
@@ -87,9 +73,7 @@ span{
 #remember input{
 	margin-top: 16px;
 }
-#remember input[type="checkbox"] {
-	margin-right: 8px; 
-}
+#remember input[type="checkbox"] {margin-right: 8px;}
 
 /* estilos al boton */
 #btn{
@@ -101,59 +85,19 @@ span{
 	border: none;
 }
 
-#btn:hover{
-	cursor: pointer;
-}
+#btn:hover{cursor: pointer;}
 
 #hr{
 	color: rgba(255,255,255,0.3);
 	border: 1px solid;
 }
 
-footer{
-	height: auto;
-}
-
-.footer-contacto{
-    margin: 30px 0 15px 26px;
-}
-
-.footer-contacto p{
-	color: #fff;
-}
-
-.footer-contacto a{
-    color: #fff;
-    text-decoration: none;
-}
-
-.contenido-links{
-    width: 100%;
-    height: auto;
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-content: space-around;
-    row-gap: 8px;
-}
-
-.contenido-links a{
-	color: #fff;
-    font-size: 14px;
-    font-weight: 200;
-    text-decoration: underline rgba(255,255, 255,0.5);
-}
-
-.footer-lenguaje{
-    margin: 15px 0 40px 26px;
-}
-
 
 
 /*Maquetado tablet*/
-@media (min-width:600px){
-	body{
-		background: rgba(5,7,12,1)
-	}
+@media (min-width:768px){
+	body{background: rgba(5,7,12,1)}
+	/* Cuando se agranda la pantalla agregamos un fondo */
 	main{
 		height: 920px;
 		background: linear-gradient(rgba(5,7,12,0.6), rgba(5,7,12,0.6)),
@@ -180,63 +124,20 @@ footer{
 		background-color: rgba(0,0,0,0.7);
 	}
 
-	#login input{
-		height: 55px;
-	}
+	#login input{height: 55px;}
 
-	#login h2{
-		margin-bottom: 30px;
-	}
+	#login h2{margin-bottom: 30px;}
 
-	#login a, #login p{
-		font-size: 18px ;
-	}
+	#login a, #login p{font-size: 18px;}
 
-	#hr{
-		border: none;
-	}
 
-	footer{
-		margin: 80px
-	}
-
-	.footer-contacto{
-		display: flex;
-		justify-content: center;
-		font-size: 20px;
-		margin-bottom: 20px;
-	}
-	
-	.footer-lenguaje{
-		margin-left: 75px;
-	}
-
-	.footer-links a{
-		font-size: 16px;
-	}
+	#hr{border: none;}
 } 
 
+/* Maquetado escritorio */
 @media (min-width: 1200px){
     .logo h1 {
         font-size: 45px;
 		margin-left: 120px;
     }
-
-	.footer-contacto{
-		margin-left: -30px;
-	}
-
-	.contenido-links{
-		justify-content: center;
-		row-gap: 16px;
-		column-gap: 16px;
-		row-gap: 16px;
-	}
-
-	.footer-lenguaje{
-		text-align:center ;
-		margin: 20px 0 0 -250px;
-		
-	}
-
 }
