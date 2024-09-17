@@ -1,0 +1,143 @@
+/* Maquetado Celular */
+body{
+	width: 100%;
+	height: auto;
+	background-color: #1c1c1c;
+}
+
+ main{
+	width: 100%;
+	height: auto;
+} 
+
+/* estilo logo */
+.logo h1{
+	color: rgb(18, 159, 152);
+	font-weight: bold;
+}
+.logo h1, #login{margin: 20px 0 0 20px;}
+
+/* estilo al login */
+
+#login{
+	width: 90%;
+	display: flex;
+	flex-direction: column;
+	color: #fff;
+	margin-bottom: 150px;
+}
+#login h2{
+	font-size: 32px;
+	margin-bottom: 40px;
+}
+
+#login input{
+	padding: 8px;
+	margin-bottom: 16px;
+	border-radius: 4px;
+	outline: none;
+}
+
+#login p a:hover{text-decoration: underline;}
+
+.ipt{
+	width: 100%;
+	height: 60px;
+	color: #fff;
+	font-size: 16px;
+	background-color:#1c1c1c;
+	border: 2px solid #ccc;
+}
+::placeholder{color: #fff;}
+
+:focus::placeholder{color: rgba(255,255,255,0.5);}
+
+#login a{
+	text-align: center;
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+span{
+	color: rgb(18, 159, 152);
+	font-weight: bold;
+}
+
+/* estilo al input de checkbox */
+#remember{
+	display: flex;
+	align-items: center;
+	margin-top: 10px;
+}
+#remember input{
+	margin-top: 16px;
+}
+#remember input[type="checkbox"] {margin-right: 8px;}
+
+/* estilos al boton */
+#btn{
+	width: 100%;
+	height: 45px;
+	color: #fff;
+	font-weight: bold;
+	background-color: rgb(18, 159, 152);
+	border: none;
+}
+
+#btn:hover{cursor: pointer;}
+
+#hr{
+	color: rgba(255,255,255,0.3);
+	border: 1px solid;
+}
+
+
+
+/*Maquetado tablet*/
+@media (min-width:768px){
+	body{background: rgba(5,7,12,1)}
+	/* Cuando se agranda la pantalla agregamos un fondo */
+	main{
+		height: 920px;
+		background: linear-gradient(rgba(5,7,12,0.6), rgba(5,7,12,0.6)),
+		url(/Imagenes-proyecto/fondoFlixFusion.jpg);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+	}
+
+	.logo h1{
+		margin-top:0;
+		padding: 24px 5px;
+		text-shadow: 2px 2px 2px black;
+
+	}
+
+	#login{
+		max-width: 450px;
+		height: 700px;
+		margin:  0px auto;
+		border: 1px solid rgba(0,0,0,0.7);
+		border-radius: 4px;
+		padding: 48px 60px;
+		background-color: rgba(0,0,0,0.7);
+	}
+
+	#login input{height: 55px;}
+
+	#login h2{margin-bottom: 30px;}
+
+	#login a, #login p{font-size: 18px;}
+
+
+	#hr{border: none;}
+} 
+
+/* Maquetado escritorio */
+@media (min-width: 1200px){
+    .logo h1 {
+        font-size: 45px;
+		margin-left: 120px;
+    }
+}

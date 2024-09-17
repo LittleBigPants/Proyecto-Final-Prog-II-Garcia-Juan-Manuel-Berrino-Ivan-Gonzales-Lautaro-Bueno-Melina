@@ -1,0 +1,114 @@
+/* Maquetado celular */
+
+header, body, main,footer{
+    width: 100%;
+    height: auto;
+}
+
+body{
+    background-color: #1c1c1c;
+    color: #fff;
+}
+
+/* Estilos al header */
+
+
+.container{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 16px;
+}
+
+.contenido{padding: 16px;}
+
+.contenido h1, .container h2, .motivos h3{
+    color: rgb(18, 159, 152);
+    text-align: center;
+}
+
+.contenido p{
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.crear-cuenta{margin-top: 30px;}
+
+/* Estilos a los botones */
+
+.boton{
+    max-width: 350px;
+    margin: auto;
+    display: block;
+    margin-top: 16px;
+    padding: 8px;
+    text-align: center;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: rgb(18, 159, 152);
+}
+
+.boton:hover{background-color: rgb(75, 184, 178);}
+
+/* Estilos al contenido principal */
+
+
+.motivos{margin: 24px;}
+
+.motivos section{
+    margin-top: 24px;
+    border: 1px solid;
+    padding: 16px;
+    max-width: 300px;
+    height: 130px;
+    margin: 32px auto;
+}
+
+.motivos section p{
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+
+/* Maquetado tablet */
+
+@media (min-width:768px){
+
+    .boton{
+        height: 50px;
+        line-height: 30px;
+    }
+    .container h2{font-size: 40px;}
+
+    .motivos section{height: auto;}
+
+    .container{margin-top: 100px;}
+}
+
+/* Maquetado Escritorio */
+
+@media (min-width:1200px){
+    /*Ponemos los section uno al lado del otro */
+    .motivos{
+        display: flex;
+        margin: auto;
+    }
+
+
+    .motivos section{
+        max-width: 300px;
+        height: 150px;
+        margin: 32px;
+        transition: 0.5s ease;
+    }
+
+    /* Cuando pasamos el mouse por encima crece cada una */
+    .motivos section:hover{
+        transform: scale(1.1) 
+    }
+}
+

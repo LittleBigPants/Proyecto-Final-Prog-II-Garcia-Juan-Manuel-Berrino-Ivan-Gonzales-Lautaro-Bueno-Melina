@@ -1,0 +1,125 @@
+/* En este css usamos estilos que se van a compartir en las mayorias de las paginas */
+
+/* Reiniciamos todo a 0 */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+
+/* Nav que queda fijo en la parte inferior de la pagina */
+
+#navbar{
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+}
+
+#cont-nav{
+    width: auto;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    line-height: 60px;
+}
+
+/* Estilos a los iconos de font awesome */
+
+#cont-nav i{
+    color: rgb(18, 159, 152);
+}
+
+#cont-nav i:hover{
+    color: #fff;
+}
+
+
+
+
+/* Estilos al footer */
+
+footer {
+    height: 300px;
+    margin-top: 40px;
+}
+
+.footer-contacto {
+    margin-left: 26px;
+}
+
+.footer-contacto p {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.footer-contacto a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.contenido-links {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-around;
+    row-gap: 8px;
+}
+
+.contenido-links a {
+    color: #e7dcdc;
+    font-size: 14px;
+    font-weight: 200;
+    text-decoration: underline rgba(255, 255, 255, 0.5);
+}
+
+.footer-lenguaje {
+    margin: 15px 0 40px 26px;
+}
+
+
+/* Maquetado tablet */
+
+@media (min-width:768px) {
+
+    .footer-contacto {
+        display: flex;
+        justify-content: center;
+        margin: 30px 0 0 0;
+        font-size: 20px;
+    }
+
+    .footer-lenguaje {
+        margin-left: 130px;
+    }
+
+    .footer-links a {
+        font-size: 16px;
+    }
+}
+
+
+@media (min-width:1200px) {
+    .contenido-links {
+        justify-content: center;
+        row-gap: 16px;
+        column-gap: 16px;
+    }
+
+    .footer-contacto {
+        margin-left: -30px;
+    }
+
+    .footer-lenguaje {
+        text-align: center;
+         margin: 20px 0 0 -250px; 
+
+    }
+}
