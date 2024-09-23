@@ -48,6 +48,8 @@ body{
 	background-color:#1c1c1c;
 	border: 2px solid #ccc;
 }
+
+
 ::placeholder{color: #fff;}
 
 :focus::placeholder{color: rgba(255,255,255,0.5);}
@@ -129,6 +131,20 @@ span{
 	#login h2{margin-bottom: 30px;}
 
 	#login a, #login p{font-size: 18px;}
+	
+	.input-control.success input{
+        border-color: #09c372;
+    }
+
+    .input-control.error input{
+        border-color: #ff3860;
+    }
+
+    .input-control.error{
+        color: #ff3860;
+        font-size: 9px;
+        height: 13px;
+    }
 
 
 	#hr{border: none;}
