@@ -41,6 +41,13 @@
 }
 
 
+/* Estilos al formulario para validacion */
+.error-message {
+    color: rgb(158, 18, 18);
+    font-size: 12px;
+    margin: 0 0 10px 5px;
+    font-weight: bold;
+}
 
 
 /* Estilos al footer */
