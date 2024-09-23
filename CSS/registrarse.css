@@ -89,6 +89,8 @@ h1 {color: rgb(18, 159, 152);}
     .registro {
         grid-template-columns: auto auto;
         justify-content: center;
+        display: flex;
+        flex-direction: column;
     }
 
     .registro input {
