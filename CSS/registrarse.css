@@ -118,6 +118,8 @@ h1 {color: rgb(18, 159, 152);}
     #formulario {
         grid-template-columns: auto auto;
         justify-content: center;
+        display: flex;
+        flex-direction: column;
     }
 
     #formulario input {
