@@ -6,7 +6,7 @@ const errorContraseña = document.getElementById('errorContraseña');
 
 formulario.addEventListener("submit", e => {
     e.preventDefault();
-    let error = false;
+    let error = true;
 
     errorEmail.textContent = '';
     errorContraseña.textContent = '';
@@ -16,19 +16,19 @@ formulario.addEventListener("submit", e => {
     let validarPassword = /^(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,20}$/;
     if (!validEmail.test(email.value)) {
         errorEmail.textContent = 'El email no es válido';
-        error = true;
+        error = false;
     }
 
     // Validación de la contraseña
     if (contraseña.value.length < 8) {
         errorContraseña.textContent = 'Contraseña incorrecta';
-        error = true;
+        error = false;
     } else if(!validarPassword.test(contraseña.value)){
         errorContraseña.textContent = 'Contraseña incorrecta';
-        error = true;
+        error = false;
     }
 
-    if(!error){
+    if(error){
         window.location.href = "contenido.html"
     }
 }
