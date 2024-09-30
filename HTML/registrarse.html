@@ -6,34 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/CSS/registrarse.css">
     <link rel="stylesheet" href="/CSS/comun.css">
-    <title>Únete a FlixFasion!</title>
+    <title>Únete a FlixFusion!</title>
 </head>
 
 <body>
     <div class="container">
-        <h1>Registrate</h1>
+        <h1>Regístrate</h1>
         <p id="descripcion">Ingrese sus datos correspondientes.</p>
-        <!-- Login para registrarse -->
-        <div class="registro">
-            <input id="email" type="email" placeholder="Ejemmplo@gmail.com" required>
-            <p id="errorEmail"></p>
-            <input type="text" placeholder="Nombre Completo" required>
-            <p></p>
-            <input id="age" type="date" placeholder="Fecha de nacimiento" required>
-            <p id="errorAge"></p>
-            <input id="phone" type="text" placeholder="Numero de movil" required>
-            <p></p>
-            <input id="password" type="password" placeholder="Contraseña" required>
-            <p id="errorContraseña" class="error"></p>
-            <input id="confirm-password" type="password" placeholder="Repetir contraseña" required>
-            <p id="errorContraseña2"></p>
-        </div>
-        <button  id="btn-registro" type="button">Registrarme</button>
-        <div class="container">
-            <p id="cuenta"><a href="/HTML/iniciar_sesion.html">¡Ya tengo cuenta!</a></p>
-        </div>
+        <form id="formulario" action="">
+            <div class="form-group">
+                <input type="text" placeholder="Nombre" id="nombre">
+                <p id="errorNombre" class="error-message"></p>
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="Apellido" id="apellido">
+                <p id="errorApellido" class="error-message"></p>
+            </div>
+            <div class="form-group">
+                <input type="date" id="fecha">
+                <p id="errorFecha" class="error-message"></p>
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="Número de móvil" id="movil">
+                <p id="errorMovil" class="error-message"></p>
+            </div>
+            <div class="form-group">
+                <input type="password" placeholder="Contraseña" id="contraseña">
+                <p id="errorContraseña" class="error-message"></p>
+            </div>
+            <div class="form-group">
+                <input type="password" placeholder="Repetir contraseña" id="contraseña2">
+                <p id="errorContraseña2" class="error-message"></p>
+            </div>
+            <input id="btn" type="submit" value="Registrarse">
+        </form>
     </div>
 
+    <div class="container">
+        <p id="cuenta"><a href="/HTML/iniciar_sesion.html">Ya tengo cuenta</a></p>
+    </div>
+    
 
     <hr id="hr">
 
@@ -65,7 +77,7 @@
             </select>
         </div>
     </footer>
-    <script src="/Javascript/registrarse.js"></script>
+    <script src="/JavaScript/registrarse.js"></script>
 </body>
 
 </html>

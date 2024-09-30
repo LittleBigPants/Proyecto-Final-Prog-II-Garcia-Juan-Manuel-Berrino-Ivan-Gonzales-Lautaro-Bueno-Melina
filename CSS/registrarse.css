@@ -9,7 +9,11 @@ h1 {color: rgb(18, 159, 152);}
 
 .container p,h1 {text-align: center;}
 
-.container{margin-top: 20px;}
+.container{
+    margin-top: 20px;
+    width: 100%;
+    padding: 0 15px;
+}
 
 #descripcion{
     margin: 20px 0 20px 0;
@@ -17,19 +21,28 @@ h1 {color: rgb(18, 159, 152);}
 
 /* Estilos al login de registro */
 
-.registro {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
-    align-items: center;
+.form-group {
+    display: flex;
+    flex-direction: column; 
 }
 
-.registro input {
-    margin: 0 10px 0 10px;
+#formulario {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+#formulario input {
     height: 40px;
     outline: none;
     padding: 8px;
+    width: 100%;
+    border-radius: 4px;
+    border: none;
 }
+
+
 
 /* Color de fondo de las letras del input */
 ::placeholder {color: #000;}
@@ -38,9 +51,18 @@ h1 {color: rgb(18, 159, 152);}
 
 :focus::placeholder {color: rgba(22, 15, 15, 0.5);}
 
-/* Centramos el boton y el "Ya tengo cuenta" */
 
-#btn-registro,
+.error-message{
+    margin: 10px auto 0 auto;
+    font-size: 12px;
+    color: rgb(158, 18, 18);
+    font-weight: bold;
+    padding: 4px;
+}
+
+/* Centramos  el "Ya tengo cuenta" */
+
+
 #cuenta {
     display: flex;
     align-items: center;
@@ -50,7 +72,6 @@ h1 {color: rgb(18, 159, 152);}
     border-radius: 4px;
 }
 
-#btn-registro a,
 #cuenta a {
     text-decoration: none;
     font-size: 20px;
@@ -60,12 +81,20 @@ h1 {color: rgb(18, 159, 152);}
 
 /* Estilos al boton */
 
-#btn-registro {
+#btn {
     background-color: rgb(18, 159, 152);
-    width: 300px;
+    grid-column: span 2;
+    width: 100%;
+    height: 45px;
+    margin-top: 25px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 4px;
 }
 
-#btn-registro:hover {cursor: pointer;}
+#btn:hover {cursor: pointer;}
 
 /*  Estilos "Ya tengo cuenta" */
 
@@ -86,16 +115,24 @@ h1 {color: rgb(18, 159, 152);}
 
 @media (min-width:768px) {
 
-    .registro {
+    #formulario {
         grid-template-columns: auto auto;
         justify-content: center;
         display: flex;
         flex-direction: column;
     }
 
-    .registro input {
+    #formulario input {
         width: 250px;
         height: 40px;
+    }
+
+    .error-message{
+        width: 200px;
+    }
+
+    #btn{
+        margin: 15px auto;
     }
 
     #hr {margin-top: 150px;}

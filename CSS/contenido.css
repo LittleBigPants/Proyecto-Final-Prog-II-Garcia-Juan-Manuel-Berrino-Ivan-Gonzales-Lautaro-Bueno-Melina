@@ -2,33 +2,31 @@
 principal y esta solo para celular(hasta que avancemos).
 Tocando el boton de "Iniciar sesion se puede ver(maquetado en celular) */
 
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 body{
     width: 100%;
     height: auto;
     background-color: #1c1c1c;
 }
-
-.logo{
-    width: 100%;
-    height: auto;
-    margin-top: 40px;
-    margin-bottom: 10px;
+h2,h3,h4{
+    font-family: "Raleway", sans-serif;
 }
 
-.logo h1{
-    text-align: center;
-    color: rgb(18, 159, 152);
-    font-weight: bold;
+.logo{
+    background: url(/Imagenes-proyecto/logo-flix-fusion.png);
+    background-repeat:no-repeat;
+    background-position: center center;
+    background-size: contain;
+    width: 100%;
+    height: 70px;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .hr{
     background-color: rgba(66, 62, 62, 0.185);
     margin-top: 30px;
 }
-
-
-
-
 
 /* Estilos para que las imagenes vayan pasando. Maquetado por
 ahora solo en celular */
@@ -110,24 +108,26 @@ ahora solo en celular */
 }
 
 .clases-categorias{
-    width: 115px;
+    width: 120px;
     height: 70px;
     color: #fff;
-    border: 1px solid rgb(18, 159, 152);
+    box-shadow: 0 4px 6px rgba(5, 5, 7, 0.5);
     border-radius: 4px;
     padding: 8px;
     text-align: center;
     font-weight: 600;
     line-height: 50px;
+    background: linear-gradient(to right, rgba(18, 159,152) 0%, rgba(57, 114, 111, 0.418) 50%, rgb(2, 44, 42) 100%);
 }
 
 .clases-categorias:hover{box-shadow: 0 2px 4px rgb(255,255,255);}
 
-#principales{margin-top: 35px;}
+.principales{margin-top: 35px;}
 
-#principales h4{
+.principales h4{
     margin-left: 16px;
     color: rgb(18, 159, 152);
+    font-weight: 800;
 
 }
 
@@ -146,7 +146,7 @@ simulador de celular no se puede */
 
 .scroll-contenido::-webkit-scrollbar{display: none;}
 
-.peliculas-principales img{
+.container-contenido img{
     flex: 0 0 auto;
     width: 100px;
     height: 150px;
@@ -163,6 +163,58 @@ simulador de celular no se puede */
 } */
 
 
+
+.proximamente{
+    width: 100%;
+    max-width: 600px;
+    margin: 30px auto ;
+    position: relative;
+    overflow: hidden;
+}
+
+.proximamente h3{
+    margin-left: 16px;
+    margin-bottom: 20px;
+    color: rgb(18, 159, 152);
+    font-weight: 800;
+
+}
+
+#slider-proximamente{
+    display: flex;
+    width: 400%;
+    animation: slider-prox 25s infinite ease-in-out;
+}
+
+.sliders-prox{
+    width: 100%;
+   /*  height: 350px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s ease;
+}
+
+.sliders-prox img{
+    width: 100%;
+    height: 200px;
+}
+
+
+
+@keyframes slider-prox {
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+ 
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+ 
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+ 
+    75%{margin-left: -300%;}
+    95%{margin-left: -300%;}
+ } 
 
 
 
