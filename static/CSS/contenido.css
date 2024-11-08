@@ -12,16 +12,7 @@ h2,h3,h4{
     font-family: "Raleway", sans-serif;
 }
 
-.logo{
-    background: url(/Imagenes-proyecto/logo-flix-fusion.png);
-    background-repeat:no-repeat;
-    background-position: center center;
-    background-size: contain;
-    width: 100%;
-    height: 70px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
+
 
 .hr{
     background-color: rgba(66, 62, 62, 0.185);
@@ -48,24 +39,74 @@ ahora solo en celular */
 
 .sliders{
     width: 100%;
-    height: 350px;
+    height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px;
+    margin: 0px 20px;
     transition: 1s ease;
+    position: relative;
 }
 
 .sliders img{
     width: 100%;
-    height: 350px;
+    height: 200px;
     border-radius: 10px;
+}
+
+.text-overlay-escape, .text-overlay-ciudad, .text-overlay-rescatados, .text-overlay-galaxia, .text-overlay-amor {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    position: absolute;
+    transform: translate(-50%, -50%); 
+    font-size: 22px; 
+    text-shadow: 2px 2px 4px rgba(14, 11, 11, 0.8);
+}
+
+.text-overlay-escape{
+    top: 65%;
+    left: 20%;
+    color: #dd2a2a;
+}
+
+.text-overlay-ciudad{
+    top: 65%;
+    left: 20%;
+    color: #7bf30b;
+}
+
+.text-overlay-rescatados{
+    top: 65%;
+    left: 20%;
+    color: #8a0606;
+}
+
+.text-overlay-galaxia{
+    top: 65%;
+    left: 20%;
+    color: #61e20af1;
+}
+
+.text-overlay-amor{
+    top: 65%;
+    left: 20%;
+    color: #fff;
+}
+
+.text-overlay-parrafo{
+    position: absolute;
+    top: 75%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: rgb(247, 247, 247);
+    font-size: 14px; /* Tamaño de la fuente */
+    text-shadow: 2px 2px 4px rgba(7, 0, 0, 0.9);
 }
 
 .sliders img:hover{
     transform: scale(1.05);
     border: 2px solid rgb(18, 159, 152) ;
 }
+
 
 /* Efectos al slider de imagenes del principio */
 
@@ -89,14 +130,10 @@ ahora solo en celular */
 
 /* Estilos a las categorias de peliculas */
 
-#categorias{margin-top: 25px;}
-
-#categorias h2{
-    color: #fff;
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 20px;
+#categorias{
+    margin-top: 25px;
 }
+
 
 .container{
     width: 100%;
@@ -117,7 +154,7 @@ ahora solo en celular */
     text-align: center;
     font-weight: 600;
     line-height: 50px;
-    background: linear-gradient(to right, rgba(18, 159,152) 0%, rgba(57, 114, 111, 0.418) 50%, rgb(2, 44, 42) 100%);
+    background: #221d1d;
 }
 
 .clases-categorias:hover{box-shadow: 0 2px 4px rgb(255,255,255);}
@@ -151,6 +188,13 @@ simulador de celular no se puede */
     width: 100px;
     height: 150px;
     border-radius: 4px;
+}
+#vigingo{
+    transition: 1s ease;
+}
+
+#vigingo:hover{
+    transform: scale(1.2);
 }
 
 /* Este estamos viendo para escritorio mas adelante */
@@ -216,6 +260,67 @@ simulador de celular no se puede */
     95%{margin-left: -300%;}
  } 
 
+
+
+
+ @media (min-width:1200px){
+
+    #cont-slider{
+        margin-top: 130px;
+    }
+    .container-contenido img{
+        width: 300px;
+        height: 340px;
+    }
+
+    .clases-categorias{
+        margin-top: 40px;
+        width: 200px;
+        height: 130px;
+        line-height: 120px;
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+
+    .scroll-contenido{
+        gap: 32px;
+    }
+
+    .sliders{
+        height: 500px;
+    }
+
+    .sliders img{
+        height: 500px;
+    }
+
+
+    #cont-slider{
+        max-width: 1600px;
+    }
+
+    .text-overlay-escape, .text-overlay-ciudad, .text-overlay-rescatados, .text-overlay-galaxia, .text-overlay-amor{
+        font-size: 50px;
+        top: 80%;
+        left: 15%;
+    }
+
+    .text-overlay-parrafo{
+        top: 95%;
+        font-size: 22px;
+    }
+    .proximamente{
+        max-width: 1600px;
+    }
+
+    .proximamente h3{
+        font-size: 32px;
+    }
+
+    .sliders-prox img {
+        height: 500px;
+    }
+ }
 
 
 

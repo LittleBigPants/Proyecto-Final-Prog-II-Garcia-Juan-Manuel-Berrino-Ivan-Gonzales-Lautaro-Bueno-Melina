@@ -6,19 +6,20 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
+    list-style: none;
 }
 
 html{
     scroll-behavior: smooth;
 }
 
-
 /* Nav que queda fijo en la parte inferior de la pagina */
 
 #navbar{
     width: 100%;
     height: 60px;
-    background-color: rgb(17, 17, 17);
+    /* background-color: #07060e; */
+    background-color: #3e10a8;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -34,6 +35,35 @@ html{
     line-height: 60px;
 }
 
+#logo{
+    display: none;
+}
+
+#peliculas{
+    display: none;
+}
+
+#perfil{
+    height: 50px;
+}
+
+#mi-perfil{
+    display: none;
+} 
+
+
+
+
+#perfil img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+
+
+
+
 /* Estilos a los iconos de font awesome */
 
 #cont-nav i{
@@ -44,12 +74,88 @@ html{
     color: #fff;
 }
 
+.logo{
+    background: url(/static/Imagenes-proyecto/logo-flix-fusion.png);
+    background-repeat:no-repeat;
+    background-position: center center;
+    background-size: contain;
+    width: 100%;
+    height: 70px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Estilos al apretar el perfil */
+.menu-perfil{
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: #03010ef6;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    right: -100%;  
+    transition: right 0.8s ease; 
+    z-index: 1000; 
+}
 
 
 
+.header-perfil{
+    display: flex;
+    justify-content: space-between;
+    color: rgb(18, 159, 152);
+    padding: 10px;
+    border-bottom: 1px solid #746969;
+}
+
+.header-perfil img{
+    margin-top: 10px;
+}
+.header-perfil h2{
+    margin-left: 140px;
+    line-height: 60px;
+}
+
+.header-perfil img{
+    border-radius: 50%;
+}
+
+.cerrar {
+    position: absolute;
+    float: left;
+    top: 26px;
+    left: 30px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    cursor: pointer;
+    display: block;
+    background-color: transparent;
+    z-index: 20;
+    color: #fff;
+}
 
 
 
+.contenido-perfil{
+    display: flex;
+    justify-content: start;
+    margin: 15px 0 0 30px;
+    font-size: 18px;
+}
+
+.contenido-perfil ul li{
+    font-family: 'Times New Roman', Times, serif;
+    padding: 10px;
+}
+
+.contenido-perfil ul li:hover{
+    text-decoration: underline;
+}
 
 
 /* Estilos al footer */
@@ -98,6 +204,20 @@ footer {
 
 @media (min-width:768px) {
 
+    #menu-perfil {
+        width: 400px; 
+        height: 600px; 
+        right: -400px;
+        border-radius: 5px;
+    }
+
+    .header-perfil img{
+        width: 55px;
+        height: 55px;
+        margin-right: 10px;
+    }
+
+
     .footer-contacto {
         display: flex;
         justify-content: center;
@@ -112,14 +232,81 @@ footer {
     .footer-links a {
         font-size: 16px;
     }
+
+    #mi-perfil{
+        margin: 3px 20px 0 0;
+        position: absolute;
+        right: 80px;
+        top: -2px;
+        color: #fff;
+        display: block;
+    }
+    
 }
 
 
 @media (min-width:1200px) {
+
+    #navbar{
+        top:0;
+        height: 80px;
+    }
+
+    #cont-nav{
+        justify-content: flex-start;
+        gap: 30px;
+        height: 85px;
+        line-height: 85px;
+    }
+
+    #cont-nav #logo{
+        height: 80px;
+    }
+
+    #logo img{
+        width: 300px;
+        height: 75px;
+    }
+
+    #perfil img{
+        width: 55px;
+        height: 55px;
+    }
+    
+    
+   #contenedor-perfil{
+    margin: 10px 30px 0 auto;
+    height: 70px;
+   }
+
+    #logo{
+        display: flex;
+        height: 60px;
+    }
+
+    #peliculas{
+        display: flex;
+    }
+
+    #peliculas a{
+        font-size: 18px;
+        color: #fff;
+    }
+
+    #peliculas a:hover{
+        text-decoration: underline;
+    }
+    .logo{
+        display: none;
+    }
     .contenido-links {
         justify-content: center;
         row-gap: 16px;
         column-gap: 16px;
+    }
+
+    .principales h4{
+        font-size: 24px;
     }
 
     .footer-contacto {
