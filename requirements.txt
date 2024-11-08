@@ -1,0 +1,6 @@
+flask
+flask-migrate
+flask_sqlalchemy
+pydantic
+pydantic[email]
+flask_login
