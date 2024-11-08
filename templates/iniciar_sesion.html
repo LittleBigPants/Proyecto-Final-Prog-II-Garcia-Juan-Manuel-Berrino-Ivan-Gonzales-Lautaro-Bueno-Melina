@@ -13,11 +13,11 @@
 <body>
 	<main>
 		<!-- Titulo -->
-		<header class="logo">
+		<header class="logo-inicio-sesion">
 		</header>
 		<!-- Login Inicio de sesion -->
 		<div id="login">
-			<form id="formulario" action="">
+			<form id="formulario" action ="{{ url_for('iniciar_sesion') }}" method="post">
 				<h2>Inicia sesión</h2>
 					<input class="ipt" type="email" placeholder="Ingrese el email" name="email" id="email" />
 					<p id="errorEmail" class="error-message"></p>
