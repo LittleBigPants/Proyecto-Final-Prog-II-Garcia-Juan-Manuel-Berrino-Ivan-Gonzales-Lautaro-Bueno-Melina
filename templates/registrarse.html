@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -13,29 +13,29 @@
     <div class="container">
         <h1>Regístrate</h1>
         <p id="descripcion">Ingrese sus datos correspondientes.</p>
-        <form id="formulario" action="">
+        <form id="formulario" action= "{{ url_for('registrarse') }}" method="post">
             <div class="form-group">
-                <input type="text" placeholder="Nombre" id="nombre">
+                <input type="text" placeholder="Nombre" name="nombre" id="nombre">
                 <p id="errorNombre" class="error-message"></p>
             </div>
             <div class="form-group">
-                <input type="text" placeholder="Apellido" id="apellido">
+                <input type="text" placeholder="Apellido" name="apellido" id="apellido">
                 <p id="errorApellido" class="error-message"></p>
             </div>
             <div class="form-group">
-                <input type="date" id="fecha">
+                <input type="date" name="fecha_nacimiento"  id="fecha">
                 <p id="errorFecha" class="error-message"></p>
             </div>
             <div class="form-group">
-                <input type="text" placeholder="Número de móvil" id="movil">
+                <input type="text" placeholder="Número de móvil" name="movil" id="movil">
                 <p id="errorMovil" class="error-message"></p>
             </div>
             <div class="form-group">
-                <input type="password" placeholder="Contraseña" id="contraseña">
+                <input type="password" placeholder="Contraseña" name="contraseña" id="contraseña">
                 <p id="errorContraseña" class="error-message"></p>
             </div>
             <div class="form-group">
-                <input type="password" placeholder="Repetir contraseña" id="contraseña2">
+                <input type="password" placeholder="Repetir contraseña" name="repetir_contraseña" id="contraseña2">
                 <p id="errorContraseña2" class="error-message"></p>
             </div>
             <input id="btn" type="submit" value="Registrarse">

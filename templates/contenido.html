@@ -13,42 +13,78 @@
 </head>
 
 <body>
-    <header class="logo" id="inicio">
-    </header>
+
+    
+    <header class="logo"></header>
 
     <!-- Menu de navegacion -->
     <nav id="navbar">
         <ul id="cont-nav">
-            <a href="#inicio"><i class="fas fa-home"></i></a>
-            <a href="#"><i class="fas fa-search search-icon"></i></a>
-            <a href="#"><i class="fas fa-download download-icon"></i></a>
-            <a href=""><i class="fa-solid fa-gear"></i></a>
+            <li id="logo"><a href="#inicio"><img src="/static/Imagenes-proyecto/logo-flix-fusion.png" alt=""></a></li>
+            <li><a href="#inicio"><i class="fas fa-home"></i></a></li>
+            <li><a href="#"><i class="fas fa-search search-icon"></i></a></li>
+            <li id="peliculas"><a href="{{url_for('comprar_pelicula')}}" target="_blank">Comprar Peliculas</a></li>
+            <div class="contenedor-perfil" id="contenedor-perfil">
+            <li id="perfil"><a href="#"><span id="mi-perfil">Mi perfil</span><img src="/static/Imagenes-proyecto/spiderman.jpg" alt="spiderman"></a></li>
+        </div>
         </ul>
     </nav>
+
+   <!--  Menu perfil -->
+    <div class="menu-perfil" id="menu-perfil">
+        <div class="header-perfil">
+            <h2>Mi perfil</h2>
+            <img src="/static/Imagenes-proyecto/spiderman.jpg" alt="spiderman" width="45px" height="45px">
+            <span class="cerrar">
+                <i class="fa-solid fa-xmark cerrar_perfil"></i>
+            </span>
+        
+        </div>
+        <div class="contenido-perfil">
+            <ul>
+                <li>Cambiar perfil</li>
+                <li>Cuenta</li>
+                <li>Ayuda</li>
+                <li>Ajustes</li>
+                <li>Cerrar sesión</li>
+            </ul>
+        </div>
+    </div>
+
+
     <!--  Contenido principal -->
     <main>
         <div id="cont-slider">
             <div id="slider">
                 <div class="sliders">
-                    <img src="/static/Imagenes-proyecto/batman-rojo.jpg" alt="Batman Rojo">
+                    <img src="/static/Imagenes-proyecto/fondo-1.webp" alt="El Escape">
+                    <div class="text-overlay-escape">El Escape</div>
+                    <div class="text-overlay-parrafo">18+  2024  -  Suspenso, Terror</div>
                 </div>
                 <div class="sliders">
-                    <img src="/static/Imagenes-proyecto/leon.jpg" alt="León">
+                    <img src="/static/Imagenes-proyecto/fondo-2.jpg" alt="León">
+                    <div class="text-overlay-ciudad">El Peor Plan</div>
+                    <div class="text-overlay-parrafo">14+  2024  -  Comedia, Accion</div>
                 </div>
                 <div class="sliders">
-                    <img src="/static/Imagenes-proyecto/joker.jpg" alt="Joker">
+                    <img src="/static/Imagenes-proyecto/fondo-3.jpg" alt="Joker">
+                    <div class="text-overlay-rescatados">El Rescate</div>
+                    <div class="text-overlay-parrafo">18+  2024  -  Suspenso, Accion</div>
                 </div>
                 <div class="sliders">
-                    <img src="/static/Imagenes-proyecto/mujer-gato.jpg" alt="Mujer Gato">
+                    <img src="/static/Imagenes-proyecto/fondo-4.jpg" alt="Mujer Gato">
+                    <div class="text-overlay-galaxia">Galácticos</div>
+                    <div class="text-overlay-parrafo">14+  2024  -  Documental</div>
                 </div>
                 <div class="sliders">
-                    <img src="/static/Imagenes-proyecto/spiderman.jpg" alt="Spiderman">
+                    <img src="/static/Imagenes-proyecto/fondo-5.jpg" alt="Spiderman">
+                    <div class="text-overlay-amor">Un Corazón</div>
+                    <div class="text-overlay-parrafo">16+  2024  -  Romantica</div>
                 </div>
             </div>
         </div>
 
         <section id="categorias">
-            <h2>Categorias</h2>
             <div class="container">
                 <div class="clases-categorias">
                     <h3>Comedia</h3>
@@ -72,15 +108,10 @@
         </section>
 
         <section class="principales">
-            <!-- <div class="scroll-boton">
-                <span id="izquierda"></span>
-                <span id="derecha"></span>
-            </div> esto todavia no se aplica -->
-            <!--    Scrollear para ver peliculas deslizando por ahora solo para celular -->
             <h4>Peliculas principales</h4>
             <div class="scroll-contenido">
                 <div class="container-contenido">
-                    <img src="/static/Imagenes-proyecto/vikingo.jpg" alt="Película de Vikingos">
+                    <a href="{{url_for ('comprar_pelicula') }}"><img id="vigingo" src="/static/Imagenes-proyecto/vikingo.jpg" alt="Película de Vikingos"></a>
                 </div>
                 <div class="container-contenido">
                     <img src="/static/Imagenes-proyecto/mujerangel.jpg" alt="Película de Mujer Angel">
@@ -106,6 +137,7 @@
         <section class="principales">
             <h4>Exclusivas de FlixFusion</h4>
             <div class="scroll-contenido">
+
                 <div class="container-contenido">
                     <img src="/static/Imagenes-proyecto/e1.jpg" alt="Película 1">
                 </div>
@@ -131,7 +163,7 @@
         </section>
 
         <section class="principales">
-            <h4>Top 10 series</h4>
+            <h4>Las más vistas</h4>
             <div class="scroll-contenido">
                 <div class="container-contenido">
                     <img src="/static/Imagenes-proyecto/s1.jpg" alt="Película 1">
@@ -208,11 +240,13 @@
     <footer>
 
     </footer>
+    <script src="{{ url_for('static', filename='JavaScript/perfil.js') }}"></script>
+    <script src="{{ url_for('static', filename='JavaScript/contenido.js') }}"></script>
 
     <!--  Script para utilizar cuando pasemos al maquetado para escritorio.
-         Basicamente poner botones para poder deslizar las peliculas -->
+         Basicamente poner botones para poder deslizar las peliculas 
 
-    <!--  <script>
+    <script>
         const btnDerecho = document.querySelector("derecha"); //Creamos una variable que agarre en este caso los id de los botones
         const btnIzquierdo = document.querySelector("izquierda");  //Creamos una variable que agarre en este caso los id de los botones
 
@@ -226,9 +260,10 @@
             content.scrollLeft -= 800;
         })
 
-    </script> -->
+    </script> 
 
-    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script> -->
+
 </body>
 
 </html>
