@@ -2,199 +2,273 @@
 principal y esta solo para celular(hasta que avancemos).
 Tocando el boton de "Iniciar sesion se puede ver(maquetado en celular) */
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-body{
-    width: 100%;
-    height: auto;
-    background-color: #1c1c1c;
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+body {
+	width: 100%;
+	height: auto;
+	background-color: #1c1c1c;
 }
-h2,h3,h4{
-    font-family: "Raleway", sans-serif;
+h2,
+h3,
+h4 {
+	font-family: "Raleway", sans-serif;
 }
 
+.flecha-izquierda,
+.flecha-derecha {
+	display: none;
+}
 
-
-.hr{
-    background-color: rgba(66, 62, 62, 0.185);
-    margin-top: 30px;
+.hr {
+	background-color: rgba(66, 62, 62, 0.185);
+	margin-top: 30px;
 }
 
 /* Estilos para que las imagenes vayan pasando. Maquetado por
 ahora solo en celular */
 
-#cont-slider{
-    width: 100%;
-    max-width: 600px;
-    margin:  30px auto 0;
-    position: relative;
-    overflow: hidden;
+#cont-slider {
+	width: 100%;
+	max-width: 600px;
+	margin: 30px auto 0;
+	position: relative;
+	overflow: hidden;
 }
 
-#slider{
-    display: flex;
-    /* Se le pone 500% porque son 5 imagenes */
-    width: 500%;
-    animation: slider 25s infinite ease-in-out;
+#slider {
+	display: flex;
+	/* Se le pone 500% porque son 5 imagenes */
+	width: 500%;
+	animation: slider 25s infinite ease-in-out;
 }
 
-.sliders{
-    width: 100%;
-    height: 250px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0px 20px;
-    transition: 1s ease;
-    position: relative;
+.sliders {
+	width: 100%;
+	height: 250px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0px 20px;
+	transition: 1s ease;
+	position: relative;
 }
 
-.sliders img{
-    width: 100%;
-    height: 200px;
-    border-radius: 10px;
+.sliders img {
+	width: 100%;
+	height: 200px;
+	border-radius: 10px;
 }
 
-.text-overlay-escape, .text-overlay-ciudad, .text-overlay-rescatados, .text-overlay-galaxia, .text-overlay-amor {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    position: absolute;
-    transform: translate(-50%, -50%); 
-    font-size: 22px; 
-    text-shadow: 2px 2px 4px rgba(14, 11, 11, 0.8);
+.text-overlay-escape,
+.text-overlay-ciudad,
+.text-overlay-rescatados,
+.text-overlay-galaxia,
+.text-overlay-amor {
+	font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	font-size: 22px;
+	text-shadow: 2px 2px 4px rgba(14, 11, 11, 0.8);
 }
 
-.text-overlay-escape{
-    top: 65%;
-    left: 20%;
-    color: #dd2a2a;
+.text-overlay-escape {
+	top: 65%;
+	left: 20%;
+	color: #dd2a2a;
 }
 
-.text-overlay-ciudad{
-    top: 65%;
-    left: 20%;
-    color: #7bf30b;
+.text-overlay-ciudad {
+	top: 65%;
+	left: 20%;
+	color: #7bf30b;
 }
 
-.text-overlay-rescatados{
-    top: 65%;
-    left: 20%;
-    color: #8a0606;
+.text-overlay-rescatados {
+	top: 65%;
+	left: 20%;
+	color: #8a0606;
 }
 
-.text-overlay-galaxia{
-    top: 65%;
-    left: 20%;
-    color: #61e20af1;
+.text-overlay-galaxia {
+	top: 65%;
+	left: 20%;
+	color: #61e20af1;
 }
 
-.text-overlay-amor{
-    top: 65%;
-    left: 20%;
-    color: #fff;
+.text-overlay-amor {
+	top: 65%;
+	left: 20%;
+	color: #fff;
 }
 
-.text-overlay-parrafo{
-    position: absolute;
-    top: 75%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
-    color: rgb(247, 247, 247);
-    font-size: 14px; /* Tamaño de la fuente */
-    text-shadow: 2px 2px 4px rgba(7, 0, 0, 0.9);
+.text-overlay-parrafo {
+	position: absolute;
+	top: 75%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: rgb(247, 247, 247);
+	font-size: 14px; /* Tamaño de la fuente */
+	text-shadow: 2px 2px 4px rgba(7, 0, 0, 0.9);
 }
 
-.sliders img:hover{
-    transform: scale(1.05);
-    border: 2px solid rgb(18, 159, 152) ;
+.sliders img:hover {
+	transform: scale(1.05);
+	border: 2px solid rgb(18, 159, 152);
 }
-
 
 /* Efectos al slider de imagenes del principio */
 
-
 @keyframes slider {
-   0%{margin-left: 0;}
-   15%{margin-left: 0;}
+	0% {
+		margin-left: 0;
+	}
+	15% {
+		margin-left: 0;
+	}
 
-   20%{margin-left: -100%;}
-   35%{margin-left: -100%;}
+	20% {
+		margin-left: -100%;
+	}
+	35% {
+		margin-left: -100%;
+	}
 
-   40%{margin-left: -200%;}
-   55%{margin-left: -200%;}
+	40% {
+		margin-left: -200%;
+	}
+	55% {
+		margin-left: -200%;
+	}
 
-   60%{margin-left: -300%;}
-   75%{margin-left: -300%;}
+	60% {
+		margin-left: -300%;
+	}
+	75% {
+		margin-left: -300%;
+	}
 
-   80%{margin-left: -400%;}
-   95%{margin-left: -400%;}
-} 
+	80% {
+		margin-left: -400%;
+	}
+	95% {
+		margin-left: -400%;
+	}
+}
 
 /* Estilos a las categorias de peliculas */
 
-#categorias{
-    margin-top: 25px;
+#categorias {
+	margin-top: 25px;
 }
 
-
-.container{
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 8px;
+.container {
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 8px;
 }
 
-.clases-categorias{
-    width: 120px;
-    height: 70px;
-    color: #fff;
-    box-shadow: 0 4px 6px rgba(5, 5, 7, 0.5);
-    border-radius: 4px;
-    padding: 8px;
-    text-align: center;
-    font-weight: 600;
-    line-height: 50px;
-    background: #221d1d;
+.clases-categorias {
+	width: 120px;
+	height: 70px;
+	color: #fff;
+	box-shadow: 0 4px 6px rgba(5, 5, 7, 0.5);
+	border-radius: 4px;
+	padding: 8px;
+	text-align: center;
+	font-weight: 600;
+	line-height: 50px;
+	background: #221d1d;
 }
 
-.clases-categorias:hover{box-shadow: 0 2px 4px rgb(255,255,255);}
+.clases-categorias:hover {
+	box-shadow: 0 2px 4px rgb(255, 255, 255);
+}
 
-.principales{margin-top: 35px;}
+.principales {
+	margin-top: 35px;
+}
 
-.principales h4{
-    margin-left: 16px;
-    color: rgb(18, 159, 152);
-    font-weight: 800;
-
+.principales h4 {
+	margin-left: 16px;
+	color: rgb(18, 159, 152);
+	font-weight: 800;
 }
 
 /* Estilos para hacer el efecto de deslizar para ver mas peliculas en celular.
 Para ver el efecto inspeccionar en modo responsive ya que con el
 simulador de celular no se puede */
 
-.scroll-contenido{
+.scroll-contenido {
+	display: flex;
+	flex-wrap: nowrap;
+	overflow-x: auto;
+	scroll-behavior: smooth;
+	gap: 16px;
+	margin: 16px;
+}
+
+.contenedor-principal {
+	display: flex;
+	flex-wrap: nowrap;
+	overflow-x: auto;
+	scroll-behavior: smooth;
+	gap: 16px;
+	margin: 16px;
+}
+
+.contenedor-principal {
+	display: flex;
+	flex-wrap: nowrap;
+	overflow-x: auto;
+	scroll-behavior: smooth;
+	gap: 16px;
+	margin: 16px;
+}
+
+.contenedor-principal::-webkit-scrollbar {
+	display: none;
+}
+
+.scroll-contenido::-webkit-scrollbar {
+	display: none;
+}
+
+.peliculas-tipo .contenedor-carousel .carousel {
     display: flex;
     flex-wrap: nowrap;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    gap: 16px;
-    margin: 16px;
+    gap: 1%;
 }
 
-.scroll-contenido::-webkit-scrollbar{display: none;}
-
-.container-contenido img{
-    flex: 0 0 auto;
-    width: 100px;
-    height: 150px;
-    border-radius: 4px;
-}
-#vigingo{
-    transition: 1s ease;
+.peliculas-tipo .contenedor-carousel .carousel .pelicula {
+    transition: 0.3s ease all;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+	width: 100px;
+	height: 150px;
+	border-radius: 4px;
 }
 
-#vigingo:hover{
+.peliculas-tipo .contenedor-carousel .carousel .pelicula.hover {
     transform: scale(1.2);
+    transform-origin: center;
+}
+
+.peliculas-tipo .contenedor-carousel .carousel .pelicula img {
+    width: 100%;
+    vertical-align: top;
+	flex: 0 0 auto;
+	width: 100px;
+	height: 150px;
+	border-radius: 4px;
+}
+
+.container-contenido img {
+	flex: 0 0 auto;
+	width: 100px;
+	height: 150px;
+	border-radius: 4px;
 }
 
 /* Este estamos viendo para escritorio mas adelante */
@@ -206,121 +280,235 @@ simulador de celular no se puede */
     margin-right: 25px;
 } */
 
-
-
-.proximamente{
-    width: 100%;
-    max-width: 600px;
-    margin: 30px auto ;
-    position: relative;
-    overflow: hidden;
+.proximamente {
+	width: 100%;
+	max-width: 600px;
+	margin: 30px auto;
+	position: relative;
+	overflow: hidden;
 }
 
-.proximamente h3{
-    margin-left: 16px;
-    margin-bottom: 20px;
-    color: rgb(18, 159, 152);
-    font-weight: 800;
-
+.proximamente h3 {
+	margin-left: 16px;
+	margin-bottom: 20px;
+	color: rgb(18, 159, 152);
+	font-weight: 800;
 }
 
-#slider-proximamente{
-    display: flex;
-    width: 400%;
-    animation: slider-prox 25s infinite ease-in-out;
+#slider-proximamente {
+	display: flex;
+	width: 400%;
+	animation: slider-prox 25s infinite ease-in-out;
 }
 
-.sliders-prox{
-    width: 100%;
-   /*  height: 350px; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 1s ease;
+.sliders-prox {
+	width: 100%;
+	/*  height: 350px; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 1s ease;
 }
 
-.sliders-prox img{
-    width: 100%;
-    height: 200px;
+.sliders-prox img {
+	width: 100%;
+	height: 200px;
 }
-
-
 
 @keyframes slider-prox {
-    0%{margin-left: 0;}
-    20%{margin-left: 0;}
- 
-    25%{margin-left: -100%;}
-    45%{margin-left: -100%;}
- 
-    50%{margin-left: -200%;}
-    70%{margin-left: -200%;}
- 
-    75%{margin-left: -300%;}
-    95%{margin-left: -300%;}
- } 
+	0% {
+		margin-left: 0;
+	}
+	20% {
+		margin-left: 0;
+	}
+
+	25% {
+		margin-left: -100%;
+	}
+	45% {
+		margin-left: -100%;
+	}
+
+	50% {
+		margin-left: -200%;
+	}
+	70% {
+		margin-left: -200%;
+	}
+
+	75% {
+		margin-left: -300%;
+	}
+	95% {
+		margin-left: -300%;
+	}
+}
+
+@media (min-width: 1200px) {
+	#cont-slider {
+		margin-top: 130px;
+	}
+	.container-contenido img {
+		width: 300px;
+		height: 340px;
+	}
+
+	.clases-categorias {
+		margin-top: 40px;
+		width: 200px;
+		height: 130px;
+		line-height: 120px;
+		font-size: 18px;
+		text-transform: uppercase;
+	}
+
+	.scroll-contenido {
+		gap: 32px;
+	}
+
+	.sliders {
+		height: 500px;
+	}
+
+	.sliders img {
+		height: 500px;
+	}
+
+	#cont-slider {
+		max-width: 1600px;
+	}
+
+	.text-overlay-escape,
+	.text-overlay-ciudad,
+	.text-overlay-rescatados,
+	.text-overlay-galaxia,
+	.text-overlay-amor {
+		font-size: 50px;
+		top: 80%;
+		left: 15%;
+	}
+
+	.text-overlay-parrafo {
+		top: 95%;
+		font-size: 22px;
+	}
+	.proximamente {
+		max-width: 1600px;
+	}
+
+	.proximamente h3 {
+		font-size: 32px;
+	}
+
+	.sliders-prox img {
+		height: 500px;
+	}
 
 
+	/* ---- ----- ----- Contenedor Titulo y Controles ----- ----- ----- */
+	.contenedor-titulo-controles {
+		display: flex;
+		justify-content: space-between;
+		align-items: end;
+	}
 
+	.contenedor-titulo-controles h3 {
+		color: #fff;
+		font-size: 30px;
+	}
 
- @media (min-width:1200px){
+	.contenedor-titulo-controles .indicadores button {
+		background: #fff;
+		height: 3px;
+		width: 10px;
+		cursor: pointer;
+		border: none;
+		margin-right: 2px;
+	}
 
-    #cont-slider{
-        margin-top: 130px;
-    }
-    .container-contenido img{
-        width: 300px;
-        height: 340px;
-    }
+	.contenedor-titulo-controles .indicadores button:hover,
+	.contenedor-titulo-controles .indicadores button.activo {
+		background: rgb(18, 159, 152);
+	}
 
-    .clases-categorias{
-        margin-top: 40px;
-        width: 200px;
-        height: 130px;
-        line-height: 120px;
-        font-size: 18px;
-        text-transform: uppercase;
-    }
+	/* ---- ----- ----- Contenedor Principal y Flechas ----- ----- ----- */
 
-    .scroll-contenido{
-        gap: 32px;
-    }
+    .flecha-izquierda,
+	.flecha-derecha {
+		display: block;
+	}
+	.peliculas-tipo {
+		margin-bottom: 70px;
+	}
 
-    .sliders{
-        height: 500px;
-    }
+	.peliculas-tipo .contenedor-principal {
+		display: flex;
+		align-items: center;
+		position: relative;
+	}
 
-    .sliders img{
-        height: 500px;
-    }
+	.peliculas-tipo .contenedor-principal .flecha-izquierda,
+	.peliculas-tipo .contenedor-principal .flecha-derecha {
+		position: absolute;
+		border: none;
+		background: rgba(0, 0, 0, 0.3);
+		font-size: 40px;
+		height: 50%;
+		top: calc(50% - 25%);
+		line-height: 40px;
+		width: 50px;
+		color: #fff;
+		cursor: pointer;
+		z-index: 500;
+		transition: 0.2s ease all;
+	}
 
+	.peliculas-tipo .contenedor-principal .flecha-izquierda:hover,
+	.peliculas-tipo .contenedor-principal .flecha-derecha:hover {
+		background: rgba(0, 0, 0, 0.9);
+	}
 
-    #cont-slider{
-        max-width: 1600px;
-    }
+	.peliculas-tipo .contenedor-principal .flecha-izquierda {
+		left: 0;
+	}
 
-    .text-overlay-escape, .text-overlay-ciudad, .text-overlay-rescatados, .text-overlay-galaxia, .text-overlay-amor{
-        font-size: 50px;
-        top: 80%;
-        left: 15%;
-    }
+	.peliculas-tipo .contenedor-principal .flecha-derecha {
+		right: 0;
+	}
 
-    .text-overlay-parrafo{
-        top: 95%;
-        font-size: 22px;
-    }
-    .proximamente{
-        max-width: 1600px;
-    }
+	/* ---- ----- ----- Carousel ----- ----- ----- */
+	.peliculas-tipo .contenedor-carousel {
+		width: 100%;
+		padding: 20px 0;
+		overflow: hidden;
+		scroll-behavior: smooth;
+	}
 
-    .proximamente h3{
-        font-size: 32px;
-    }
+	.peliculas-tipo .contenedor-carousel .carousel {
+		display: flex;
+		flex-wrap: nowrap;
+		gap: 1%;
+	}
 
-    .sliders-prox img {
-        height: 500px;
-    }
- }
+	.peliculas-tipo .contenedor-carousel .carousel .pelicula {
+		transition: 0.3s ease all;
+		box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+		width: 300px;
+		height: 340px;
+		border-radius: 4px;
+	}
 
+	.peliculas-tipo .contenedor-carousel .carousel .pelicula.hover {
+		transform: scale(1.2);
+		transform-origin: center;
+	}
 
-
+	.peliculas-tipo .contenedor-carousel .carousel .pelicula img {
+		width: 100%;
+		vertical-align: top;
+		width: 300px;
+		height: 340px;
+		border-radius: 4px;
+	}
+}

@@ -10,6 +10,7 @@
 
     <!-- Usamos iconos de font awesome para el nav -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
 <body>
@@ -24,6 +25,7 @@
             <li><a href="#inicio"><i class="fas fa-home"></i></a></li>
             <li><a href="#"><i class="fas fa-search search-icon"></i></a></li>
             <li id="peliculas"><a href="{{url_for('comprar_pelicula')}}" target="_blank">Comprar Peliculas</a></li>
+            <li><i class="fa-solid fa-bag-shopping"></i></li>
             <div class="contenedor-perfil" id="contenedor-perfil">
             <li id="perfil"><a href="#"><span id="mi-perfil">Mi perfil</span><img src="/static/Imagenes-proyecto/spiderman.jpg" alt="spiderman"></a></li>
         </div>
@@ -55,6 +57,7 @@
     <!--  Contenido principal -->
     <main>
         <div id="cont-slider">
+            
             <div id="slider">
                 <div class="sliders">
                     <img src="/static/Imagenes-proyecto/fondo-1.webp" alt="El Escape">
@@ -77,11 +80,11 @@
                     <div class="text-overlay-parrafo">14+  2024  -  Documental</div>
                 </div>
                 <div class="sliders">
-                    <img src="/static/Imagenes-proyecto/fondo-5.jpg" alt="Spiderman">
                     <div class="text-overlay-amor">Un Corazón</div>
                     <div class="text-overlay-parrafo">16+  2024  -  Romantica</div>
                 </div>
             </div>
+            
         </div>
 
         <section id="categorias">
@@ -107,115 +110,256 @@
             </div>
         </section>
 
-        <section class="principales">
-            <h4>Peliculas principales</h4>
-            <div class="scroll-contenido">
-                <div class="container-contenido">
-                    <a href="{{url_for ('comprar_pelicula') }}"><img id="vigingo" src="/static/Imagenes-proyecto/vikingo.jpg" alt="Película de Vikingos"></a>
-                </div>
-                <div class="container-contenido">
-                    <img src="/static/Imagenes-proyecto/mujerangel.jpg" alt="Película de Mujer Angel">
-                </div>
-                <div class="container-contenido">
-                    <img src="/static/Imagenes-proyecto/mujerfuego.jpg" alt="Película de Mujer Fuego">
-                </div>
-                <div class="container-contenido">
-                    <img src="/static/Imagenes-proyecto/mujerloba.jpg" alt="Película Mujer loba">
-                </div>
-                <div class="container-contenido">
-                    <img src="/static/Imagenes-proyecto/pareja.jpg" alt="Película de amor">
-                </div>
-                <div class="container-contenido">
-                    <img src="/static/Imagenes-proyecto/piloto.jpg" alt="Película de piloto de guerra">
-                </div>
-                <div class="container-contenido">
-                    <img src="/static/Imagenes-proyecto/hombreaccion.jpg" alt="Película de accion">
-                </div>
-            </div>
-        </section>
 
         <section class="principales">
-            <h4>Exclusivas de FlixFusion</h4>
-            <div class="scroll-contenido">
+            <div class="peliculas-tipo">
+                <div class="contenedor-titulo-controles">
+                <h4>Peliculas principales</h4>
+				<div class="indicadores"></div>
+			</div>
 
-                <div class="container-contenido">
-                    <img src="/static/Imagenes-proyecto/e1.jpg" alt="Película 1">
-                </div>
-                <div class="container-contenido">
-                    <img src="/static/Imagenes-proyecto/e2.jpg" alt="Película 2">
-                </div>
-                <div class="container-contenido">
-                    <img src="/static/Imagenes-proyecto/e3.jpg" alt="Película 3">
-                </div>
-                <div class="container-contenido">
-                    <img src="/static/Imagenes-proyecto/e4.jpg" alt="Película 4">
-                </div>
-                <div class="container-contenido">
-                    <img src="/static/Imagenes-proyecto/e5.jpg" alt="Película 5">
-                </div>
-                <div class="container-contenido">
-                    <img src="/static/Imagenes-proyecto/e6.jpg" alt="Película 6">
-                </div>
-                <div class="container-contenido">
-                    <img src="/static/Imagenes-proyecto/e7.jpg" alt="Película 7">
-                </div>
-            </div>
-        </section>
+			<div class="contenedor-principal">
+				<button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
 
-        <section class="principales">
-            <h4>Las más vistas</h4>
-            <div class="scroll-contenido">
-                <div class="container-contenido">
-                    <img src="/static/Imagenes-proyecto/s1.jpg" alt="Película 1">
-                </div>
-                <div class="container-contenido">
-                    <img src="/static/Imagenes-proyecto/s2.jpg" alt="Película 2">
-                </div>
-                <div class="container-contenido">
-                    <img src="/static/Imagenes-proyecto/s3.jpg" alt="Película 3">
-                </div>
-                <div class="container-contenido">
-                    <img src="/static/Imagenes-proyecto/s4.jpg" alt="Película 4">
-                </div>
-                <div class="container-contenido">
-                    <img src="/static/Imagenes-proyecto/s5.jpg" alt="Película 5">
-                </div>
-                <div class="container-contenido">
-                    <img src="/static/Imagenes-proyecto/s6.jpg" alt="Película 6">
-                </div>
-                <div class="container-contenido">
-                    <img src="/static/Imagenes-proyecto/s7.jpg" alt="Película 7">
-                </div>
-            </div>
-        </section>
+				<div class="contenedor-carousel">
+					<div class="carousel">
+						<div class="pelicula">
+							<a href="#"><img src="/static/Imagenes-proyecto/mujerangel.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="/static/Imagenes-proyecto/vikingo.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="/static/Imagenes-proyecto/mujerfuego.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="/static/Imagenes-proyecto/mujerloba.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="/static/Imagenes-proyecto/pareja.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="/static/Imagenes-proyecto/piloto.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="/static/Imagenes-proyecto/hombreaccion.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="/static/Imagenes-proyecto/mujerangel.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="/static/Imagenes-proyecto/vikingo.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="/static/Imagenes-proyecto/mujerfuego.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="/static/Imagenes-proyecto/mujerloba.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="/static/Imagenes-proyecto/pareja.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="/static/Imagenes-proyecto/piloto.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="/static/Imagenes-proyecto/hombreaccion.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="/static/Imagenes-proyecto/mujerangel.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="/static/Imagenes-proyecto/vikingo.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="/static/Imagenes-proyecto/mujerfuego.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="/static/Imagenes-proyecto/mujerloba.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="/static/Imagenes-proyecto/pareja.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="/static/Imagenes-proyecto/piloto.jpg" alt=""></a>
+						</div>
+						<div class="pelicula">
+							<a href="#"><img src="/static/Imagenes-proyecto/hombreaccion.jpg" alt=""></a>
+						</div>
+						</div>
+                        <button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
+					</div>
+				</div>
+            </section>
 
 
-        <section class="principales">
-            <h4>Recien agregadas</h4>
-            <div class="scroll-contenido">
-                <div class="container-contenido">
-                    <img src="/static/Imagenes-proyecto/ra1.jpg" alt="Película 1">
+            <section class="principales">
+                <div class="peliculas-tipo">
+                    <div class="contenedor-titulo-controles">
+                    <h4>Exclusivas de FlixFusion</h4>
+                    <div class="indicadores"></div>
                 </div>
-                <div class="container-contenido">
-                    <img src="/static/Imagenes-proyecto/ra2.jpg" alt="Película 2">
-                </div>
-                <div class="container-contenido">
-                    <img src="/static/Imagenes-proyecto/ra3.jpg" alt="Película 3">
-                </div>
-                <div class="container-contenido">
-                    <img src="/static/Imagenes-proyecto/ra4.jpg" alt="Película 4">
-                </div>
-                <div class="container-contenido">
-                    <img src="/static/Imagenes-proyecto/ra5.jpg" alt="Película 5">
-                </div>
-                <div class="container-contenido">
-                    <img src="/static/Imagenes-proyecto/ra6.jpg" alt="Película 6">
-                </div>
-                <div class="container-contenido">
-                    <img src="/static/Imagenes-proyecto/ra7.jpg" alt="Película 7">
-                </div>
-            </div>
-        </section>
+    
+                <div class="contenedor-principal">
+                    <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
+    
+                    <div class="contenedor-carousel">
+                        <div class="carousel">
+                            <div class="pelicula">
+                                <a href="#"><img src="/static/Imagenes-proyecto/e1.jpg" alt=""></a>
+                            </div>
+                            <div class="pelicula">
+                                <a href="#"><img src="/static/Imagenes-proyecto/e2.jpg" alt=""></a>
+                            </div>
+                            <div class="pelicula">
+                                <a href="#"><img src="/static/Imagenes-proyecto/e3.jpg" alt=""></a>
+                            </div>
+                            <div class="pelicula">
+                                <a href="#"><img src="/static/Imagenes-proyecto/e4.jpg" alt=""></a>
+                            </div>
+                            <div class="pelicula">
+                                <a href="#"><img src="/static/Imagenes-proyecto/e5.jpg" alt=""></a>
+                            </div>
+                            <div class="pelicula">
+                                <a href="#"><img src="/static/Imagenes-proyecto/e6.jpg" alt=""></a>
+                            </div>
+                            <div class="pelicula">
+                                <a href="#"><img src="/static/Imagenes-proyecto/e7.jpg" alt=""></a>
+                            </div>
+                            <div class="pelicula">
+                                <a href="#"><img src="/static/Imagenes-proyecto/e1.jpg" alt=""></a>
+                            </div>
+                            <div class="pelicula">
+                                <a href="#"><img src="/static/Imagenes-proyecto/e2.jpg" alt=""></a>
+                            </div>
+                            <div class="pelicula">
+                                <a href="#"><img src="/static/Imagenes-proyecto/e3.jpg" alt=""></a>
+                            </div>
+                            <div class="pelicula">
+                                <a href="#"><img src="/static/Imagenes-proyecto/e4.jpg" alt=""></a>
+                            </div>
+                            <div class="pelicula">
+                                <a href="#"><img src="/static/Imagenes-proyecto/e5.jpg" alt=""></a>
+                            </div>
+                            <div class="pelicula">
+                                <a href="#"><img src="/static/Imagenes-proyecto/e6.jpg" alt=""></a>
+                            </div>
+                            <div class="pelicula">
+                                <a href="#"><img src="/static/Imagenes-proyecto/e7.jpg" alt=""></a>
+                            </div>
+                            <div class="pelicula">
+                                <a href="#"><img src="/static/Imagenes-proyecto/e1.jpg" alt=""></a>
+                            </div>
+                            <div class="pelicula">
+                                <a href="#"><img src="/static/Imagenes-proyecto/e2.jpg" alt=""></a>
+                            </div>
+                            <div class="pelicula">
+                                <a href="#"><img src="/static/Imagenes-proyecto/e3.jpg" alt=""></a>
+                            </div>
+                            <div class="pelicula">
+                                <a href="#"><img src="/static/Imagenes-proyecto/e4.jpg" alt=""></a>
+                            </div>
+                            <div class="pelicula">
+                                <a href="#"><img src="/static/Imagenes-proyecto/e5.jpg" alt=""></a>
+                            </div>
+                            <div class="pelicula">
+                                <a href="#"><img src="/static/Imagenes-proyecto/e6.jpg" alt=""></a>
+                            </div>
+                            <div class="pelicula">
+                                <a href="#"><img src="/static/Imagenes-proyecto/e7.jpg" alt=""></a>
+                            </div>
+                            
+                            </div>
+                            <button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
+                        </div>
+                    </div>
+                </section>
+
+
+                
+                
+<!--                 <section class="principales">
+                    <div class="peliculas-tipo">
+                        <div class="contenedor-titulo-controles">
+                        <h4>Recien agregadas</h4>
+                        <div class="indicadores"></div>
+                    </div>
+        
+                    <div class="contenedor-principal">
+                        <button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
+        
+                        <div class="contenedor-carousel">
+                            <div class="carousel">
+                                <div class="pelicula">
+                                    <a href="#"><img src="/static/Imagenes-proyecto/ra1.jpg" alt=""></a>
+                                </div>
+                                <div class="pelicula">
+                                    <a href="#"><img src="/static/Imagenes-proyecto/ra2.jpg" alt=""></a>
+                                </div>
+                                <div class="pelicula">
+                                    <a href="#"><img src="/static/Imagenes-proyecto/ra3.jpg" alt=""></a>
+                                </div>
+                                <div class="pelicula">
+                                    <a href="#"><img src="/static/Imagenes-proyecto/ra4.jpg" alt=""></a>
+                                </div>
+                                <div class="pelicula">
+                                    <a href="#"><img src="/static/Imagenes-proyecto/ra5.jpg" alt=""></a>
+                                </div>
+                                <div class="pelicula">
+                                    <a href="#"><img src="/static/Imagenes-proyecto/ra6.jpg" alt=""></a>
+                                </div>
+                                <div class="pelicula">
+                                    <a href="#"><img src="/static/Imagenes-proyecto/ra7.jpg" alt=""></a>
+                                </div>
+                                <div class="pelicula">
+                                    <a href="#"><img src="/static/Imagenes-proyecto/ra1.jpg" alt=""></a>
+                                </div>
+                                <div class="pelicula">
+                                    <a href="#"><img src="/static/Imagenes-proyecto/ra2.jpg" alt=""></a>
+                                </div>
+                                <div class="pelicula">
+                                    <a href="#"><img src="/static/Imagenes-proyecto/ra3.jpg" alt=""></a>
+                                </div>
+                                <div class="pelicula">
+                                    <a href="#"><img src="/static/Imagenes-proyecto/ra4.jpg" alt=""></a>
+                                </div>
+                                <div class="pelicula">
+                                    <a href="#"><img src="/static/Imagenes-proyecto/ra5.jpg" alt=""></a>
+                                </div>
+                                <div class="pelicula">
+                                    <a href="#"><img src="/static/Imagenes-proyecto/ra6.jpg" alt=""></a>
+                                </div>
+                                <div class="pelicula">
+                                    <a href="#"><img src="/static/Imagenes-proyecto/ra7.jpg" alt=""></a>
+                                </div>
+                                <div class="pelicula">
+                                    <a href="#"><img src="/static/Imagenes-proyecto/ra1.jpg" alt=""></a>
+                                </div>
+                                <div class="pelicula">
+                                    <a href="#"><img src="/static/Imagenes-proyecto/ra2.jpg" alt=""></a>
+                                </div>
+                                <div class="pelicula">
+                                    <a href="#"><img src="/static/Imagenes-proyecto/ra3.jpg" alt=""></a>
+                                </div>
+                                <div class="pelicula">
+                                    <a href="#"><img src="/static/Imagenes-proyecto/ra4.jpg" alt=""></a>
+                                </div>
+                                <div class="pelicula">
+                                    <a href="#"><img src="/static/Imagenes-proyecto/ra5.jpg" alt=""></a>
+                                </div>
+                                <div class="pelicula">
+                                    <a href="#"><img src="/static/Imagenes-proyecto/ra6.jpg" alt=""></a>
+                                </div>
+                                <div class="pelicula">
+                                    <a href="#"><img src="/static/Imagenes-proyecto/ra7.jpg" alt=""></a>
+                                </div>
+
+                                </div>
+                                <button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
+                            </div>
+                        </div>
+                    </section>
+         -->
 
 
         <section class="proximamente">
@@ -240,8 +384,8 @@
     <footer>
 
     </footer>
-    <script src="{{ url_for('static', filename='JavaScript/perfil.js') }}"></script>
-    <script src="{{ url_for('static', filename='JavaScript/contenido.js') }}"></script>
+
+    <script src="{{ url_for('static', filename='JavaScript/carrucel.js') }}"></script>
 
     <!--  Script para utilizar cuando pasemos al maquetado para escritorio.
          Basicamente poner botones para poder deslizar las peliculas 
