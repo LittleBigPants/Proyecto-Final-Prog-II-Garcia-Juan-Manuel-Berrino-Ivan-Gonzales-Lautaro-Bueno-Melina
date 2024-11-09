@@ -1,4 +1,4 @@
-""" from flask import Flask, render_template, request, url_for,redirect,jsonify, flash
+from flask import Flask, render_template, request, url_for,redirect,jsonify, flash
 app = Flask(__name__)
 
 @app.route('/')
@@ -55,4 +55,4 @@ def comprar_pelicula():
         
 
 if __name__ == '__main__':
-    app.run(debug=True) """
+    app.run(debug=True)
