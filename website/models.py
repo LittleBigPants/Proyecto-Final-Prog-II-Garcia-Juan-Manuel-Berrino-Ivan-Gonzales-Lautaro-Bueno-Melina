@@ -1,6 +1,7 @@
 from website import db  # Cambiado para importar db desde el paquete correcto
 from flask_login import UserMixin  # Para la autenticación del usuario
 from sqlalchemy.sql import func
+from datetime import datetime
 
 class Note(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -16,16 +17,11 @@ class User(db.Model, UserMixin):
     password = db.Column(db.String(150))
     notes = db.relationship('Note')
 
-
-
 class Category(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), unique=True, nullable=False)
     description = db.Column(db.String(255))
-
-    def __repr__(self):
-        return f'<Category {self.name}>'
-
+    created_at = db.Column(db.DateTime, default=datetime.utcnow)
 
 class Movie(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -33,7 +29,7 @@ class Movie(db.Model):
     description = db.Column(db.Text)
     release_date = db.Column(db.Date)
     category_id = db.Column(db.Integer, db.ForeignKey('category.id'), nullable=False)
+    image_url = db.Column(db.String(255))  # Campo para la URL de la imagen
+    price = db.Column(db.Float, nullable=False)  # Campo para el precio
+    duration = db.Column(db.Integer, nullable=False)  # Campo para la duración en minutos
     category = db.relationship('Category', backref=db.backref('movies', lazy=True))
-
-    def __repr__(self):
-        return f'<Movie {self.title}>'
