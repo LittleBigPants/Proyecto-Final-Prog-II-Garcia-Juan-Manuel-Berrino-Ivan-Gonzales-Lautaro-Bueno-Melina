@@ -22,7 +22,7 @@ def create_app():
     app.register_blueprint(auth, url_prefix='/')
 
     # Mueve la importación de models después de que se inicializa la app
-    from .models import User, Note
+    from .models import User, Note, Category, Movie
 
     with app.app_context():
         create_database()
