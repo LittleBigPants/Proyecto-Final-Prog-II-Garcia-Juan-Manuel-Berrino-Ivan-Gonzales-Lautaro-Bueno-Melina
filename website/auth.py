@@ -47,8 +47,10 @@ def sign_up():
 
         if user:
             flash('El email ya existe.', category='error')
+            print("Email ya existe")
         elif password1 != password2:
             flash('Las contraseñas no coinciden', category='error')
+            print("Las contraseñas no coinciden")
         else:
             # Crear nuevo usuario
             new_user = User(
@@ -60,8 +62,10 @@ def sign_up():
             db.session.add(new_user)
             db.session.commit()
             login_user(new_user, remember=True)
+            print(f"Usuario logueado: {current_user.id}") 
 
             flash('Cuenta creada exitosamente.', category='success')
+            print("Redirigiendo a la página de inicio...")
             return redirect(url_for('views.home'))
 
     return render_template("registrarse.html")
@@ -73,7 +77,7 @@ def content():
 
 @auth.route('/peliculas')
 def movies():
-    return render_template("comprar_peliculas")
+    return render_template("comprar_pelicula.html")
 
 @auth.route('/suscripcion') 
 def suscripcion(): 

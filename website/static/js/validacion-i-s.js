@@ -1,4 +1,4 @@
-const formulario = document.getElementById('formulario');
+/* const formulario = document.getElementById('formulario');
 const email = document.getElementById('email');
 const contraseña = document.getElementById('contraseña');
 const errorEmail = document.getElementById('errorEmail');
@@ -46,3 +46,4 @@ formulario.addEventListener("submit", e => {
 
 
 
+ */
