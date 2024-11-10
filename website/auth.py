@@ -1,6 +1,6 @@
-from flask import Blueprint, render_template, url_for, request, flash, redirect
+from flask import Blueprint, render_template, url_for, request, flash, redirect, jsonify
 from flask_login import login_user, login_required, logout_user, current_user
-from .models import User
+from .models import User, Movie, Category
 from website import db  # Importamos db desde el paquete 'website'
 from werkzeug.security import generate_password_hash, check_password_hash
 
@@ -82,3 +82,18 @@ def movies():
 @auth.route('/suscripcion') 
 def suscripcion(): 
     return render_template("suscripcion.html")
+
+
+# Nueva ruta para obtener todas las películas
+@auth.route('/api/movies', methods=['GET'])
+def get_movies():
+    movies = Movie.query.all()
+    result = [{'id': m.id, 'title': m.title, 'description': m.description, 'release_date': m.release_date, 'category': m.category.name, 'image_url': m.image_url, 'price': m.price, 'duration': m.duration} for m in movies]
+    return jsonify(result)
+
+# Nueva ruta para obtener todas las categorías
+@auth.route('/api/categories', methods=['GET'])
+def get_categories():
+    categories = Category.query.all()
+    result = [{'id': c.id, 'name': c.name, 'description': c.description} for c in categories]
+    return jsonify(result)
