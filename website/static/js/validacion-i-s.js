@@ -8,12 +8,12 @@ formulario.addEventListener("submit", e => {
     e.preventDefault();
     let error = true;
 
+    // Limpiar mensajes de error previos
     errorEmail.textContent = '';
     errorContraseña.textContent = '';
 
     // Validación del email
     let validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    let validarPassword = /^(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,20}$/;
     if (!validEmail.test(email.value)) {
         errorEmail.textContent = 'El email no es válido';
         error = false;
@@ -21,17 +21,28 @@ formulario.addEventListener("submit", e => {
 
     // Validación de la contraseña
     if (contraseña.value.length < 8) {
-        errorContraseña.textContent = 'Contraseña incorrecta';
-        error = false;
-    } else if(!validarPassword.test(contraseña.value)){
-        errorContraseña.textContent = 'Contraseña incorrecta';
+        errorContraseña.textContent = 'La contraseña debe tener al menos 8 caracteres';
         error = false;
     }
 
-    if(error){
-        window.location.href = "contenido.html"
+
+    if (error) {
+        const formData = new FormData(formulario);
+        fetch('/iniciar_sesion', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                window.location.href = "/contenido";
+            } else {
+                errorContraseña.textContent = data.message; // 
+            }
+        })
+        .catch(error => console.error('Error:', error));
     }
-}
-);
+});
+
 
 

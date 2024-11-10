@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/suscripcion.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/comun.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/suscripcion.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/comun.css') }}">
     <title>Únete a FlixFasion!</title>
 </head>
 <body>
@@ -15,8 +15,8 @@
                     <h1>Únete a FlixFasion</h1>
                     <p>Donde podras disfrutar de tus peliculas favoritas<span> donde y cuando quieras</span>.</p>
             <div class="crear-cuenta">
-                <a class="boton" href="{{ url_for('registrarse') }}">Siguiente</a>
-                <a class="boton" href="{{ url_for('iniciar_sesion') }}">Ya tengo cuenta</a>
+                <a class="boton" href="{{ url_for('auth.sign_up') }}">Siguiente</a> 
+                <a class="boton" href="{{ url_for('auth.login') }}">Ya tengo cuenta</a>
             </div>
         </div>
         </div>

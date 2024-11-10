@@ -75,7 +75,7 @@ html{
 }
 
 .logo{
-    background: url(/static/Imagenes-proyecto/logo-flix-fusion.png);
+    background: url(/static/img/logo-flix-fusion.png);
     background-repeat:no-repeat;
     background-position: center center;
     background-size: contain;
@@ -315,7 +315,7 @@ footer {
 
     .footer-lenguaje {
         text-align: center;
-         margin: 20px 0 0 -250px; 
+        margin: 20px 0 0 -250px; 
 
     }
 }

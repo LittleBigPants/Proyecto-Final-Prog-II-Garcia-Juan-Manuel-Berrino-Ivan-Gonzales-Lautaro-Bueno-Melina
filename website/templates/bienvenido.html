@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/bienvenido.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/comun.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bienvenido.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/comun.css') }}">
     <title>FlixFusion</title>
 </head>
 <body>
     <div class="inicio">
         <h1>Bienvenido a FlixFusion</h1>
-        <a href="{{ url_for('iniciar_sesion') }}">Inicia Sesion</a>
+        <a href="{{ url_for('auth.login') }}">Inicia Sesion</a>
     </div>
 </body>
 </html>
