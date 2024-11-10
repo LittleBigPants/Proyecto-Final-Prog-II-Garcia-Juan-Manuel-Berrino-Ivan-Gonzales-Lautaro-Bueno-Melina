@@ -1,4 +1,4 @@
-let formulario = document.getElementById('formulario');
+/* let formulario = document.getElementById('formulario');
 let nombre = document.getElementById('nombre');
 let apellido = document.getElementById('apellido');
 let email = document.getElementById('email'); // Campo de email
@@ -106,4 +106,4 @@ formulario.addEventListener("submit", e => {
         })
         .catch(error => console.error('Error:', error));
     }
-});
+}); */

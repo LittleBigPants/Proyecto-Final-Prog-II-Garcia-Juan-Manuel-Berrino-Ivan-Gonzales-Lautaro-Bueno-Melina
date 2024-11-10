@@ -11,7 +11,7 @@ body{
 } 
 
 /* estilo logo */
-.logo_inicio_sesion{
+.logo-inicio-sesion{
     background: url(/static/img/logo-flix-fusion.png);
     background-repeat:no-repeat;
     background-position: -23px center;
@@ -20,7 +20,7 @@ body{
     margin-bottom: 10px;
 }
 
-.logo_inicio_sesion{
+.logo-inicio-sesion{
 	margin-left: 16px;
 }
 .logo, #login{margin: 30px 0 0 20px;}
@@ -126,7 +126,7 @@ span{
 		background-size: cover;
 	}
 
-	.logo_inicio_sesion{
+	.logo-inicio-sesion{
 		margin-top:0;
 		
 		background-position: 60px 15px;
