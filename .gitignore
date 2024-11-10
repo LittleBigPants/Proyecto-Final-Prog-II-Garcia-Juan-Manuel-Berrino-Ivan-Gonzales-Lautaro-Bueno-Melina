@@ -63,7 +63,8 @@ Django stuff:
 local_settings.py
 
 Flask stuff:
-instance/
+#NO QUIERO IGNORAR ESTA INFROMACION POR AHORA
+#instance/
 .webassets-cache
 
 Scrapy stuff:
