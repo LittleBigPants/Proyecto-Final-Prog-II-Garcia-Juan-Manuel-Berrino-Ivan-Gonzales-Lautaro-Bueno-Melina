@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/comprar_pelicula.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/comun.css') }}">
+
+
+    <title>FlixFusion</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Tienda FlixFusion</h1>
+    </header>
+
+    <!-- Menu de navegacion -->
+    <nav id="navbar">
+        <ul id="cont-nav">
+            <li id="logo"><a href="{{url_for('auth.content')}}"><img src="/static/img/logo-flix-fusion.png" alt=""></a></li>
+            <li><a href="{{url_for('auth.content')}}"><i class="fas fa-home"></i></a></li>
+            <li><a href="#"><i class="fas fa-search search-icon"></i></a></li>
+            <li id="peliculas"><a href="{{url_for('auth.movies')}}" target="_blank">Comprar Peliculas</a></li>
+            <div class="contenedor-perfil" id="contenedor-perfil">
+            <li id="perfil"><a href="#"><span id="mi-perfil">Mi perfil</span><img src="/static/img/spiderman.jpg" alt="spiderman"></a></li>
+        </div>
+        </ul>
+    </nav>
+
+   <!--  Menu perfil -->
+    <div class="menu-perfil" id="menu-perfil">
+        <div class="header-perfil">
+            <h2>Mi perfil</h2>
+            <img src="/static/img/spiderman.jpg" alt="spiderman" width="45px" height="45px">
+            <span class="cerrar">
+                <i class="fa-solid fa-xmark cerrar_perfil"></i>
+            </span>
+        
+        </div>
+        <div class="contenido-perfil">
+            <ul>
+                <li>Cambiar perfil</li>
+                <li>Cuenta</li>
+                <li>Ayuda</li>
+                <li>Ajustes</li>
+                <li>Cerrar sesión</li>
+            </ul>
+        </div>
+    </div>
+    
+
+    <div class="contenedor_carrito" id="contenedor_carrito">
+        <img src="/static/img/carrito-de-compras.png" alt="Carrito de compras">
+    </div>
+
+    <div class="carrito" id="menu_carrito">
+        <div class="header_carrito">
+            <h3>Contenido del carrito</h3>
+            <i class="fa-solid fa-xmark cerrar_carrito"></i>
+        </div>
+        <div class="carrito_items">
+            <div class="carrito_item">
+                <img src="/static/img/vikingo.jpg" alt="Pelicula The Viking" width="60px" >
+                <div class="carrito_item_detalles">
+                    <span class="carrito_item_titulo">Película The Viking</span>
+                    <div class="seleccion_cantidad">
+                        <i class="fa-solid fa-minus restar_cantidad"></i>
+                        <input type="text" value="1" class="carrito_item_cantidad" disabled>
+                        <i class="fa-solid fa-plus sumar_cantidad"></i>
+                    </div>
+                    <span class="carrito_item_precio">$70.000</span>
+                </div>
+                <span class="btn_eliminar">
+                    <i class="fa-solid fa-trash"></i>
+                </span>
+            </div>
+
+            <div class="carrito_item">
+                <img src="/static/img/e6.jpg" alt="Pelicula Ardilla Vengadora" width="60px">
+                <div class="carrito_item_detalles">
+                    <span class="carrito_item_titulo">Ardilla Vengadora</span>
+                    <div class="seleccion_cantidad">
+                        <i class="fa-solid fa-minus restar_cantidad"></i>
+                        <input type="text" value="1" class="carrito_item_cantidad" disabled>
+                        <i class="fa-solid fa-plus sumar_cantidad"></i>
+                    </div>
+                    <span class="carrito_item_precio">$50.000</span>
+                </div>
+                <span class="btn_eliminar">
+                    <i class="fa-solid fa-trash"></i>
+                </span>
+            </div>
+        </div>
+
+        <div class="carrito_total">
+            <div class="fila">
+                <strong>Tu total</strong>
+                <span class="carrito_precio_final">
+                    $120.000,00
+                </span>
+            </div>
+            <button class="btn_pagar">Pagar<i class="fa-solid fa-bag-shopping"></i></button>
+        </div>
+    </div>
+
+    
+    <div class="container" id="container">
+        <div class="carta">
+            <img src="/static/img/vikingo.jpg" alt="Pelicula The Viking">
+            <div class="informacion">
+                <h2>The Viking</h2>
+                <p>The Viking es una de las peliculas que ha revolucionado a lo largo
+                    de las decadas de los 80 con sus alucinantes peleas y guerras
+                    entre los diferentes reinos que quieren conquistar territorios.
+                </p>
+                <p class="duracion">Duracion: 2h 30m</p>
+                <div class="extra">
+                    <p class="precio">$90.000</p>
+                    <button class="añadir">Añadir al carrito</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="carta">
+            <img src="/static/img/e6.jpg" alt="Pelicula Ardilla Vengadora">
+            <div class="informacion">
+                <h2>Ardilla Vengadora</h2>
+                <p>En un tranquilo vecindario, una ardilla astuta y valiente, llamada Chispa,
+                    se convierte en la heroína inesperada cuando un nuevo vecino, un hombre egoísta
+                    y destructivo, comienza a talar árboles y arruinar su hogar
+                </p>
+                <p class="duracion">Duracion: 1h 40m</p>
+                <div class="extra">
+                    <p class="precio">$50.000</p>
+                    <button class="añadir">Añadir al carrito</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="carta">
+            <img src="/static/img/ra5.jpg" alt="Pelicula La Última Abduccion">
+            <div class="informacion">
+                <h2>La Última Abducción</h2>
+                <p>Tras un encuentro cercano, una mujer es secuestrada por extraterrestres y llevada a su nave. En lugar de ser una víctima, 
+                    descubre que tiene un papel clave en la salvación de su raza y de la humanidad misma.
+                </p>
+                <p class="duracion">Duracion: 1h 40m</p>
+                <div class="extra">
+                    <p class="precio">$80.000</p>
+                    <button class="añadir">Añadir al carrito</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="carta">
+            <img src="/static/img/pareja.jpg" alt="Pelicula Cartas de Amor">
+            <div class="informacion">
+                <h2>Cartas de Amor</h2>
+                <p>Una mujer encuentra cartas de amor de su madre dirigidas a un desconocido. 
+                    Decidida a descubrir la historia detrás de estas cartas, se embarca en un viaje que la 
+                    lleva a encontrar su propio amor.
+                </p>
+                <p class="duracion">Duracion: 1h 10m</p>
+                <div class="extra">
+                    <p class="precio">$45.000</p>
+                    <button class="añadir">Añadir al carrito</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="carta">
+            <img src="/static/img/s1.jpg" alt="Pelicula Un Ángel en Apuros">
+            <div class="informacion">
+                <h2>Un Ángel en Apuros</h2>
+                <p>Un ángel observa a una mujer solitaria y decide ayudarla a encontrar el amor. 
+                    Sus intentos de mejorar sus citas se convierten en un caos hilarante, pero en el proceso, 
+                    descubre el verdadero significado del amor.
+                </p>
+                <p class="duracion">Duracion: 1h 25m</p>
+                <div class="extra">
+                    <p class="precio">$55.000</p>
+                    <button class="añadir">Añadir al carrito</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="carta">
+            <img src="/static/img/e7.jpg" alt="Pelicula Marcados">
+            <div class="informacion">
+                <h2>Marcados</h2>
+                <p>En una ciudad en la que las personas comienzan a aparecer con un extraño código en la espalda, 
+                    una periodista investiga el fenómeno. Cuanto más se adentra en la verdad, más se da cuenta 
+                    de que su propia vida está en peligro.
+                </p>
+                <p class="duracion">Duracion: 2h 40m</p>
+                <div class="extra">
+                    <p class="precio">$100.000</p>
+                    <button class="añadir">Añadir al carrito</button>
+                </div>
+            </div>
+        </div>
+        <div class="carta">
+            <img src="/static/img/ra6.jpg" alt="Pelicula Triángulo de Espías">
+            <div class="informacion">
+                <h2> Triángulo de Espías</h2>
+                <p>Tres agentes de la CIA, cada uno con habilidades únicas, son asignados a una misión de alto riesgo. 
+                    A medida que trabajan juntos, surgen tensiones entre ellos, 
+                    complicando la misión y poniendo en juego su lealtad.
+                </p>
+                <p class="duracion">Duracion: 2h 10m</p>
+                <div class="extra">
+                    <p class="precio">$85.000</p>
+                    <button class="añadir">Añadir al carrito</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="carta">
+            <img src="/static/img/ra1.jpg" alt="Pelicula Rutas de Huida">
+            <div class="informacion">
+                <h2>Rutas de Huida</h2>
+                <p>Un joven soldado se encuentra atrapado en un conflicto y decide desertar. 
+                    En su viaje para escapar de la guerra, se une a un grupo de civiles que 
+                    intentan cruzar fronteras, enfrentando juntos los horrores del conflicto.
+                </p>
+                <p class="duracion">Duracion: 2h 05m</p>
+                <div class="extra">
+                    <p class="precio">$82.000</p>
+                    <button class="añadir">Añadir al carrito</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="carta">
+            <img src="/static/img/s6.jpg" alt="Pelicula El Cientñifico Chiflado">
+            <div class="informacion">
+                <h2>El Científico Chiflado</h2>
+                <p> Un científico loco crea un dispositivo que convierte armas en juguetes 
+                    en medio de un conflicto bélico. Mientras sus colegas intentan detenerlo, 
+                    él solo quiere demostrar que la risa puede ganar la guerra.
+                </p>
+                <p class="duracion">Duracion: 1h 50m</p>
+                <div class="extra">
+                    <p class="precio">$75.000</p>
+                    <button class="añadir">Añadir al carrito</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="carta">
+            <img src="/static/img/s4.jpg" alt="Pelicula El Último Verano">
+            <div class="informacion">
+                <h2>El Último Verano</h2>
+                <p>Durante su último verano juntos antes de la universidad, un grupo de amigos explora el amor ,la amistad, 
+                    y el temor de enfrentárse contra decisiones que cambiarán sus vidas para siempre.
+                </p>
+                <p class="duracion">Duracion: 1h 35m</p>
+                <div class="extra">
+                    <p class="precio">$60.000</p>
+                    <button class="añadir">Añadir al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Pie de pagina -->
+    <footer>
+        <div class="footer-contacto">
+            <p>¿Preguntas? Llama al <a href="">0341 411 2004</a></p>
+        </div>
+        <div class="footer-links">
+            <div class="contenido-links">
+                <div id="elemento1">
+                    <a href="">Preguntas Frecuentes</a>
+                </div>
+                <div id="elemento2">
+                    <a href="">Centro de ayuda</a>
+                </div>
+                <div id="elemento3">
+                    <a href="">Términos de uso</a>
+                </div>
+                <div id="elemento4">
+                    <a href="">Privacidad</a>
+                </div>
+                <div id="elemento5">
+                    <a href="">Preferencias de cookies</a>
+                </div>
+                <div id="elemento6">
+                    <a href="">Información Corporativa</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-lenguaje">
+            <select>
+                <option value="es">Español</option>
+                <option value="en">English</option>
+            </select>
+        </div>
+    </footer>
+    <script src="{{ url_for('static', filename='js/perfil.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/carrito.js') }}"></script>
+</body>
+
+</html>

@@ -41,15 +41,8 @@ h1 {color: rgb(18, 159, 152);}
     border-radius: 4px;
 }
 
-.input-error {
-    border: 3px solid red; /* Borde rojo para errores */
-    background-color: #fdd; /* Color de fondo claro */
-}
 
-.input-success {
-    border: 3px solid green; /* Borde verde para éxito */
-    background-color: #dfd; /* Color de fondo claro */
-}
+
 
 
 
