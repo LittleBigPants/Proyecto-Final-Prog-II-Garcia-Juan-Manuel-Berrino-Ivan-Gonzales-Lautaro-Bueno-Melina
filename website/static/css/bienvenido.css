@@ -1,11 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
 /* Maquetado celular */
 
 body{
     background-color:#1c1c1c;
     height: auto;
+    font-family: "Poppins", sans-serif;
 }
 
 /* Contenido principal */
+
 .inicio{
     width: 100%;
     height: auto;
@@ -15,9 +19,12 @@ body{
     align-items: center;
     text-align: center;
     margin-top: 250px;
-    color: rgb(18, 159, 152)
+    color: rgb(18, 159, 152);
+    background: rgb(2, 0, 36);
+    background: linear-gradient(180deg, rgba(50,222,191,1) 17%, rgba(28,179,165,1) 49%, rgba(18,159,152,1) 60%, rgba(42,122,118,1) 90%);
+    background-clip: text;
+    color: transparent;
 }
-
 
 .inicio a{
     text-decoration: none;
@@ -28,7 +35,7 @@ body{
 }
 
 
-.inicio a:hover{text-decoration: underline;}
+.inicio a:hover{transform: scale(1.1);}
 
 /* Maquetado tablet y escritorio se adapta igual a los dos
 por eso no hacemos un media query para escritorio*/
