@@ -412,109 +412,108 @@ simulador de celular no se puede */
 	}
 
 
-	/* ---- ----- ----- Contenedor Titulo y Controles ----- ----- ----- */
-	.contenedor-titulo-controles {
-		display: flex;
-		justify-content: space-between;
-		align-items: end;
-	}
+/* ---- ----- ----- Contenedor Titulo y Controles ----- ----- ----- */
+.contenedor-titulo-controles {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
 
-	.contenedor-titulo-controles h3 {
-		color: #fff;
-		font-size: 30px;
-	}
+.contenedor-titulo-controles h3 {
+    color: #fff;
+    font-size: 30px;
+}
 
-	.contenedor-titulo-controles .indicadores button {
-		background: #fff;
-		height: 3px;
-		width: 10px;
-		cursor: pointer;
-		border: none;
-		margin-right: 2px;
-	}
+.contenedor-titulo-controles .indicadores button {
+    background: #fff;
+    height: 3px;
+    width: 10px;
+    cursor: pointer;
+    border: none;
+    margin-right: 2px;
+}
 
-	.contenedor-titulo-controles .indicadores button:hover,
-	.contenedor-titulo-controles .indicadores button.activo {
-		background: rgb(18, 159, 152);
-	}
+.contenedor-titulo-controles .indicadores button:hover,
+.contenedor-titulo-controles .indicadores button.activo {
+    background: rgb(18, 159, 152);
+}
 
-	/* ---- ----- ----- Contenedor Principal y Flechas ----- ----- ----- */
+/* ---- ----- ----- Contenedor Principal y Flechas ----- ----- ----- */
+.flecha-izquierda,
+.flecha-derecha {
+    display: block;
+}
+.peliculas-tipo {
+    margin-bottom: 70px;
+}
 
-    .flecha-izquierda,
-	.flecha-derecha {
-		display: block;
-	}
-	.peliculas-tipo {
-		margin-bottom: 70px;
-	}
+.peliculas-tipo .contenedor-principal {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
 
-	.peliculas-tipo .contenedor-principal {
-		display: flex;
-		align-items: center;
-		position: relative;
-	}
+.peliculas-tipo .contenedor-principal .flecha-izquierda,
+.peliculas-tipo .contenedor-principal .flecha-derecha {
+    position: absolute;
+    border: none;
+    background: rgba(0, 0, 0, 0.3);
+    font-size: 40px;
+    height: 50%;
+    top: calc(50% - 25%);
+    line-height: 40px;
+    width: 50px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 500;
+    transition: 0.2s ease all;
+}
 
-	.peliculas-tipo .contenedor-principal .flecha-izquierda,
-	.peliculas-tipo .contenedor-principal .flecha-derecha {
-		position: absolute;
-		border: none;
-		background: rgba(0, 0, 0, 0.3);
-		font-size: 40px;
-		height: 50%;
-		top: calc(50% - 25%);
-		line-height: 40px;
-		width: 50px;
-		color: #fff;
-		cursor: pointer;
-		z-index: 500;
-		transition: 0.2s ease all;
-	}
+.peliculas-tipo .contenedor-principal .flecha-izquierda:hover,
+.peliculas-tipo .contenedor-principal .flecha-derecha:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
 
-	.peliculas-tipo .contenedor-principal .flecha-izquierda:hover,
-	.peliculas-tipo .contenedor-principal .flecha-derecha:hover {
-		background: rgba(0, 0, 0, 0.9);
-	}
+.peliculas-tipo .contenedor-principal .flecha-izquierda {
+    left: 0;
+}
 
-	.peliculas-tipo .contenedor-principal .flecha-izquierda {
-		left: 0;
-	}
+.peliculas-tipo .contenedor-principal .flecha-derecha {
+    right: 0;
+}
 
-	.peliculas-tipo .contenedor-principal .flecha-derecha {
-		right: 0;
-	}
+/* ---- ----- ----- Carousel ----- ----- ----- */
+.peliculas-tipo .contenedor-carousel {
+    width: 100%;
+    padding: 20px 0;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
 
-	/* ---- ----- ----- Carousel ----- ----- ----- */
-	.peliculas-tipo .contenedor-carousel {
-		width: 100%;
-		padding: 20px 0;
-		overflow: hidden;
-		scroll-behavior: smooth;
-	}
+.peliculas-tipo .contenedor-carousel .carousel {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1%;
+}
 
-	.peliculas-tipo .contenedor-carousel .carousel {
-		display: flex;
-		flex-wrap: nowrap;
-		gap: 1%;
-	}
+.peliculas-tipo .contenedor-carousel .carousel .pelicula {
+    transition: 0.3s ease all;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    height: 340px;
+    border-radius: 4px;
+}
 
-	.peliculas-tipo .contenedor-carousel .carousel .pelicula {
-		transition: 0.3s ease all;
-		box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-		width: 300px;
-		height: 340px;
-		border-radius: 4px;
-	}
+.peliculas-tipo .contenedor-carousel .carousel .pelicula.hover {
+    transform: scale(1.2);
+    transform-origin: center;
+}
 
-	.peliculas-tipo .contenedor-carousel .carousel .pelicula.hover {
-		transform: scale(1.2);
-		transform-origin: center;
-	}
-
-	.peliculas-tipo .contenedor-carousel .carousel .pelicula img {
-		width: 100%;
-		vertical-align: top;
-		width: 300px;
-		height: 340px;
-		border-radius: 4px;
-	}
+.peliculas-tipo .contenedor-carousel .carousel .pelicula img {
+    width: 100%;
+    vertical-align: top;
+    height: 340px;
+	width: 300px;
+    border-radius: 4px;
+}
 }

@@ -7,11 +7,12 @@ async function fetchCategories() {
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
-         categories = await response.json();
+        categories = await response.json();
     } catch (error) {
         console.error('Fetch error:', error);
     }
 }
+
 async function fetchMovies() {
     try {
         const response = await fetch('/api/movies');
@@ -19,17 +20,13 @@ async function fetchMovies() {
             throw new Error('Network response was not ok');
         }
         movies = await response.json();
-
     } catch (error) {
         console.error('Fetch error:', error);
     }
 }
 
+async function inicializarData() {
+    await Promise.all([fetchCategories(), fetchMovies()]);
+}
 
-fetchCategories()
-fetchMovies()
-
-console.log("Categorías:", categories);
-console.log("Películas:", movies);
-
-export { categories, movies, fetchCategories, fetchMovies };
+export { categories, movies, inicializarData };
