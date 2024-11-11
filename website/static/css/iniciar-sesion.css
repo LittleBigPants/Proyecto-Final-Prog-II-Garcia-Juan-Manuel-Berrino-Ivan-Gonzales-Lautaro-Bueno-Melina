@@ -3,9 +3,10 @@ body{
 	width: 100%;
 	height: auto;
 	background-color: #1c1c1c;
+	font-family: Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
 }
 
- main{
+main{
 	width: 100%;
 	height: auto;
 } 
@@ -16,7 +17,7 @@ body{
     background-repeat:no-repeat;
     background-position: -23px center;
     background-size: contain;
-    height: 70px;
+    height: 85px;
     margin-bottom: 10px;
 }
 
@@ -101,6 +102,7 @@ span{
 	height: 45px;
 	background-color: rgb(18, 159, 152);
 	border: none;
+	font-size: 16px;
 }
 
 
@@ -111,7 +113,16 @@ span{
 	border: 1px solid;
 }
 
-
+.language-selector {
+    position: relative;
+    background-color: #1a1919;
+    color: white;
+    border: 1px solid #555;
+    border-radius: 4px;
+    padding: 6px 14px;
+    cursor: pointer;
+    font-size: 14px;
+}
 
 /*Maquetado tablet*/
 @media (min-width:768px){
