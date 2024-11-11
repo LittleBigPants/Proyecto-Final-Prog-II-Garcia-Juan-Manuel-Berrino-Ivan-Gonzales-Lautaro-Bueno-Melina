@@ -7,6 +7,7 @@ body {
 	width: 100%;
 	height: auto;
 	background-color: #1c1c1c;
+	font-family: Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
 }
 h2,
 h3,
@@ -22,6 +23,11 @@ h4 {
 .hr {
 	background-color: rgba(66, 62, 62, 0.185);
 	margin-top: 30px;
+}
+
+#logo img {
+	width: 75px;  
+    height: auto; 
 }
 
 /* Estilos para que las imagenes vayan pasando. Maquetado por
@@ -180,7 +186,7 @@ ahora solo en celular */
 	text-align: center;
 	font-weight: 600;
 	line-height: 50px;
-	background: #221d1d;
+	background: linear-gradient(135deg, #14213d 0%, #1e2a47 60%, #4a6d8c 100%);
 }
 
 .clases-categorias:hover {

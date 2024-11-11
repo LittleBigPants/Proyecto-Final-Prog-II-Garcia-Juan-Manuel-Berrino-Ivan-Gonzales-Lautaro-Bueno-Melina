@@ -19,7 +19,7 @@ html{
     width: 100%;
     height: 60px;
     /* background-color: #07060e; */
-    background-color: #3e10a8;
+    background: linear-gradient(135deg, #14213d 0%, #1e2a47 60%, #4a6d8c 100%);
     position: fixed;
     bottom: 0;
     left: 0;
@@ -39,9 +39,11 @@ html{
     display: none;
 }
 
-#peliculas{
-    display: none;
-}
+#peliculas { display: none; } 
+#peliculas a { text-decoration: none !important;} 
+#peliculas a:hover { text-decoration: none !important;
+color: rgb(153, 224, 221); }
+
 
 #perfil{
     height: 50px;
@@ -67,7 +69,7 @@ html{
 /* Estilos a los iconos de font awesome */
 
 #cont-nav i{
-    color: rgb(18, 159, 152);
+    color: rgb(153, 224, 221);
 }
 
 #cont-nav i:hover{
