@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, url_for, request, flash, redirect, jsonify
+from flask import Flask,Blueprint, render_template, url_for, request, flash, redirect, jsonify
 from flask_login import login_user, login_required, logout_user, current_user
 from .models import User, Movie, Category
 from website import db  # Importamos db desde el paquete 'website'
@@ -97,3 +97,6 @@ def get_categories():
     categories = Category.query.all()
     result = [{'id': c.id, 'name': c.name, 'description': c.description} for c in categories]
     return jsonify(result)
+
+
+
