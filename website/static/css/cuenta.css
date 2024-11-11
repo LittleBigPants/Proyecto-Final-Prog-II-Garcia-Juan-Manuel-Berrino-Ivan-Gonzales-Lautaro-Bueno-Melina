@@ -1,12 +1,112 @@
-body{
-    background-color: #1c1c1c;
-}
-
-.container{
+body {
     display: flex;
     justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #1c1c1c !important;
+    color: white;
+}
+
+.container {
+    display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    height: 70vh;
+    background: linear-gradient(135deg, #14213d 0%, #1e2a47 60%, #4a6d8c 100%);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 90%;
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 300px; 
+        padding: 15px; 
+    }
+
+    h1 {
+        font-size: 1.6em; 
+    }
+
+    h2 {
+        font-size: 1.2em; 
+    }
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+h1 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.3em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.profile-section img {
+    border-radius: 50%;
+    margin: 10px 0;
+}
+
+.form-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.form-upload label {
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+.form-upload input[type="file"] {
+    color: #ccc;
+    background: linear-gradient(135deg, #14213d 0%, #1e2a47 60%, #4a6d8c 100%);
+    padding: 5px;
+    border-radius: 4px;
+    width: 100%; 
+    box-sizing: border-box; 
+    max-width: 280px; 
+}
+
+.form-upload button {
+    background-color: rgb(153, 224, 221); 
+    color: black;
+    padding: 14px 22px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+.form-upload input[type="file"] {
+    max-width: 100%; 
+}
+
+.form-upload button:hover {
+    background-color: white;
+    color: #1c1c1c;
+}
+
+.logout {
+    color: #ffffff;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: color 0.3s;
+    font-weight: bold;
+}
+
+.logout:hover {
+    color:black;
 }
