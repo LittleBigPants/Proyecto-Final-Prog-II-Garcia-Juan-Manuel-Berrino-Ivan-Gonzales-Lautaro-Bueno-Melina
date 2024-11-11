@@ -3,6 +3,7 @@ from flask_sqlalchemy import SQLAlchemy  # Facilita la conexión y operación co
 from os import path
 from flask_migrate import Migrate
 from flask_login import LoginManager
+import os
 
 db = SQLAlchemy()  # Creamos un objeto para interactuar con la base de datos
 migrate = Migrate()
@@ -12,6 +13,8 @@ def create_app():
     app = Flask(__name__)  # Instancia de la aplicación Flask
     app.config['SECRET_KEY'] = 'proyecto-final'
     app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'  # Configura la URI de la base de datos
+    app.config['UPLOAD_FOLDER'] = os.path.join(app.root_path, 'static', 'img') #Carpeta para las img de perfil
+    app.config['ALLOWED_EXTENSION'] = {'png', 'jpg', 'jpeg', 'gif'} #Archivos de imagenes permitidos
     db.init_app(app)  # Inicializamos la base de datos
     migrate.init_app(app, db)
 
@@ -34,7 +37,7 @@ def create_app():
     @login_manager.user_loader
     def load_user(user_id):
         return User.query.get(int(user_id))
-
+    
     return app
 
 def create_database():

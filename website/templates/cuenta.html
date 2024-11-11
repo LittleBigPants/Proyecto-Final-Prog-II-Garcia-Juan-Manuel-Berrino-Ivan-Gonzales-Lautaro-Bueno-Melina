@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/comun.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cuenta.css') }}">
+    <title>FlixFusion</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Perfil de {{user.first_name}} {{user.last_name}} </h1>
+        <p>Email:{{user.email}} </p>
+        <h2>Imagen actual:</h2>
+        <img src="{{ url_for('static', filename='img/' + (current_user.image_file or 'spiderman.jpg')) }}" alt="Imagen de perfil" width="150">
+        <form action="{{ url_for('auth.account') }}" method="POST" enctype="multipart/form-data">
+            <label for="imagen">Sube una nueva imagen de perfil:</label>
+            <input type="file" name="imagen" id="imagen" accept="image/*">
+            <button type="submit">Actualizar Imagen</button>
+        </form>
+    
+
+        <a href="{{url_for('auth.login')}} ">Cerrar Sesión</a>
+    </div>
+</body>
+</html>

@@ -15,6 +15,7 @@ class User(db.Model, UserMixin):
     last_name = db.Column(db.String(50))
     email = db.Column(db.String(150), unique=True)
     password = db.Column(db.String(150))
+    image_file = db.Column(db.String(200), default='spiderman.jpg')
     notes = db.relationship('Note')
 
 class Category(db.Model):

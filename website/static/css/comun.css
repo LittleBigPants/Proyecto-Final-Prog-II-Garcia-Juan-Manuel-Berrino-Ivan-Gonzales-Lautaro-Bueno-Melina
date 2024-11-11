@@ -54,8 +54,6 @@ color: rgb(153, 224, 221); }
 } 
 
 
-
-
 #perfil img{
     width: 45px;
     height: 45px;
@@ -153,10 +151,15 @@ color: rgb(153, 224, 221); }
 .contenido-perfil ul li{
     font-family: 'Times New Roman', Times, serif;
     padding: 10px;
+    cursor: pointer;
 }
 
 .contenido-perfil ul li:hover{
     text-decoration: underline;
+}
+
+.contenido-perfil ul li a{
+    color: #fff;
 }
 
 
