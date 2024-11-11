@@ -1,8 +1,10 @@
-from flask import Flask,Blueprint, render_template, url_for, request, flash, redirect, jsonify
+from flask import Flask,Blueprint, render_template, url_for, request, flash, redirect, current_app, jsonify
 from flask_login import login_user, login_required, logout_user, current_user
 from .models import User, Movie, Category
 from website import db  # Importamos db desde el paquete 'website'
+import os
 from werkzeug.security import generate_password_hash, check_password_hash
+from werkzeug.utils import secure_filename
 
 auth = Blueprint('auth', __name__)
 
@@ -84,7 +86,7 @@ def suscripcion():
     return render_template("suscripcion.html")
 
 
-# Nueva ruta para obtener todas las películas
+
 @auth.route('/api/movies', methods=['GET'])
 def get_movies():
     movies = Movie.query.all()
@@ -96,7 +98,48 @@ def get_movies():
 def get_categories():
     categories = Category.query.all()
     result = [{'id': c.id, 'name': c.name, 'description': c.description} for c in categories]
-    return jsonify(result)
+    return jsonify(result) 
+
+
+@auth.route('/cuenta', methods=['GET', 'POST'])
+@login_required
+def account():
+    if request.method == 'POST':
+        # Verificar si el formulario tiene un archivo de imagen
+        if 'imagen' not in request.files:
+            flash('No se seleccionó ninguna imagen.', category='error')
+            return redirect(url_for('auth.account'))
+
+        imagen = request.files['imagen'] #Obtenemos la imagen enviada
+
+        # Verificar si el archivo tiene un nombre válido
+        if imagen.filename == '':
+            flash('No se seleccionó ningún archivo.', category='error')
+            return redirect(url_for('auth.account'))
+
+        # Verificar que el archivo sea una imagen válida
+        if imagen and allowed_file(imagen.filename): #Allowed es una funcion que verifica si el nombre del archivo tiene unaa extension valida
+            filename = secure_filename(imagen.filename)
+            
+            # Guardar el archivo en el servidor
+            imagen.save(os.path.join(current_app.config['UPLOAD_FOLDER'], filename))
+            
+            # Actualizar la imagen en la base de datos
+            current_user.image_file = filename
+            db.session.commit()
+            
+            flash('Imagen de perfil actualizada correctamente.', category='success')
+        else:
+            flash('Archivo no válido. Asegúrate de que sea una imagen (png, jpg, jpeg, gif).', category='error')
+
+    return render_template('cuenta.html', user=current_user)
+
+# Función para verificar si el archivo tiene una extensión permitida
+def allowed_file(filename):
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in {'png', 'jpg', 'jpeg', 'gif'} #Verifica que el archivo tenga un punto
+
+
+
 
 
 
