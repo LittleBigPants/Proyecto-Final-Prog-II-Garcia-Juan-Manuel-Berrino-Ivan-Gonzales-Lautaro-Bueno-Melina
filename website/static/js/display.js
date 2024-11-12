@@ -1,6 +1,8 @@
 function displayCategories(categories) {
     const container = document.querySelector('.principales');
     container.innerHTML = ''; 
+    const categoriesSelection = document.querySelector('.container');
+    categoriesSelection.innerHTML = ''; 
 
     categories.forEach(category => {
         const categorieElement = document.createElement('div');
@@ -21,8 +23,15 @@ function displayCategories(categories) {
             </div>
         `;
         container.appendChild(categorieElement);
+        
+        const categoriesButton = document.createElement('div');
+        categoriesButton.classList.add('clases-categorias');
+        categoriesButton.innerHTML = `<h3>${category.name}</h3>`
+        
+        categoriesSelection.appendChild(categoriesButton);
     });
 }
+
 
 function displayMovies(movies) {
     movies.forEach(movie => {
@@ -31,12 +40,18 @@ function displayMovies(movies) {
             const movieElement = document.createElement('div');
             movieElement.classList.add('pelicula');
             movieElement.innerHTML = `
-                <a href="#"><img src="${movie.image_url}" alt="${movie.title}"></a>
+                <a href="#"><img src="${movie.image_url}" alt="${movie.title}" class="img-button" id="${movie.id}"></a>
             `;
             categoryCarousel.appendChild(movieElement);
         }
     });
+
+
+    
 }
+
+
+
 
 
 export {displayMovies, displayCategories};
