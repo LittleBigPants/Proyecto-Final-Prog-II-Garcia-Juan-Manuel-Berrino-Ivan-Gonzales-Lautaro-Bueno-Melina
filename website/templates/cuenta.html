@@ -16,40 +16,40 @@
             <li id="logo"><a href="{{url_for('views.content')}}"><img src="/static/img/logo-flix-fusion.png" alt=""></a></li>
             <li><a href="{{url_for('views.content')}}"><i class="fas fa-home"></i></a></li>
             <li><a href="#"><i class="fas fa-search search-icon"></i></a></li>
+            <!--<li id="peliculas"><a href="{{url_for('views.movies')}}" target="_blank">Comprar Peliculas</a></li>-->
             <li><a href=" {{url_for('views.movies')}}"><i class="fa-solid fa-bag-shopping"></i></a></li>
             <div class="contenedor-perfil" id="contenedor-perfil">
             <!-- <li id="perfil"><a href="#"><span id="mi-perfil">Mi perfil</span><img src="/static/img/spiderman.jpg" alt="spiderman"></a></li> -->
             <li id="perfil">
                 <a href="#">
-                    <span id="mi-perfil">Mi perfil</span>
+                    <span id="mi-perfil">{{user.first_name}} {{user.last_name}}</span>
                     <!-- Mostrar la imagen de perfil -->
                     <img src="{{ url_for('static', filename='img/' + (current_user.image_file or 'spiderman.jpg')) }}" alt="Imagen de perfil" width="40" height="40">
-
                 </a>
             </li>
         </div>
         </ul>
     </nav>
-    <!--  Menu perfil -->
-    <div class="menu-perfil" id="menu-perfil">
-        <div class="header-perfil">
-            <h2>Mi perfil</h2>
-            <img src="{{ url_for('static', filename='img/' + (current_user.image_file or 'spiderman.jpg')) }}" alt="Imagen de perfil" width="45" height="45">
-            <span class="cerrar">
-                <i class="fa-solid fa-xmark cerrar_perfil"></i>
-            </span>
-        
-        </div>
-        <div class="contenido-perfil">
-            <ul>
-                <li>Cambiar perfil</li>
-                <li> <a href="{{url_for('views.account')}} ">Cuenta</a></li>
-                <li>Ayuda</li>
-                <li>Ajustes</li>
-                <li><a href="{{url_for('auth.logout')}} ">Cerrar sesión</a></li>
-            </ul>
-        </div>
+<!--  Menu perfil -->
+<div class="menu-perfil" id="menu-perfil">
+    <div class="header-perfil">
+        <h2>{{user.first_name}} {{user.last_name}}</h2>
+        <img src="{{ url_for('static', filename='img/' + (current_user.image_file or 'spiderman.jpg')) }}" alt="Imagen de perfil" width="45" height="45">
+        <span class="cerrar">
+            <i class="fa-solid fa-xmark cerrar_perfil"></i>
+        </span>
+    
     </div>
+    <div class="contenido-perfil">
+        <ul>
+            <li>Cambiar perfil</li>
+            <li> <a href="{{url_for('views.account')}} ">Cuenta</a></li>
+            <li>Ayuda</li>
+            <li>Ajustes</li>
+            <li><a href="{{url_for('auth.logout')}} ">Cerrar sesión</a></li>
+        </ul>
+    </div>
+</div>
     <div class="container">
         <h1>Perfil de {{user.first_name}} {{user.last_name}}</h1>
         <p>Email: {{user.email}}</p>
@@ -67,39 +67,64 @@
             <a href="{{ url_for('auth.login') }}" class="logout">Cerrar Sesión</a>
         </div>
     </div>
-    <footer>
-        <div class="footer-contacto">
-            <p>¿Preguntas? Llama al <a href="">0341 411 2004</a></p>
-        </div>
-        <div class="footer-links">
-            <div class="contenido-links">
-                <div id="elemento1">
-                    <a href="">Preguntas Frecuentes</a>
-                </div>
-                <div id="elemento2">
-                    <a href="">Centro de ayuda</a>
-                </div>
-                <div id="elemento3">
-                    <a href="">Términos de uso</a>
-                </div>
-                <div id="elemento4">
-                    <a href="">Privacidad</a>
-                </div>
-                <div id="elemento5">
-                    <a href="">Preferencias de cookies</a>
-                </div>
-                <div id="elemento6">
-                    <a href="">Información Corporativa</a>
-                </div>
+   <!-- Pie de pagina -->
+   <footer>
+    <div class="redes">
+        <h3>Nuestras redes:</h3>
+    <div class="social">
+        <a class="instagram"
+            href="https://instagram.com"
+            title="Seguinos en instagram"
+            target="_blank">
+        </a>
+        <a class="twitter"
+            href="https://twitter.com"
+            title="Seguinos en twitter"
+            target="_blank">
+        </a>
+        <a class="github"
+            href="https://github.com/c215714n/EducacionIT/tree/html-xv14"
+            title="Seguinos en github"
+            target="_blank">
+        </a>
+    </div>
+</div>
+    <div class="container-footer">
+    <div class="footer-contacto">
+        <p>¿Preguntas? Llama al <a href="">0341 411 2004</a></p>
+    </div>
+    <div class="footer-links">
+        <div class="contenido-links">
+            <div id="elemento1">
+                <a href="">Preguntas Frecuentes</a>
+            </div>
+            <div id="elemento2">
+                <a href="">Centro de ayuda</a>
+            </div>
+            <div id="elemento3">
+                <a href="">Términos de uso</a>
+            </div>
+            <div id="elemento4">
+                <a href="">Privacidad</a>
+            </div>
+            <div id="elemento5">
+                <a href="">Preferencias de cookies</a>
+            </div>
+            <div id="elemento6">
+                <a href="">Información Corporativa</a>
             </div>
         </div>
-        <div class="footer-lenguaje">
-            <select class="language-selector">
-                <option value="es">Español</option>
-                <option value="en">English</option>
-            </select>
-        </div>
-    </footer>
+    </div>
+    <div class="footer-lenguaje">
+        <select class="language-selector">
+            <option value="es">Español</option>
+            <option value="en">English</option>
+        </select>
+    </div>
+</div>
+</div>
+
+</footer>
 <script src="{{ url_for('static', filename='js/perfil.js') }}"></script>
 </body>
 </html>
