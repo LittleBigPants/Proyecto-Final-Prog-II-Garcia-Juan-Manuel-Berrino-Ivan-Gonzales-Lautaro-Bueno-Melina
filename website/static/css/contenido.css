@@ -193,6 +193,10 @@ ahora solo en celular */
 	box-shadow: 0 2px 4px rgb(255, 255, 255);
 }
 
+.clases-categorias a { color: inherit; 
+	text-decoration: none; 
+} 
+
 .principales {
 	margin-top: 35px;
 }

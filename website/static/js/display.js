@@ -7,6 +7,7 @@ function displayCategories(categories) {
     categories.forEach(category => {
         const categorieElement = document.createElement('div');
         categorieElement.classList.add('peliculas-tipo');
+        categorieElement.id = `section-${category.name}`; // Agrega un id único
         categorieElement.innerHTML = `
             <div class="contenedor-titulo-controles">
                 <h4>${category.name}</h4>
@@ -23,15 +24,14 @@ function displayCategories(categories) {
             </div>
         `;
         container.appendChild(categorieElement);
-        
+
         const categoriesButton = document.createElement('div');
         categoriesButton.classList.add('clases-categorias');
-        categoriesButton.innerHTML = `<h3>${category.name}</h3>`
-        
+        categoriesButton.innerHTML = `<h3><a href="#section-${category.name}">${category.name}</a></h3>`; // Agrega un enlace de anclaje
+
         categoriesSelection.appendChild(categoriesButton);
     });
 }
-
 
 function displayMovies(movies) {
     movies.forEach(movie => {
@@ -45,13 +45,6 @@ function displayMovies(movies) {
             categoryCarousel.appendChild(movieElement);
         }
     });
-
-
-    
 }
 
-
-
-
-
-export {displayMovies, displayCategories};
+export { displayMovies, displayCategories };
