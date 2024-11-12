@@ -13,24 +13,52 @@
         <p id="descripcion">Ingrese sus datos correspondientes.</p>
         <form id="formulario" action="{{ url_for('auth.sign_up') }}" method="post">
             <div class="form-group">
-                <input type="text" placeholder="Nombre" name="firstName" id="nombre">
-                <p id="errorNombre" class="error-message"></p>
+                <input type="text" placeholder="Nombre" name="first_name" id="nombre"  value ="{{ request.form.get('first_name', '') }}">
+                {% if form.first_name.errors %}
+                    {% for error in form.first_name.errors %}
+                        <p class="text-danger">{{ error }}</p>
+                    {% endfor %}
+                {% endif %}
             </div>
             <div class="form-group">
-                <input type="text" placeholder="Apellido" name="lastName" id="apellido">
-                <p id="errorApellido" class="error-message"></p>
+                <input type="text" placeholder="Apellido" name="last_name" id="apellido"  value ="{{ request.form.get('last_name', '') }}">
+                {% if form.last_name.errors %}
+                    {% for error in form.last_name.errors %}
+                        <p class="text-danger">{{ error }}</p>
+                    {% endfor %}
+            {% endif %}
             </div>
             <div class="form-group">
-                <input type="email" placeholder="Email" name="email" id="email">
-                <p id="errorEmail" class="error-message"></p>
+                <input type="email" placeholder="Email" name="email" id="email" value ="{{ request.form.get('email', '') }}">
+                {% if form.email.errors %}
+                    {% for error in form.email.errors %}
+                        <p class="text-danger">{{ error }}</p>
+                    {% endfor %}
+            {% endif %}
+
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% for category, message in messages %}
+                    {% if category == 'email_error' %}
+                        <p class="text-danger">{{ message }}</p>
+                    {% endif %}
+                {% endfor %}
+            {% endwith %}
             </div>
             <div class="form-group">
-                <input type="password" placeholder="Contraseña" name="password1" id="contraseña">
-                <p id="errorContraseña" class="error-message"></p>
+                <input type="password" placeholder="Contraseña" name="password1" id="contraseña"  value ="{{ request.form.get('password1', '') }}">
+                {% if form.password1.errors %}
+                    {% for error in form.password1.errors %}
+                        <p class="text-danger">{{ error }}</p>
+                {% endfor %}
+            {% endif %}
             </div>
             <div class="form-group">
-                <input type="password" placeholder="Repetir contraseña" name="password2" id="contraseña2">
-                <p id="errorContraseña2" class="error-message"></p>
+                <input type="password" placeholder="Repetir contraseña" name="password2" id="contraseña2" value ="{{ request.form.get('password2', '') }}">
+                {% if form.password2.errors %}
+                    {% for error in form.password2.errors %}
+                        <p class="text-danger">{{ error }}</p>
+                    {% endfor %}
+                {% endif %}
             </div>
             <input id="btn" type="submit" value="Registrarse">
         </form>

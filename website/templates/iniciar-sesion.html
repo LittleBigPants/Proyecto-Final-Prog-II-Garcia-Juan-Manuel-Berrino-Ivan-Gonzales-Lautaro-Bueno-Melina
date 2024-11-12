@@ -14,12 +14,38 @@
         <header class="logo-inicio-sesion"></header>
         <!-- Login Inicio de sesion -->
         <div id="login">
-            <form id="formulario" action="{{ url_for('auth.login') }}" method="post">
+            <form id="formulario" action="{{ url_for('auth.login') }}" method="post" >
                 <h2>Inicia sesión</h2>
-                <input class="ipt" type="email" placeholder="Ingrese el email" name="email" id="email">
-                <p id="errorEmail" class="error-message"></p>
-                <input class="ipt" type="password" placeholder="Contraseña" name="password" id="password">
-                <p id="errorContraseña" class="error-message"></p>
+                <input class="ipt" type="email" placeholder="Ingrese el email" name="email" id="email" value ="{{ request.form.get('email', '') }}">
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        {% for category, message in messages %}
+                            {% if category == 'email_error' %}
+                                <p class="text-danger">{{ message }}</p>
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+                <input class="ipt" type="password" placeholder="Contraseña" name="password" id="password" value ="{{ request.form.get('password', '') }}">
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        {% for category, message in messages %}
+                            {% if category == 'password_error' %}
+                                <p class="text-danger">{{ message }}</p>
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        {% for category, message in messages %}
+                            {% if category == 'general_error' %}
+                                <p class="text-danger">{{ message }}</p>
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
                 <input id="btn" type="submit" value="Iniciar sesión">
                 <a href="#" id="forget">¿Olvidaste la Contraseña?</a>
                 <div id="remember">

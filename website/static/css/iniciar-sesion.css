@@ -108,6 +108,14 @@ span{
 
 #btn:hover{cursor: pointer;}
 
+.text-danger {
+    color: red;
+    font-size: 1.1em;
+	display: flex;
+	justify-content: start;
+	margin: 0 0 8px 2px;
+}
+
 #hr{
 	color: rgba(255,255,255,0.3);
 	border: 1px solid;
