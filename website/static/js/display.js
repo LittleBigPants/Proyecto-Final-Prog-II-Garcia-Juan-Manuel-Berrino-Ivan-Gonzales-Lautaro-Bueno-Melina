@@ -7,7 +7,7 @@ function displayCategories(categories) {
     categories.forEach(category => {
         const categorieElement = document.createElement('div');
         categorieElement.classList.add('peliculas-tipo');
-        categorieElement.id = `section-${category.name}`; // Agrega un id único
+        categorieElement.id = `section-${category.name}`; 
         categorieElement.innerHTML = `
             <div class="contenedor-titulo-controles">
                 <h4>${category.name}</h4>
@@ -27,9 +27,20 @@ function displayCategories(categories) {
 
         const categoriesButton = document.createElement('div');
         categoriesButton.classList.add('clases-categorias');
-        categoriesButton.innerHTML = `<h3><a href="#section-${category.name}">${category.name}</a></h3>`; // Agrega un enlace de anclaje
+        categoriesButton.innerHTML = `<h3><a href="#section-${category.name}">${category.name}</a></h3>`; 
 
         categoriesSelection.appendChild(categoriesButton);
+    });
+
+    // Agrega un evento de clic a los enlaces de anclaje
+    document.querySelectorAll('.clases-categorias a').forEach(anchor => {
+        anchor.addEventListener('click', event => {
+            event.preventDefault();
+            const href = anchor.getAttribute('href');
+            const offset = 100; 
+            const target = document.querySelector(href);
+            window.scrollTo({ top: target.offsetTop - offset, behavior: 'smooth' });
+        });
     });
 }
 
