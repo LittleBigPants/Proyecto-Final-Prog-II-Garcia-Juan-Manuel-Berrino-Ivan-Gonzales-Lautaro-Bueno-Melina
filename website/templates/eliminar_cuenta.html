@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/eliminar_cuenta.css') }}">
+    <title>FlixFusion</title>
+</head>
+<body>
+    <div class="container">
+    <h1>FlixFusion</h1>
+    <p>¿Estas seguro que deseas eliminar la cuenta?</p>
+        <div id="confirmar">
+            <form method="POST">
+                <button type="submit" class="btn btn-danger">Sí, eliminar mi cuenta</button>
+            </form>
+            <button><a href="{{ url_for('views.account') }}">Cancelar</a></button>
+        </div>
+</div>
+</body>
+</html>

@@ -30,10 +30,9 @@
             <!-- <li id="perfil"><a href="#"><span id="mi-perfil">Mi perfil</span><img src="/static/img/spiderman.jpg" alt="spiderman"></a></li> -->
             <li id="perfil">
                 <a href="#">
-                    <span id="mi-perfil">Mi perfil</span>
+                    <span id="mi-perfil">{{user.first_name}} {{user.last_name}}</span>
                     <!-- Mostrar la imagen de perfil -->
                     <img src="{{ url_for('static', filename='img/' + (current_user.image_file or 'spiderman.jpg')) }}" alt="Imagen de perfil" width="40" height="40">
-
                 </a>
             </li>
         </div>
@@ -43,7 +42,7 @@
 <!--  Menu perfil -->
     <div class="menu-perfil" id="menu-perfil">
         <div class="header-perfil">
-            <h2>Mi perfil</h2>
+            <h2>{{user.first_name}} {{user.last_name}}</h2>
             <img src="{{ url_for('static', filename='img/' + (current_user.image_file or 'spiderman.jpg')) }}" alt="Imagen de perfil" width="45" height="45">
             <span class="cerrar">
                 <i class="fa-solid fa-xmark cerrar_perfil"></i>
@@ -137,6 +136,27 @@
 
     <!-- Pie de pagina -->
     <footer>
+        <div class="redes">
+            <h3>Nuestras redes:</h3>
+        <div class="social">
+            <a class="instagram"
+                href="https://instagram.com"
+                title="Seguinos en instagram"
+                target="_blank">
+            </a>
+            <a class="twitter"
+                href="https://twitter.com"
+                title="Seguinos en twitter"
+                target="_blank">
+            </a>
+            <a class="github"
+                href="https://github.com/c215714n/EducacionIT/tree/html-xv14"
+                title="Seguinos en github"
+                target="_blank">
+            </a>
+        </div>
+    </div>
+        <div class="container-footer">
         <div class="footer-contacto">
             <p>¿Preguntas? Llama al <a href="">0341 411 2004</a></p>
         </div>
@@ -168,6 +188,9 @@
                 <option value="en">English</option>
             </select>
         </div>
+    </div>
+</div>
+
     </footer>
 
     <script type="module" src="{{ url_for('static', filename='js/main.js') }}"></script>

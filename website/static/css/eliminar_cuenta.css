@@ -1,0 +1,59 @@
+body { 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+    margin: 0; 
+    background-color: #1c1c1c !important; 
+    color: white;
+    font-family: Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+}
+
+
+
+.container { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    background: linear-gradient(135deg, #14213d 0%, #1e2a47 60%, #4a6d8c 100%); 
+    padding: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    max-width: 400px; 
+    width: 90%;
+    margin-top: 50px;
+}
+
+
+
+#confirmar{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#confirmar button{
+    background-color: rgb(153, 224, 221); 
+    color: black;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+    font-weight: bold;
+    width: 170px;
+}
+
+#confirmar button a {
+    text-decoration: none;
+    color: black;
+}
+
+
+#confirmar button:hover {
+    background-color: white;
+    color: #1c1c1c;
+}

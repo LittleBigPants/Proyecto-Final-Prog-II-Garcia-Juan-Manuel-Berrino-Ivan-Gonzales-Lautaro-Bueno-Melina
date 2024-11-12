@@ -64,8 +64,8 @@ def sign_up():
 
     if request.method == 'POST' and form.validate():
         # Obtener los datos del formulario
-        first_name = form.first_name.data
-        last_name = form.last_name.data
+        first_name = form.first_name.data.strip().capitalize()
+        last_name = form.last_name.data.strip().capitalize()
         email = form.email.data
         password1 = form.password1.data
 
@@ -93,4 +93,18 @@ def sign_up():
     return render_template('registrarse.html', form=form)
 
 
-
+@auth.route('/eliminar_cuenta' , methods=['GET','POST'])
+@login_required
+def delete_account():
+    if request.method == 'POST':
+        user = current_user
+        
+        if user:
+            db.session.delete(user)
+            db.session.commit()
+    
+            logout_user()
+    
+        return redirect(url_for('auth.login'))
+    return render_template('eliminar_cuenta.html')
+    
