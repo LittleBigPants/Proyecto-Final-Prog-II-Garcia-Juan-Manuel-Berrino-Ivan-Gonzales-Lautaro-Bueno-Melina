@@ -36,3 +36,14 @@ class Movie(db.Model):
     video_url = db.Column(db.String(255), nullable=True)
     download_url = db.Column(db.String(255), nullable=True)
     category = db.relationship('Category', backref=db.backref('movies', lazy=True))
+
+
+
+class Receipt(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+    total_price = db.Column(db.Float, nullable=False)
+    movie_id = db.Column(db.Integer, db.ForeignKey('movie.id'), nullable=False)
+    movie = db.relationship('Movie', backref=db.backref('receipts', lazy=True))
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    user = db.relationship('User', backref=db.backref('receipts', lazy=True))
