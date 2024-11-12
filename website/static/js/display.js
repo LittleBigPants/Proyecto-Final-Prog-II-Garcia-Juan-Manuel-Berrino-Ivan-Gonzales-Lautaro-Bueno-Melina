@@ -1,8 +1,6 @@
-function displayCategories(categories) {
+function displayCategories(categories, movies) {
     const container = document.querySelector('.principales');
     container.innerHTML = ''; 
-    const categoriesSelection = document.querySelector('.container');
-    categoriesSelection.innerHTML = ''; 
 
     categories.forEach(category => {
         const categorieElement = document.createElement('div');
@@ -24,12 +22,21 @@ function displayCategories(categories) {
         `;
         container.appendChild(categorieElement);
         
-        const categoriesButton = document.createElement('div');
-        categoriesButton.classList.add('clases-categorias');
-        categoriesButton.innerHTML = `<h3>${category.name}</h3>`
-        
-        categoriesSelection.appendChild(categoriesButton);
     });
+    displayMovies(movies)
+}
+
+function createCategoryButtons(categories) {
+	const categoriesSelection = document.querySelector(".container");
+	categoriesSelection.innerHTML = "";
+	categories.forEach((category) => {
+		const categoriesButton = document.createElement("div");
+		categoriesButton.classList.add("clases-categorias");
+		categoriesButton.setAttribute("id", `${category.name}`);
+		categoriesButton.innerHTML = `<h3>${category.name}</h3>`;
+
+		categoriesSelection.appendChild(categoriesButton);
+	});
 }
 
 
@@ -54,4 +61,4 @@ function displayMovies(movies) {
 
 
 
-export {displayMovies, displayCategories};
+export {displayCategories, createCategoryButtons};
