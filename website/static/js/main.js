@@ -34,10 +34,10 @@ function displayDescriptionMovie(movie) {
             <h1>${movie.title}</h1> 
             <p>${movie.description}</p>
             <img src="${movie.image_url}" alt="${movie.title}" class="img-detail">
-            <p>Fecha de estreno: <strong>${movie.release_date}</strong></p>
+            <p>Fecha de estreno: <strong>${new Date(movie.release_date).toISOString().split('T')[0]}</strong></p>
             <p>Categoría: <strong>${movie.category}</strong></p>
-            <p>Precio: <strong>${movie.price}</strong></p>
-            <p>Duración: <strong>${movie.duration}</strong></p>
+            <p>Precio: <strong>${movie.price.toLocaleString('en-US', { style: 'currency', currency: 'USD' })}</strong></p>
+            <p>Duración: <strong>${movie.duration} minutos</strong></p>
             <button><a href="#">Reproducir</a></button>
         </div>
     `;
