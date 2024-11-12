@@ -1,6 +1,6 @@
-export function displayCategories(categories) {
+function displayCategories(categories) {
     const container = document.querySelector('.principales');
-    container.innerHTML = ''; // Limpiar contenido existente
+    container.innerHTML = ''; 
 
     categories.forEach(category => {
         const categorieElement = document.createElement('div');
@@ -24,7 +24,7 @@ export function displayCategories(categories) {
     });
 }
 
-export function displayMovies(movies) {
+function displayMovies(movies) {
     movies.forEach(movie => {
         const categoryCarousel = document.querySelector(`#carousel-${movie.category} .carousel`);
         if (categoryCarousel) {
@@ -37,3 +37,6 @@ export function displayMovies(movies) {
         }
     });
 }
+
+
+export {displayMovies, displayCategories};
