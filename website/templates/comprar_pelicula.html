@@ -23,10 +23,10 @@
     <!-- Menu de navegacion -->
     <nav id="navbar">
         <ul id="cont-nav">
-            <li id="logo"><a href="{{url_for('auth.content')}}"><img src="/static/img/logo-flix-fusion.png" alt=""></a></li>
-            <li><a href="{{url_for('auth.content')}}"><i class="fas fa-home"></i></a></li>
+            <li id="logo"><a href="{{url_for('views.content')}}"><img src="/static/img/logo-flix-fusion.png" alt=""></a></li>
+            <li><a href="{{url_for('views.content')}}"><i class="fas fa-home"></i></a></li>
             <li><a href="#"><i class="fas fa-search search-icon"></i></a></li>
-            <li id="peliculas"><a href="{{url_for('auth.movies')}}" target="_blank">Comprar Peliculas</a></li>
+            <li id="peliculas"><a href="{{url_for('views.movies')}}" target="_blank">Comprar Peliculas</a></li>
             <div class="contenedor-perfil" id="contenedor-perfil">
             <li id="perfil"><a href="#"><span id="mi-perfil">Mi perfil</span><img src="/static/img/spiderman.jpg" alt="spiderman"></a></li>
         </div>
@@ -46,7 +46,7 @@
         <div class="contenido-perfil">
             <ul>
                 <li>Cambiar perfil</li>
-                <li> <a href="{{url_for('auth.account')}} ">Cuenta</a></li>
+                <li> <a href="{{url_for('views.account')}} ">Cuenta</a></li>
                 <li>Ayuda</li>
                 <li>Ajustes</li>
                 <li><a href="{{url_for('auth.logout')}} ">Cerrar sesión</a></li>
