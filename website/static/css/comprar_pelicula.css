@@ -1,18 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
 body{
     background-color: #1c1c1c;
 }
 
 header{
-    background-color:  #f5f5f5;;
     width: 100%;
     height: 80px;
 }
 
 h1{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Poppins", sans-serif;
     text-align: center;
     line-height: 80px;
-    color: rgb(18, 159, 152);
+    color: rgb(153, 224, 221);
     margin-right: 30px;
 }
 
@@ -59,14 +60,18 @@ h1{
 .informacion h2{
     text-align: center;
     padding-bottom: 10px;
-    color: rgb(18, 159, 152);
+    color: rgb(153, 224, 221);
 }
 
 .informacion p{
     font-size: 18px;
-    font-weight: 300;
+    font-weight: 200;
     font-family: Arial, Helvetica, sans-serif;
     color: #fff;
+}
+
+.carta-des{
+    font-style: italic;
 }
 
 .informacion .precio {
@@ -75,7 +80,7 @@ h1{
 }
 
 .informacion .duracion{
-    color: #1c5897;
+    color: #216ab8;
     padding: 10px 0;
     font-weight: 400;
 }
@@ -85,8 +90,9 @@ h1{
     margin: 15px 0 10px 0;
 }
 .añadir{
-    background-color: #007BFF; /* Color del botón */
-    color: white; /* Color del texto del botón */
+    background-color: rgb(153, 224, 221); /* Color del botón */
+    color: rgb(61, 60, 60); /* Color del texto del botón */
+    font-weight: bold;
     border: none;
     border-radius: 5px; /* Bordes redondeados del botón */
     padding: 10px 15px;
@@ -95,7 +101,8 @@ h1{
 }
 
 .añadir:hover {
-    background-color: #0056b3; /* Cambio de color al pasar el ratón */
+    background-color: #043468; /* Cambio de color al pasar el ratón */
+    color: white;
 }
 
 .contenedor_carrito{
@@ -112,6 +119,8 @@ h1{
     width: 100%;
     height: auto;
     color: wheat;
+    width: 35px;
+    margin: 0 10px;
 }
 
 
@@ -285,7 +294,14 @@ h1{
 
     .contenedor_carrito img{
         position: absolute;
+        width: 40px;
         right: 60px;
         z-index: 100;
+    }
+}
+
+@media (max-width: 768px) {
+    header{
+        background: linear-gradient(135deg, #14213d 0%, #1e2a47 60%, #4a6d8c 100%);
     }
 }
