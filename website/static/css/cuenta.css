@@ -1,39 +1,25 @@
-body {
-    display: flex;
-    justify-content: center;
+body { 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
     align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    background-color: #1c1c1c !important;
-    color: white;
-}
+    min-height: 100vh; 
+    margin: 0; 
+    background-color: #1c1c1c !important; 
+    color: white;}
 
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background: linear-gradient(135deg, #14213d 0%, #1e2a47 60%, #4a6d8c 100%);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    max-width: 400px;
+.container { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    background: linear-gradient(135deg, #14213d 0%, #1e2a47 60%, #4a6d8c 100%); 
+    padding: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    max-width: 400px; 
     width: 90%;
-}
-
-@media (max-width: 768px) {
-    .container {
-        max-width: 300px; 
-        padding: 15px; 
-    }
-
-    h1 {
-        font-size: 1.6em; 
-    }
-
-    h2 {
-        font-size: 1.2em; 
-    }
+    margin-top: 150px;
 }
 
 h1, h2 {
@@ -110,3 +96,22 @@ h2 {
 .logout:hover {
     color:black;
 }
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 300px; 
+        padding: 15px; 
+        margin-top: 50px;
+    }
+
+    h1 {
+        font-size: 1.6em; 
+    }
+
+    h2 {
+        font-size: 1.2em; 
+    }
+    footer{
+        width: 300px;
+    }
+} 
