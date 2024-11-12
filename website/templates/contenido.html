@@ -21,10 +21,10 @@
     <!-- Menu de navegacion -->
     <nav id="navbar">
         <ul id="cont-nav">
-            <li id="logo"><a href="#inicio"><img src="/static/img/logo-flix-fusion.png" alt=""></a></li>
-            <li><a href="#inicio"><i class="fas fa-home"></i></a></li>
+            <li id="logo"><a href="{{url_for('views.content')}}"><img src="/static/img/logo-flix-fusion.png" alt=""></a></li>
+            <li><a href="{{url_for('views.content')}}"><i class="fas fa-home"></i></a></li>
             <li><a href="#"><i class="fas fa-search search-icon"></i></a></li>
-            <li id="peliculas"><a href="{{url_for('views.movies')}}" target="_blank">Comprar Peliculas</a></li>
+            <!--<li id="peliculas"><a href="{{url_for('views.movies')}}" target="_blank">Comprar Peliculas</a></li>-->
             <li><a href=" {{url_for('views.movies')}}"><i class="fa-solid fa-bag-shopping"></i></a></li>
             <div class="contenedor-perfil" id="contenedor-perfil">
             <!-- <li id="perfil"><a href="#"><span id="mi-perfil">Mi perfil</span><img src="/static/img/spiderman.jpg" alt="spiderman"></a></li> -->
@@ -65,6 +65,14 @@
     <!--  Contenido principal -->
     <main>
         <div class="movie-description"></div>
+        <div id="moviePopup" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="movie-description-content">
+                    <!-- Aquí se cargará la información de la película -->
+                </div>
+            </div>
+        </div>
         <div id="cont-slider">
             
             <div id="slider">
@@ -127,8 +135,39 @@
         </section>
     </main>
 
+    <!-- Pie de pagina -->
     <footer>
-
+        <div class="footer-contacto">
+            <p>¿Preguntas? Llama al <a href="">0341 411 2004</a></p>
+        </div>
+        <div class="footer-links">
+            <div class="contenido-links">
+                <div id="elemento1">
+                    <a href="">Preguntas Frecuentes</a>
+                </div>
+                <div id="elemento2">
+                    <a href="">Centro de ayuda</a>
+                </div>
+                <div id="elemento3">
+                    <a href="">Términos de uso</a>
+                </div>
+                <div id="elemento4">
+                    <a href="">Privacidad</a>
+                </div>
+                <div id="elemento5">
+                    <a href="">Preferencias de cookies</a>
+                </div>
+                <div id="elemento6">
+                    <a href="">Información Corporativa</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-lenguaje">
+            <select class="language-selector">
+                <option value="es">Español</option>
+                <option value="en">English</option>
+            </select>
+        </div>
     </footer>
 
     <script type="module" src="{{ url_for('static', filename='js/main.js') }}"></script>

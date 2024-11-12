@@ -9,41 +9,49 @@ document.addEventListener('DOMContentLoaded', async () => {
     displayMovies(movies);
     inicializarCarousel();
 
+    const moviePopup = document.getElementById("moviePopup");
+    const movieDescriptionContent = document.querySelector(".movie-description-content");
+    const closeModal = document.querySelector(".close");
 
-
-
-const movieDescription = document.querySelector(".movie-description");
-let imgButton = document.querySelectorAll(".img-button");
-
-imgButton.forEach(img => {
-    img.addEventListener("click", (e) => {
-        console.log('este es un evento');
-        movieDescription.innerHTML = "";
-        if (e.currentTarget.id) {
-            const choosenMovie = movies.filter(movie => movie.id == e.currentTarget.id);
-            displayDescriptionMovie(choosenMovie[0]);
-        }
+    let imgButton = document.querySelectorAll(".img-button");
+    imgButton.forEach(img => {
+        img.addEventListener("click", (e) => {
+            if (e.currentTarget.id) {
+                const choosenMovie = movies.filter(movie => movie.id == e.currentTarget.id);
+                displayDescriptionMovie(choosenMovie[0]);
+            }
+        });
     });
-});
 
-function displayDescriptionMovie(movie) { 
-    const movieInfoContainer = document.createElement("div");
-    movieInfoContainer.setAttribute("id", "movie-info");
-    movieInfoContainer.innerHTML = `
-        <div class="movie-details">
-            <h1>${movie.title}</h1> 
-            <p>${movie.description}</p>
-            <img src="${movie.image_url}" alt="${movie.title}" class="img-detail">
-            <p>Fecha de estreno: <strong>${new Date(movie.release_date).toISOString().split('T')[0]}</strong></p>
-            <p>Categoría: <strong>${movie.category}</strong></p>
-            <p>Precio: <strong>${movie.price.toLocaleString('en-US', { style: 'currency', currency: 'USD' })}</strong></p>
-            <p>Duración: <strong>${movie.duration} minutos</strong></p>
-            <button><a href="#">Reproducir</a></button>
-        </div>
-    `;
+    function displayDescriptionMovie(movie) { 
+        movieDescriptionContent.innerHTML = `
+            <div class="movie-details">
+                <h1>${movie.title}</h1> 
+                <p>${movie.description}</p>
+                <img src="${movie.image_url}" alt="${movie.title}" class="img-detail">
+                <p>Fecha de estreno: <strong>${new Date(movie.release_date).toISOString().split('T')[0]}</strong></p>
+                <p>Categoría: <strong>${movie.category}</strong></p>
+                <p>Precio: <strong>${movie.price.toLocaleString('en-US', { style: 'currency', currency: 'USD' })}</strong></p>
+                <p>Duración: <strong>${movie.duration} minutos</strong></p>
+                <button><a href="#">Reproducir</a></button>
+            </div>
+        `;
 
-    movieDescription.appendChild(movieInfoContainer);
-}
+        // Mostrar el modal
+        moviePopup.style.display = "block";
+    }
+
+    // Cerrar el modal al hacer clic en la 'x'
+    closeModal.onclick = function() {
+        moviePopup.style.display = "none";
+    };
+
+    // Cerrar el modal al hacer clic fuera del contenido
+    window.onclick = function(event) {
+        if (event.target == moviePopup) {
+            moviePopup.style.display = "none";
+        }
+    };
 });
 
 

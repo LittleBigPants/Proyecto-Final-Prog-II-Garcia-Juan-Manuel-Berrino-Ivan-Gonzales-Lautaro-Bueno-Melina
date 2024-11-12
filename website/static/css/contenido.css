@@ -117,10 +117,10 @@ ahora solo en celular */
 	text-shadow: 2px 2px 4px rgba(7, 0, 0, 0.9);
 }
 
-.sliders img:hover {
+/*.sliders img:hover {
 	transform: scale(1.05);
 	border: 2px solid rgb(18, 159, 152);
-}
+}*/
 
 /* Efectos al slider de imagenes del principio */
 
@@ -199,7 +199,7 @@ ahora solo en celular */
 
 .principales h4 {
 	margin-left: 16px;
-	color: rgb(18, 159, 152);
+	color: rgb(153, 224, 221);
 	font-weight: 800;
 }
 
@@ -520,7 +520,86 @@ simulador de celular no se puede */
 
 /* Meli aca te dejo el para que hagas tu magia(puse la imagen mas chica poorque no se ve nada) */
 
-.img-detail {
-	width: 300px;
-	height: 340px;
+/* Estilos para el popup */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7); 
 }
+
+.modal-content {
+	background-color: rgba(255, 255, 255, 0.9);
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.movie-description-content .movie-details {
+    text-align: center;
+}
+
+.movie-description-content img.img-detail {
+    width: 60%;
+    height: auto;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+.movie-details h1 { 
+	text-transform: uppercase;
+	margin-bottom: 5px;
+}
+
+.movie-details button { 
+	background-color: #1ad1c2; 
+	padding: 12px 24px; 
+	border-radius: 5px; 
+	font-weight: bold; 
+	transition: background-color 0.3s ease, transform 0.2s ease; 
+	margin-top:10px;
+	border: none; 
+	outline: none;
+} 
+.movie-details button a { 
+	display: inline-block; 
+	text-decoration: none; 
+	font-size: 16px; 
+	color: white;} 
+
+.movie-details button:hover { 
+	background-color: #17b3a4;}
+
+.movie-description-content .movie-details {
+	text-align: center; 
+	line-height: 1.2; 
+} 
+
+.movie-description-content p { 
+	margin-bottom: 10px; 
+}; 
+
+@media (max-width: 600px) {
+    .modal-content {
+        width: 90%;
+        max-width: 350px;
+    }
+}
+
