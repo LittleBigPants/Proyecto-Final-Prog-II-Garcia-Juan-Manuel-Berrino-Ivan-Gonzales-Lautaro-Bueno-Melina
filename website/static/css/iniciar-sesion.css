@@ -121,17 +121,6 @@ span{
 	border: 1px solid;
 }
 
-.language-selector {
-    position: relative;
-    background-color: #1a1919;
-    color: white;
-    border: 1px solid #555;
-    border-radius: 4px;
-    padding: 6px 14px;
-    cursor: pointer;
-    font-size: 14px;
-}
-
 /*Maquetado tablet*/
 @media (min-width:768px){
 	body{background: rgba(5,7,12,1)}
