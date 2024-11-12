@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 function showLoadingIndicator() {
     const container = document.querySelector('.principales');
-    container.innerHTML = '<p>Loading...</p>';
+    container.innerHTML = '<h1>Loading...</h1>';
 }
 
 function hideLoadingIndicator() {

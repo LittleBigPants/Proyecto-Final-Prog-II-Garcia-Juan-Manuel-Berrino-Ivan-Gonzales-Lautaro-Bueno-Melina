@@ -90,7 +90,7 @@ def suscripcion():
 @auth.route('/api/movies', methods=['GET'])
 def get_movies():
     movies = Movie.query.all()
-    result = [{'id': m.id, 'title': m.title, 'description': m.description, 'release_date': m.release_date, 'category': m.category.name, 'image_url': m.image_url, 'price': m.price, 'duration': m.duration} for m in movies]
+    result = [{'id': m.id, 'title': m.title, 'description': m.description, 'release_date': m.release_date, 'category': m.category.name, 'image_url': m.image_url, 'price': m.price, 'duration': m.duration, 'video_url': m.video_url, 'download_url': m.download_url} for m in movies]
     return jsonify(result)
 
 # Nueva ruta para obtener todas las categorías
@@ -99,6 +99,12 @@ def get_categories():
     categories = Category.query.all()
     result = [{'id': c.id, 'name': c.name, 'description': c.description} for c in categories]
     return jsonify(result) 
+
+@auth.route('watch/movie/<int:movie_id>')
+def movie_detail(movie_id):
+    movie = Movie.query.get_or_404(movie_id)
+    return render_template('movie_view.html', movie=movie)
+
 
 
 @auth.route('/cuenta', methods=['GET', 'POST'])

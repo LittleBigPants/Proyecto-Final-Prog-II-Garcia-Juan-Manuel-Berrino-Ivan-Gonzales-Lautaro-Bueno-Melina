@@ -33,4 +33,6 @@ class Movie(db.Model):
     image_url = db.Column(db.String(255))  # Campo para la URL de la imagen
     price = db.Column(db.Float, nullable=False)  # Campo para el precio
     duration = db.Column(db.Integer, nullable=False)  # Campo para la duración en minutos
+    video_url = db.Column(db.String(255), nullable=True)
+    download_url = db.Column(db.String(255), nullable=True)
     category = db.relationship('Category', backref=db.backref('movies', lazy=True))
