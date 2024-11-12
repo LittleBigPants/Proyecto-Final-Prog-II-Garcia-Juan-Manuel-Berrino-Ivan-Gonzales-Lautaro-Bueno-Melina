@@ -6,7 +6,9 @@ body {
     min-height: 100vh; 
     margin: 0; 
     background-color: #1c1c1c !important; 
-    color: white;}
+    color: white;
+    font-family: Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+}
 
 .container { 
     display: flex; 
@@ -83,6 +85,12 @@ h2 {
 .form-upload button:hover {
     background-color: white;
     color: #1c1c1c;
+}
+
+#cuenta{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
 }
 
 .logout {

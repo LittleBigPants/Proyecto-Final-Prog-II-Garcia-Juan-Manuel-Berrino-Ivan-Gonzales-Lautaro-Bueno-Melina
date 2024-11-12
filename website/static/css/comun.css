@@ -113,7 +113,7 @@ color: rgb(153, 224, 221); }
     margin-top: 10px;
 }
 .header-perfil h2{
-    margin-left: 140px;
+    margin-left: 110px;
     line-height: 60px;
 }
 
@@ -169,6 +169,46 @@ footer {
     height: 300px;
     margin-top: 40px;
 }
+.redes{
+    color: #fff;
+    text-align: center;
+}
+.social{
+    display: flex;
+    justify-content: center;
+    margin: 16px 0 20px 0;
+    gap: 8px;
+}
+
+.social a {
+    width: 64px;
+    height: 64px;
+    border-radius: 8px;
+    background-color: #080000;
+    background-position: center;
+    background-size: 36px;
+    background-repeat: no-repeat;
+}
+
+.social a:hover{
+    background-color: #eee;
+    background-size: 48px;
+}
+
+.instagram{
+    background-image: url('/static/img/instagram.svg');
+}
+
+
+.twitter{
+    background-image: url('/static/img/twitter.svg');
+}
+
+.github{
+    background-image: url('/static/img/github.svg');
+}
+
+
 
 .footer-contacto {
     margin-left: 26px;
@@ -226,10 +266,72 @@ footer {
         border-radius: 5px;
     }
 
+    .header-perfil h2{
+        text-align: center;
+        margin-left: 100px;
+    }
+
     .header-perfil img{
         width: 55px;
         height: 55px;
         margin-right: 10px;
+    }
+
+
+    .social{
+        display: flex;
+        justify-content: center;
+        margin: 16px;
+        gap: 16px;
+    }
+    
+    .social a {
+        width: 64px;
+        height: 64px;
+        border-radius: 8px;
+        background-color: #080000;
+        background-position: center;
+        background-size: 36px;
+        background-repeat: no-repeat;
+    }
+    
+    .social a:hover{
+        background-color: #eee;
+        background-size: 48px;
+    }
+    
+    .redes{
+        display: inline-block;
+        margin-top: 40px;
+        text-align: center;
+        color: #fff;
+    }
+    .instagram{
+        background-image: url('/static/img/instagram.svg');
+    }
+    
+    
+    .twitter{
+        background-image: url('/static/img/twitter.svg');
+    }
+    
+    .github{
+        background-image: url('/static/img/github.svg');
+    }
+    
+    footer{
+        max-width: 1000px;
+        display: flex;
+        justify-content: space-evenly;
+        margin: auto;
+    }
+    
+    .container{
+        display: flex;
+        justify-content: center;
+    }
+    .container-footer{
+        display: inline-block;
     }
 
 
@@ -259,14 +361,7 @@ footer {
         font-size: 14px;
     }
 
-    #mi-perfil{
-        margin: 3px 20px 0 0;
-        position: absolute;
-        right: 80px;
-        top: -2px;
-        color: #fff;
-        display: block;
-    }
+  
     
 }
 
@@ -308,6 +403,15 @@ footer {
     #logo{
         display: flex;
         height: 60px;
+    }
+
+    #mi-perfil{
+        margin: 3px 20px 0 0;
+        position: absolute;
+        right: 80px;
+        top: -2px;
+        color: #fff;
+        display: block;
     }
 
     #peliculas{

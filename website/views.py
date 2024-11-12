@@ -16,12 +16,12 @@ def home():
 @views.route('/contenido')
 @login_required
 def content():
-    return render_template("contenido.html")
+    return render_template("contenido.html", user=current_user)
 
 
 @views.route('/peliculas')
 def movies():
-    return render_template("comprar_pelicula.html")
+    return render_template("comprar_pelicula.html", user=current_user)
 
 @views.route('/suscripcion') 
 def suscripcion(): 

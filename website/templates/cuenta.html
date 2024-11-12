@@ -62,7 +62,10 @@
             <input type="file" name="imagen" id="imagen" accept="image/*">
             <button type="submit">Actualizar Imagen</button>
         </form>
-        <a href="{{ url_for('auth.login') }}" class="logout">Cerrar Sesión</a>
+        <div id="cuenta">
+            <a href="{{url_for('auth.delete_account')}}" class="logout">Eliminar cuenta</a>
+            <a href="{{ url_for('auth.login') }}" class="logout">Cerrar Sesión</a>
+        </div>
     </div>
     <footer>
         <div class="footer-contacto">
