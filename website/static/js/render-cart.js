@@ -36,6 +36,11 @@ function renderCart() {
             renderCart();  // Volvemos a renderizarel carrito después de la eliminación
         });
     });
+
+
+    let carritoCounter = document.querySelector(".carrito-counter");
+    console.log(carrito.length);
+    carritoCounter.innerHTML=`${carrito.length}` ;
 }
 
 let pagar = document.querySelector(".btn_pagar");

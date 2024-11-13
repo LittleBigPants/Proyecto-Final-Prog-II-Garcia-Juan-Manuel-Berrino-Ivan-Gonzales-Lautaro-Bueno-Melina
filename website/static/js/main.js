@@ -2,7 +2,7 @@ import { inicializarData, categories, movies } from "./api.js";
 import { inicializarCarousel } from "./carousel.js";
 import { displayCategories, displayMovies } from "./display.js";
 import { renderCart } from "./render-cart.js";  // Importamos la función renderCart
-import { addMovieToCart } from "./cart.js";  // Importamos la función addMovieToCart
+import { addMovieToCart, getCart } from "./cart.js";  // Importamos la función addMovieToCart
 
 document.addEventListener("DOMContentLoaded", async () => {
     await inicializarData();  // Esperamos a que se carguen los datos
@@ -66,5 +66,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
     };
 
+
+ 
 
 });
