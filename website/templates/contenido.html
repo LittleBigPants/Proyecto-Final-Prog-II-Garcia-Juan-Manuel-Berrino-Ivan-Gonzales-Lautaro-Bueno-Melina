@@ -73,6 +73,33 @@
     </div>
 
 
+    <div class="contenedor_carrito" id="contenedor_carrito">
+        <img class="img-carrito"src="/static/img/carrito-de-compras.png" alt="Carrito de compras">
+    </div>
+
+    <div class="carrito" id="menu_carrito">
+        <div class="header_carrito">
+            <h3>Contenido del carrito</h3>
+            <i class="fa-solid fa-xmark cerrar_carrito"></i>
+        </div>
+        <div class="carrito_items">
+            </div>
+
+            <div class="carrito_total">
+                <div class="fila">
+                    <strong>Tu total</strong>
+                    <span class="carrito_precio_final">
+                        $120.000,00
+                    </span>
+                </div>
+                <button class="btn_pagar">Pagar<i class="fa-solid fa-bag-shopping"></i></button>
+            </div>
+        </div>
+        </div>
+
+
+
+
     <!--  Contenido principal -->
     <main>
         <div class="movie-description"></div>
@@ -208,7 +235,7 @@
     <script type="module" src="{{ url_for('static', filename='js/main.js') }}"></script>
     <script src="{{ url_for('static', filename='js/perfil.js') }}"></script>
     <script src="{{ url_for('static', filename='js/busqueda-pelicula.js') }}"></script>
-    
+    <script src="{{ url_for('static', filename='js/carrito.js') }}"></script>
 
 </body>
 
