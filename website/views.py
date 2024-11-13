@@ -19,13 +19,6 @@ def content():
     return render_template("contenido.html", user=current_user)
 
 
-@views.route('/peliculas')
-def movies():
-    return render_template("comprar_pelicula.html", user=current_user)
-
-@views.route('/suscripcion') 
-def suscripcion(): 
-    return render_template("suscripcion.html")
 
 
 @views.route('/api/movies', methods=['GET'])
@@ -53,10 +46,10 @@ def get_categories():
     result = [{'id': c.id, 'name': c.name, 'description': c.description} for c in categories]
     return jsonify(result) 
 
-@views.route('watch/movie/<int:movie_id>')
+""" @views.route('watch/movie/<int:movie_id>')
 def movie_detail(movie_id):
     movie = Movie.query.get_or_404(movie_id)
-    return render_template('movie_view.html', movie=movie)
+    return render_template('movie_view.html', movie=movie) """
 
 
 
@@ -66,14 +59,13 @@ def account():
     if request.method == 'POST':
         # Verificar si el formulario tiene un archivo de imagen
         if 'imagen' not in request.files:
-            flash('No se seleccionó ninguna imagen.', category='error')
+            flash('No se seleccionó ninguna imagen.', category='error-archivo')
             return redirect(url_for('views.account'))
 
         imagen = request.files['imagen'] #Obtenemos la imagen enviada
 
         # Verificar si el archivo tiene un nombre válido
         if imagen.filename == '':
-            flash('No se seleccionó ningún archivo.', category='error')
             return redirect(url_for('views.account'))
 
         # Verificar que el archivo sea una imagen válida
@@ -86,10 +78,9 @@ def account():
             # Actualizar la imagen en la base de datos
             current_user.image_file = filename
             db.session.commit()
-            
-            flash('Imagen de perfil actualizada correctamente.', category='success')
+
         else:
-            flash('Archivo no válido. Asegúrate de que sea una imagen (png, jpg, jpeg, gif).', category='error')
+            flash('Archivo no válido. Asegúrate de que sea una imagen (png, jpg, jpeg, gif).', category='error-archivo')
 
     return render_template('cuenta.html', user=current_user)
 

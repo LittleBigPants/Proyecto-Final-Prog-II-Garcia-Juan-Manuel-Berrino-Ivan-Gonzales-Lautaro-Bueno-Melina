@@ -9,9 +9,7 @@ body {
 	background-color: #1c1c1c;
 	font-family: Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
 }
-h2,
-h3,
-h4 {
+h2,h3,h4 {
 	font-family: "Raleway", sans-serif;
 }
 
@@ -534,7 +532,7 @@ simulador de celular no se puede */
     .contenedor_carrito img{
         position: absolute;
         width: 40px;
-        right: 190px;
+        right: 250px;
         z-index: 100;
     }
     
