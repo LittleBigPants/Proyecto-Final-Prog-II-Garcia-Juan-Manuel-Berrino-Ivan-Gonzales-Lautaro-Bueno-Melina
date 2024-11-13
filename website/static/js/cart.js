@@ -17,7 +17,7 @@ function addMovieToCart(movie) {
 // Función para eliminar una película del carrito
 function removeMovieFromCart(movieId) {
     // Buscamos el índice de la película en el carrito
-    const movieIndex = carrito.findIndex((movie) => movie.id === movieId);
+    const movieIndex = carrito.findIndex((movie) => movie.id == movieId);
     if (movieIndex !== -1) {
         carrito.splice(movieIndex, 1);  // Eliminamos la película si se encuentra
     }

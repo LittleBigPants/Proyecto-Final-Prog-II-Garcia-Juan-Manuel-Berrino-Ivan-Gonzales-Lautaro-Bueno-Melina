@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 <p>Categoría: <strong>${movie.category}</strong></p>
                 <p>Precio: <strong>${movie.price.toLocaleString("en-US", { style: "currency", currency: "USD" })}</strong></p>
                 <p>Duración: <strong>${movie.duration} minutos</strong></p>
-                <button id="${movie.id}" class="btn-añadir-carrito">Añadir al carrito</button>
+                <button id=${movie.id} class="btn-añadir-carrito">Añadir al carrito</button>
             </div>
         `;
 
