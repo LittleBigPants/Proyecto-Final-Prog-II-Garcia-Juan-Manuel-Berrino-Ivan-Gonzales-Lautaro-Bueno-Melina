@@ -66,6 +66,5 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
     };
 
-    // Inicializamos la vista del carrito
-    renderCart();
+
 });

@@ -1,4 +1,4 @@
-import { getCart, removeMovieFromCart } from './cart.js';  // Importamos las funciones del carrito
+import { getCart, removeMovieFromCart, buy } from './cart.js';  // Importamos las funciones del carrito
 
 function renderCart() {
     const carrito = getCart();  // Obtenemos el carrito actualizado
@@ -37,5 +37,15 @@ function renderCart() {
         });
     });
 }
+
+let pagar = document.querySelector(".btn_pagar");
+let check = document.querySelector(".check");
+check.innerHTML = "";
+pagar.addEventListener("click", () => {
+    console.log("evento");
+    buy();
+    renderCart();
+    check.innerHTML='Gracias por su compra!!'
+}) 
 
 export { renderCart };
