@@ -99,28 +99,30 @@ color: rgb(153, 224, 221); }
     z-index: 1000; 
 }
 
-
-
-.header-perfil{
+.header-perfil {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     color: rgb(18, 159, 152);
     padding: 10px;
     border-bottom: 1px solid #746969;
-}
-
-.header-perfil img{
-    margin-top: 10px;
-}
-.header-perfil h2{
-    margin-left: 110px;
-    line-height: 60px;
-}
-
-.header-perfil img{
+  }
+  
+  .header-perfil img {
     border-radius: 50%;
-}
-
+    margin-right: 20px;
+  }
+  
+  .header-perfil h2 {
+    margin: 0;
+    flex-grow: 1;
+    text-align: center;
+  }
+  
+  .header-perfil .cerrar {
+    margin-left: 20px;
+  }
+  
 .cerrar {
     position: absolute;
     float: left;
