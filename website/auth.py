@@ -87,7 +87,6 @@ def sign_up():
             db.session.commit()
             login_user(new_user, remember=True)
 
-            flash('Cuenta creada exitosamente.', category='success')
             return redirect(url_for('views.home'))
 
     return render_template('registrarse.html', form=form)
