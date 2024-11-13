@@ -21,6 +21,8 @@ function removeMovieFromCart(movieId) {
     if (movieIndex !== -1) {
         carrito.splice(movieIndex, 1);  // Eliminamos la película si se encuentra
     }
+    console.log(carrito);
+    
 }
 
 // Exportamos las funciones necesarias

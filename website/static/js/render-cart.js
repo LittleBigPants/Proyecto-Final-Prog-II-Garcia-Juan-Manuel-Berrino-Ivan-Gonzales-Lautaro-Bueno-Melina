@@ -14,7 +14,7 @@ function renderCart() {
                     <span class="carrito_item_titulo">${movie.title}</span>
                     <span class="carrito_item_precio">$${movie.price}</span>
                 </div>
-                <span class="btn_eliminar" id="${movie.id}">
+                <span class="btn_eliminar" id=${movie.id}>
                     <i class="fa-solid fa-trash"></i>
                 </span>
             </div>`;
@@ -33,7 +33,7 @@ function renderCart() {
         btn.addEventListener("click", (e) => {
             const movieId = e.currentTarget.id;  // Obtenemos el ID de la película
             removeMovieFromCart(movieId);  // Eliminamos la película del carrito
-            renderCart();  // Volvemos a renderizar el carrito después de la eliminación
+            renderCart();  // Volvemos a renderizarel carrito después de la eliminación
         });
     });
 }
