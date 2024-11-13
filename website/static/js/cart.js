@@ -1,9 +1,19 @@
 let carrito = [];  // El carrito almacenará las películas
-
 // Función para obtener el carrito
 function getCart() {
     return carrito;
 }
+
+
+function buy(){
+    if (carrito.length === 0) {
+        alert("No tienes productos en el carrito para comprar.");
+        return;
+    }
+    carrito = [];
+
+}
+
 
 // Función para añadir una película al carrito
 function addMovieToCart(movie) {
@@ -26,4 +36,4 @@ function removeMovieFromCart(movieId) {
 }
 
 // Exportamos las funciones necesarias
-export { getCart, addMovieToCart, removeMovieFromCart };
+export { getCart, addMovieToCart, removeMovieFromCart, buy };
