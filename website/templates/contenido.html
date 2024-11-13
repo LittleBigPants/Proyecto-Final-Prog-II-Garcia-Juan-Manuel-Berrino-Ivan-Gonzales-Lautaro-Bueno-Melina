@@ -35,8 +35,10 @@
                 </div>
             </li>
             <li id="buy"><a href=""><i class="fa-solid fa-bag-shopping"></i></a></li>
+            <div class="contenedor_carrito" id="contenedor_carrito">
+                <img class="img-carrito"src="/static/img/carrito-de-compras.png" alt="Carrito de compras">
+            </div>
             <div class="contenedor-perfil" id="contenedor-perfil">
-
                 <li id="perfil">
                     <a href="#">
                         <span id="mi-perfil">{{user.first_name}} {{user.last_name}}</span>
@@ -73,9 +75,7 @@
     </div>
 
 
-    <div class="contenedor_carrito" id="contenedor_carrito">
-        <img class="img-carrito"src="/static/img/carrito-de-compras.png" alt="Carrito de compras">
-    </div>
+
 
     <div class="carrito" id="menu_carrito">
         <div class="header_carrito">
@@ -89,7 +89,6 @@
                 <div class="fila">
                     <strong>Tu total</strong>
                     <span class="carrito_precio_final">
-                        $120.000,00
                     </span>
                 </div>
                 <button class="btn_pagar">Pagar<i class="fa-solid fa-bag-shopping"></i></button>
