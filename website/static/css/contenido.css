@@ -30,6 +30,107 @@ h4 {
     height: auto; 
 }
 
+#mi-perfil{
+    display: none;
+}
+.cerrar-buscador{
+    display: none;
+}
+
+#search-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color:#000; 
+    z-index: 1000;
+    display: none; 
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease; 
+    
+}
+
+#search-overlay {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+#search-input {
+    margin-top: 10px;
+    width: 80%;
+    height: 40px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    border: 1px solid #fff;
+    background-color: #000;
+    color: #fff;
+}
+
+
+
+#movies-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 15px;
+    max-height: 200px;
+    transition: margin-top 0.3s ease;
+    position: relative;
+    z-index: 100;
+}
+
+#movies-container.search-active {
+    margin-top: 70px; 
+}
+
+.movie-card {
+    width: 160px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    padding: 10px;
+    text-align: center;
+    background-color: #222;
+    position: relative;
+    z-index: 100;
+
+}
+
+.movie-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.movie-card h3 {
+    font-size: 1.1em;
+    margin-top: 10px;
+    color: #fff;
+}
+
+.cerrar-buscador {
+    position: absolute;
+    float: right;
+    right: 5px;
+    top: 25px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    cursor: pointer;
+    display: block;
+    background-color: transparent;
+    z-index: 1100;
+    color: #fff;
+}
+
 /* Estilos para que las imagenes vayan pasando. Maquetado por
 ahora solo en celular */
 
@@ -356,6 +457,50 @@ simulador de celular no se puede */
 }
 
 @media (min-width: 1200px) {
+
+	#search-container {
+        display: none; /* Ocultamos el input al principio */
+      }
+      
+      #search-input {
+        padding: 5px;
+        font-size: 16px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        width: 300px;
+        height: 35px;
+        transition: width 0.3s ease;
+        background-color: #14213d;
+        color: #fff;
+      }
+
+    #movies-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.movie-card {
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+}
+
+.movie-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.movie-card h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
 	#cont-slider {
 		margin-top: 130px;
 	}
