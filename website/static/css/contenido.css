@@ -37,6 +37,7 @@ h4 {
     display: none;
 }
 
+/* Busqueda menu */
 #search-container {
     position: fixed;
     top: 0;
@@ -70,55 +71,6 @@ h4 {
     color: #fff;
 }
 
-
-.contenedor_carrito img{
-    width: 30px;
-    margin: 20px 0 0 10px;
-}
-
-
-
-#movies-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-    padding: 15px;
-    max-height: 200px;
-    transition: margin-top 0.3s ease;
-    position: relative;
-    z-index: 100;
-}
-
-#movies-container.search-active {
-    margin-top: 70px; 
-}
-
-.movie-card {
-    width: 160px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    padding: 10px;
-    text-align: center;
-    background-color: #222;
-    position: relative;
-    z-index: 100;
-
-}
-
-.movie-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-}
-
-.movie-card h3 {
-    font-size: 1.1em;
-    margin-top: 10px;
-    color: #fff;
-}
-
 .cerrar-buscador {
     position: absolute;
     float: right;
@@ -137,6 +89,54 @@ h4 {
     color: #fff;
 }
 
+
+#movies-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    max-height: 200px;
+    transition: margin-top 0.3s ease;
+    position: relative;
+    z-index: 100;
+}
+
+#movies-container.search-active {
+    margin-top: 70px; 
+}
+
+.movie-card {
+    width: 150px;
+    min-height: 300px;
+    text-align: center;
+    position: relative;
+    z-index: 100;
+
+}
+
+.movie-card img {
+    width: 100%;
+    max-height: 200px;
+    transition: 1s ease;
+}
+
+.movie-card h3 {
+    font-size: 1.1em;
+    height: 30px;
+    color: #fff;
+    margin-top: 10px;
+
+}
+
+.movie-card img:hover {
+    scale: 1.1;
+    border-radius: 4px;
+    border: 1px solid #fff;
+}
+.contenedor_carrito img{
+    width: 30px;
+    margin: 20px 0 0 10px;
+}
 /* Estilos para que las imagenes vayan pasando. Maquetado por
 ahora solo en celular */
 
@@ -476,11 +476,58 @@ simulador de celular no se puede */
         width: 300px;
         height: 35px;
         transition: width 0.3s ease;
-        background-color: #14213d;
+        background-color:#000;
         color: #fff;
       }
 
-      .contenedor_carrito{
+
+    #movies-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    max-height: 200px;
+    transition: margin-top 0.3s ease;
+    position: relative;
+    z-index: 100;
+}
+
+#movies-container.search-active {
+    margin-top: 70px; 
+}
+
+.movie-card {
+    width: 200px;
+    min-height: 300px;
+    text-align: center;
+
+}
+
+.movie-card img {
+    width: 100%;
+    max-height: 200px;
+    transition: 1s ease;
+}
+
+.movie-card h3 {
+    font-size: 1.1em;
+    height: 30px;
+    color: #fff;
+    margin-top: 10px;
+
+}
+
+.movie-card img:hover {
+    scale: 1.1;
+    border-radius: 4px;
+    border: 1px solid #fff;
+}
+
+.cerrar-buscador{
+    right: 750px;
+    top: 20px
+}
+    .contenedor_carrito{
         display: block;
         margin-bottom: 80px;
     }
@@ -495,32 +542,7 @@ simulador de celular no se puede */
         cursor: pointer;
     }
 
-    #movies-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
 
-.movie-card {
-    width: 200px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    text-align: center;
-}
-
-.movie-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-}
-
-.movie-card h3 {
-    font-size: 1.2em;
-    margin: 10px 0;
-}
 
 	#cont-slider {
 		margin-top: 130px;
