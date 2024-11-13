@@ -125,15 +125,23 @@ h1 {color: rgb(18, 159, 152);}
 
 @media (min-width:768px) {
 
+
+    .container{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
     h1{margin-top:75px;}
 
+
     #formulario {
-        grid-template-columns: auto auto;
-        justify-content: center;
         display: flex;
+        justify-content: center;
         flex-direction: column;
-        align-items: center;
+        margin: auto;
     }
+
 
     #formulario input {
         width: 370px;

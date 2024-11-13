@@ -71,6 +71,12 @@ h4 {
 }
 
 
+.contenedor_carrito img{
+    width: 30px;
+    margin: 20px 0 0 10px;
+}
+
+
 
 #movies-container {
     display: flex;
@@ -474,6 +480,21 @@ simulador de celular no se puede */
         color: #fff;
       }
 
+      .contenedor_carrito{
+        display: block;
+        margin-bottom: 80px;
+    }
+    .contenedor_carrito img{
+        position: absolute;
+        width: 40px;
+        right: 190px;
+        z-index: 100;
+    }
+    
+    .contenedor_carrito:hover{
+        cursor: pointer;
+    }
+
     #movies-container {
     display: flex;
     flex-wrap: wrap;
@@ -656,6 +677,7 @@ simulador de celular no se puede */
 .peliculas-tipo .contenedor-carousel .carousel .pelicula.hover {
     transform: scale(1.2);
     transform-origin: center;
+    cursor: pointer;
 }
 
 .peliculas-tipo .contenedor-carousel .carousel .pelicula img {
@@ -733,7 +755,8 @@ simulador de celular no se puede */
 	font-size: 16px; 
 	color: white;} 
 
-.movie-details button:hover { 
+.movie-details button:hover {
+    cursor: pointer;
 	background-color: #17b3a4;}
 
 .movie-description-content .movie-details {
@@ -899,9 +922,4 @@ simulador de celular no se puede */
 .carrito_total .btn_pagar:hover{
     scale: 1.05;
 }
-.contenedor_carrito img{
-	position: absolute;
-	width: 40px;
-	right: 60px;
-	z-index: 100;
-}
+
