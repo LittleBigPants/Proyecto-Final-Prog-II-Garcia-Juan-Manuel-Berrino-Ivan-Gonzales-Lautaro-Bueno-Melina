@@ -50,7 +50,7 @@ pagar.addEventListener("click", () => {
     console.log("evento");
     buy();
     renderCart();
-    check.innerHTML='Gracias por su compra!!'
+    check.innerHTML='¡Gracias por su compra!'
 }) 
 
 export { renderCart };

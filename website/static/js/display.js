@@ -27,20 +27,19 @@ function displayCategories(categories) {
 
         const categoriesButton = document.createElement('div');
         categoriesButton.classList.add('clases-categorias');
-        categoriesButton.innerHTML = `<h3><a href="#section-${category.name}">${category.name}</a></h3>`; 
+        categoriesButton.setAttribute('data-target', `#section-${category.name}`);
+        categoriesButton.innerHTML = `<h3>${category.name}</h3>`; 
 
-        categoriesSelection.appendChild(categoriesButton);
-    });
-
-    // Agrega un evento de clic a los enlaces de anclaje
-    document.querySelectorAll('.clases-categorias a').forEach(anchor => {
-        anchor.addEventListener('click', event => {
+        // Evento de clic en todo el div de la categoría
+        categoriesButton.addEventListener('click', event => {
             event.preventDefault();
-            const href = anchor.getAttribute('href');
+            const href = categoriesButton.getAttribute('data-target');
             const offset = 100; 
             const target = document.querySelector(href);
             window.scrollTo({ top: target.offsetTop - offset, behavior: 'smooth' });
         });
+
+        categoriesSelection.appendChild(categoriesButton);
     });
 }
 
