@@ -15,7 +15,6 @@ function buy(){
 
 }
 
-
 // Función para añadir una película al carrito
 function addMovieToCart(movie) {
     // Verificamos si la película ya existe en el carrito
