@@ -1,5 +1,6 @@
 let carrito = [];  // El carrito almacenará las películas
 // Función para obtener el carrito
+
 function getCart() {
     return carrito;
 }
