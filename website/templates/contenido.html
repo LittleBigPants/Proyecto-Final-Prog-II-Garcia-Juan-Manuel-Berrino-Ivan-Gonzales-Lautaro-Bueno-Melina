@@ -21,23 +21,35 @@
     <!-- Menu de navegacion -->
     <nav id="navbar">
         <ul id="cont-nav">
-            <li id="logo"><a href="{{url_for('views.content')}}"><img src="/static/img/logo-flix-fusion.png" alt=""></a></li>
-            <li><a href="{{url_for('views.content')}}"><i class="fas fa-home"></i></a></li>
-            <li><a href="#"><i class="fas fa-search search-icon"></i></a></li>
-            <!--<li id="peliculas"><a href="{{url_for('views.movies')}}" target="_blank">Comprar Peliculas</a></li>-->
-            <li><a href=" {{url_for('views.movies')}}"><i class="fa-solid fa-bag-shopping"></i></a></li>
-            <div class="contenedor-perfil" id="contenedor-perfil">
-            <!-- <li id="perfil"><a href="#"><span id="mi-perfil">Mi perfil</span><img src="/static/img/spiderman.jpg" alt="spiderman"></a></li> -->
-            <li id="perfil">
-                <a href="#">
-                    <span id="mi-perfil">{{user.first_name}} {{user.last_name}}</span>
-                    <!-- Mostrar la imagen de perfil -->
-                    <img src="{{ url_for('static', filename='img/' + (current_user.image_file or 'spiderman.jpg')) }}" alt="Imagen de perfil" width="40" height="40">
-                </a>
+            <li id="logo"><a href="{{url_for('views.content')}}"><img src="/static/img/logo-flix-fusion.png" alt=""></a>
             </li>
-        </div>
+            <li><a href="{{url_for('views.content')}}"><i class="fas fa-home"></i></a></li>
+            <li><a href="#" id="search-icon"><i class="fas fa-search search-icon"></i></a></li>
+            <!--  Input cuando tocamos el icono de buscar -->
+            <li id="search-container" style="display: none;">
+                <div id="search-overlay" class="search-overlay">
+                    <input type="text" id="search-input" placeholder="Buscar...">
+                    <span class="cerrar-buscador">
+                        <i class="fa-solid fa-xmark cerrar_perfil"></i>
+                    </span>
+                </div>
+            </li>
+            <li id="buy"><a href=""><i class="fa-solid fa-bag-shopping"></i></a></li>
+            <div class="contenedor-perfil" id="contenedor-perfil">
+
+                <li id="perfil">
+                    <a href="#">
+                        <span id="mi-perfil">{{user.first_name}} {{user.last_name}}</span>
+                        <!-- Mostrar la imagen de perfil -->
+                        <img src="{{ url_for('static', filename='img/' + (current_user.image_file or 'spiderman.jpg')) }}"
+                            alt="Imagen de perfil" width="40" height="40">
+                    </a>
+                </li>
+            </div>
         </ul>
     </nav>
+
+    <div id="movies-container"></div>
 
 <!--  Menu perfil -->
     <div class="menu-perfil" id="menu-perfil">
@@ -195,6 +207,7 @@
 
     <script type="module" src="{{ url_for('static', filename='js/main.js') }}"></script>
     <script src="{{ url_for('static', filename='js/perfil.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/busqueda-pelicula.js') }}"></script>
     
 
 </body>

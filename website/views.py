@@ -30,8 +30,20 @@ def suscripcion():
 
 @views.route('/api/movies', methods=['GET'])
 def get_movies():
-    movies = Movie.query.all()
-    result = [{'id': m.id, 'title': m.title, 'description': m.description, 'release_date': m.release_date, 'category': m.category.name, 'image_url': m.image_url, 'price': m.price, 'duration': m.duration, 'video_url': m.video_url, 'download_url': m.download_url} for m in movies]
+    # Obtener el término de búsqueda si se proporciona
+    search_query = request.args.get('q', '')  # Si no se pasa, el valor por defecto es una cadena vacía
+
+    # Filtrar películas si hay una búsqueda
+    if search_query:
+        movies = Movie.query.filter(Movie.title.ilike(f'%{search_query}%')).all()
+    else:
+        movies = Movie.query.all()
+
+    # Preparar el resultado para devolver
+    result = [{'id': m.id, 'title': m.title, 'description': m.description, 'release_date': m.release_date,
+               'category': m.category.name, 'image_url': m.image_url, 'price': m.price, 'duration': m.duration,
+               'video_url': m.video_url, 'download_url': m.download_url} for m in movies]
+    
     return jsonify(result)
 
 # Nueva ruta para obtener todas las categorías
