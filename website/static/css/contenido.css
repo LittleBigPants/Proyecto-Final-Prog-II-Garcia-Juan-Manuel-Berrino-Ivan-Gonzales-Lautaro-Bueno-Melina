@@ -35,6 +35,20 @@ h2,h3,h4 {
     display: none;
 }
 
+.carrito-counter {
+    width: 16px;
+    height: 16px;
+    background-color: rgb(153, 224, 221);
+    border-radius: 50%;
+    font-size: 0.90rem;
+    position: absolute;
+    top: 30px;
+    right: 37%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Busqueda menu */
 #search-container {
     position: fixed;
@@ -461,6 +475,21 @@ simulador de celular no se puede */
 }
 
 @media (min-width: 1200px) {
+
+    .carrito-counter {
+        width: 16px;
+        height: 16px;
+        background-color: rgb(153, 224, 221);
+        border-radius: 50%;
+        font-size: 0.90rem;
+        position: absolute;
+        top: 50px;
+        right: 247px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
 
 	#search-container {
         display: none; /* Ocultamos el input al principio */
