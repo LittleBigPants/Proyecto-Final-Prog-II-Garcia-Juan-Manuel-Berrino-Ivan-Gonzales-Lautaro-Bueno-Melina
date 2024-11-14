@@ -7,7 +7,6 @@ function inicializarCarousel() {
         const flechaIzquierda = seccion.querySelector('.flecha-izquierda');
         const flechaDerecha = seccion.querySelector('.flecha-derecha');
 
-        // Event Listener para las flechas derechas.
         flechaDerecha.addEventListener('click', () => {
             fila.scrollLeft += fila.offsetWidth;
 
@@ -18,7 +17,6 @@ function inicializarCarousel() {
             }
         });
 
-        // Event Listener para las flechas izquierdas.
         flechaIzquierda.addEventListener('click', () => {
             fila.scrollLeft -= fila.offsetWidth;
 
@@ -29,7 +27,6 @@ function inicializarCarousel() {
             }
         });
 
-        // Paginación
         const numeroPaginas = Math.ceil(peliculas.length / 5);
         for (let i = 0; i < numeroPaginas; i++) {
             const indicador = document.createElement('button');
@@ -47,7 +44,6 @@ function inicializarCarousel() {
             });
         }
 
-        // Hover effect
         peliculas.forEach((pelicula) => {
             pelicula.addEventListener('mouseenter', (e) => {
                 const elemento = e.currentTarget;

@@ -3,6 +3,8 @@ import { inicializarCarousel } from "./carousel.js";
 import { displayCategories, displayMovies, displayDescriptionMovie, displayCart, displayPerfil } from "./display.js";
 import { renderCart } from "./render-cart.js"; 
 import { addMovieToCart, getCart } from "./cart.js";  
+import { searchBar } from "./busqueda-pelicula.js";
+
 
 
 document.addEventListener("DOMContentLoaded", async () => {
@@ -13,6 +15,38 @@ document.addEventListener("DOMContentLoaded", async () => {
     displayCart();
     displayPerfil();
     inicializarCarousel();
+    searchBar();
+
+    const flechasDerechas = document.querySelectorAll(".flecha-derecha");
+    const flechasIzquierdas = document.querySelectorAll(".flecha-izquierda");
+    const exitSearch = document.querySelector(".cerrar-buscador");
+    const searchInput = document.querySelector("#search-icon");
+
+    searchInput.addEventListener("click", () =>{
+        flechasDerechas.forEach((e) => {
+            e.style.visibility  ="hidden";
+        });
+        flechasIzquierdas.forEach((e) => {
+            e.style.visibility  ="hidden";
+        });
+
+    });
+
+    
+    exitSearch.addEventListener("click", () =>{
+        flechasDerechas.forEach((e) => {
+            e.style.visibility  ="visible";
+        });
+        flechasIzquierdas.forEach((e) => {
+            e.style.visibility  ="visible";
+        });
+
+    });
+
+    
+
+
+
 
     const moviePopup = document.getElementById("moviePopup");
     const movieDescriptionContent = document.querySelector(".movie-description-content");
