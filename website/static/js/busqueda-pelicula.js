@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+function searchBar() {
     const searchIcon = document.getElementById('search-icon');
     const searchContainer = document.getElementById('search-container');
     const searchInput = document.getElementById('search-input');
@@ -66,4 +66,6 @@ document.addEventListener("DOMContentLoaded", function() {
         moviesContainer.innerHTML = ''; // Limpiar películas
         moviesContainer.classList.remove('search-active');
     });
-});
+};
+
+export {searchBar}
