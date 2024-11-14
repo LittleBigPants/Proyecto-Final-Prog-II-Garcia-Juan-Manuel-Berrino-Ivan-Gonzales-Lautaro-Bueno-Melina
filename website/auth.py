@@ -89,7 +89,7 @@ def sign_up():
 
             return redirect(url_for('views.home'))
 
-    return render_template('registrarse.html', form=form)
+    return render_template('registrarse.html', form=form) 
 
 
 @auth.route('/eliminar_cuenta' , methods=['GET','POST'])
@@ -107,3 +107,8 @@ def delete_account():
         return redirect(url_for('auth.login'))
     return render_template('eliminar_cuenta.html')
     
+
+
+
+from flask import render_template, request, redirect, url_for
+
