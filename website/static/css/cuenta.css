@@ -1,11 +1,8 @@
-body { 
-    display: flex; 
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center;
-    min-height: 100vh; 
-    margin: 0; 
-    background-color: #1c1c1c !important; 
+body {
+    place-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #1c1c1c !important;
     color: white;
     font-family: Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
 }
