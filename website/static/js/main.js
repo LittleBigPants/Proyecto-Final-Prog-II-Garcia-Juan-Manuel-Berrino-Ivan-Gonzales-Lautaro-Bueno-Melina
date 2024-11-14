@@ -1,6 +1,6 @@
 import { inicializarData, categories, movies } from "./api.js";
 import { inicializarCarousel } from "./carousel.js";
-import { displayCategories, displayMovies, displayDescriptionMovie, displayCart } from "./display.js";
+import { displayCategories, displayMovies, displayDescriptionMovie, displayCart, displayPerfil } from "./display.js";
 import { renderCart } from "./render-cart.js"; 
 import { addMovieToCart, getCart } from "./cart.js";  
 
@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     displayCategories(categories);
     displayMovies(movies);
     displayCart();
+    displayPerfil();
     inicializarCarousel();
 
     const moviePopup = document.getElementById("moviePopup");
