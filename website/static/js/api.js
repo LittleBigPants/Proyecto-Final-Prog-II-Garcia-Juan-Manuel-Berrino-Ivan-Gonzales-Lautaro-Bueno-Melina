@@ -5,7 +5,7 @@ async function fetchCategories() {
     try {
         const response = await fetch('/api/categories');
         if (!response.ok) {
-            throw new Error('Network response was not ok');
+            throw new Error("ayudaaaaaaa");
         }
         categories = await response.json();
     } catch (error) {
@@ -17,7 +17,7 @@ async function fetchMovies() {
     try {
         const response = await fetch('/api/movies');
         if (!response.ok) {
-            throw new Error('Network response was not ok');
+            throw new Error("ayudaaaaaaa");
         }
         movies = await response.json();
     } catch (error) {

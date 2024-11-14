@@ -142,4 +142,6 @@ function displayPerfil() {
         }, 300); // Debe coincidir con la duración de la transición
     }
 };
+
+
 export { displayMovies, displayCategories, displayDescriptionMovie,  displayCart, displayPerfil};
