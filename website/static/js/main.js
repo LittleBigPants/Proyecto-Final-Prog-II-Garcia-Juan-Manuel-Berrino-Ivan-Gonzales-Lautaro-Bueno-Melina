@@ -1,14 +1,16 @@
 import { inicializarData, categories, movies } from "./api.js";
 import { inicializarCarousel } from "./carousel.js";
-import { displayCategories, displayMovies, displayDescriptionMovie } from "./display.js";
-import { renderCart } from "./render-cart.js";  // Importamos la función renderCart
-import { addMovieToCart, getCart } from "./cart.js";  // Importamos la función addMovieToCart
+import { displayCategories, displayMovies, displayDescriptionMovie, displayCart } from "./display.js";
+import { renderCart } from "./render-cart.js"; 
+import { addMovieToCart, getCart } from "./cart.js";  
+
 
 document.addEventListener("DOMContentLoaded", async () => {
     await inicializarData();  // Esperamos a que se carguen los datos
 
     displayCategories(categories);
     displayMovies(movies);
+    displayCart();
     inicializarCarousel();
 
     const moviePopup = document.getElementById("moviePopup");
@@ -37,7 +39,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
 
 
-        // Cerrar el modal al hacer clic en la 'x'
+    // Cerrar el modal al hacer clic en la 'x'
     closeModal.onclick = function () {
         moviePopup.style.display = "none";
     };
@@ -48,9 +50,6 @@ document.addEventListener("DOMContentLoaded", async () => {
             moviePopup.style.display = "none";
         }
     };
-
-
- 
 
 });
 
