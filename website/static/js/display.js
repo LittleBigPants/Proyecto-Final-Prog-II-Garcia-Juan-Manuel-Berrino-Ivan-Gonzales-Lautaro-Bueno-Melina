@@ -57,4 +57,24 @@ function displayMovies(movies) {
     });
 }
 
-export { displayMovies, displayCategories };
+function displayDescriptionMovie(movie, conteiner) {
+    conteiner.innerHTML = `
+        <div class="movie-details">
+            <h1>${movie.title}</h1> 
+            <p>${movie.description}</p>
+            <img src="${movie.image_url}" alt="${movie.title}" class="img-detail">
+            <p>Fecha de estreno: <strong>${new Date(movie.release_date).toISOString().split("T")[0]}</strong></p>
+            <p>Categoría: <strong>${movie.category}</strong></p>
+            <p>Precio: <strong>${movie.price.toLocaleString("en-US", { style: "currency", currency: "USD" })}</strong></p>
+            <p>Duración: <strong>${movie.duration} minutos</strong></p>
+            <button id=${movie.id} class="btn-añadir-carrito">Añadir al carrito</button>
+        </div>
+    `;
+
+    // Mostrar el modal
+    moviePopup.style.display = "block";
+}
+
+
+
+export { displayMovies, displayCategories, displayDescriptionMovie };
