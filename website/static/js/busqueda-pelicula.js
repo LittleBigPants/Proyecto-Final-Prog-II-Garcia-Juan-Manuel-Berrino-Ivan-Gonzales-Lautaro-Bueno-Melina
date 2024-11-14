@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             movieElement.innerHTML = `
                 <div class="movie-card">
-                    <img src="${movie.image_url}" alt="${movie.title}" class="movie-image">
+                    <img src="${movie.image_url}" alt="${movie.title}" class="movie-image" id=${movie.id}>
                     <h3 class="movie-title">${movie.title}</h3>
                 </div>
             `;
