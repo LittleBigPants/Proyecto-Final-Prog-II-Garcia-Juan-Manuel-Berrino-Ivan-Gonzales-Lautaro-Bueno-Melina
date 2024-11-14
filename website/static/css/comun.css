@@ -1,7 +1,7 @@
-/* En este css usamos estilos que se van a compartir en las mayorias de las paginas */
+/* Estilos generales que se van a compartir en la mayoría de las páginas */
 
 /* Reiniciamos todo a 0 */
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -9,16 +9,14 @@
     list-style: none;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-/* Nav que queda fijo en la parte inferior de la pagina */
-
-#navbar{
+/* Estilos de Navbar */
+#navbar {
     width: 100%;
     height: 60px;
-    /* background-color: #07060e; */
     background: linear-gradient(135deg, #14213d 0%, #1e2a47 60%, #4a6d8c 100%);
     position: fixed;
     bottom: 0;
@@ -26,7 +24,7 @@ html{
     z-index: 100;
 }
 
-#cont-nav{
+#cont-nav {
     width: auto;
     height: 60px;
     display: flex;
@@ -35,48 +33,48 @@ html{
     line-height: 60px;
 }
 
-#logo{
+#logo {
     display: none;
 }
 
-#peliculas { display: none; } 
-#peliculas a { text-decoration: none !important;} 
-#peliculas a:hover { text-decoration: none !important;
-color: rgb(153, 224, 221); }
+#peliculas { 
+    display: none; 
+}
+#peliculas a {
+    text-decoration: none !important;
+}
+#peliculas a:hover {
+    text-decoration: none !important;
+    color: rgb(153, 224, 221);
+}
 
-
-#perfil{
+#perfil {
     height: 50px;
 }
 
-#mi-perfil{
+#mi-perfil {
     display: none;
-} 
+}
 
-
-#perfil img{
+#perfil img {
     width: 45px;
     height: 45px;
     border-radius: 50%;
 }
 
-
-
-
-
-/* Estilos a los iconos de font awesome */
-
-#cont-nav i{
+/* Estilos de los iconos de FontAwesome */
+#cont-nav i {
     color: rgb(153, 224, 221);
 }
 
-#cont-nav i:hover{
+#cont-nav i:hover {
     color: #fff;
 }
 
-.logo{
+/* Estilos para el logo */
+.logo {
     background: url(/static/img/logo-flix-fusion.png);
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
     width: 100%;
@@ -85,8 +83,8 @@ color: rgb(153, 224, 221); }
     margin-bottom: 10px;
 }
 
-/* Estilos al apretar el perfil */
-.menu-perfil{
+/* Estilos para el menú de perfil */
+.menu-perfil {
     display: none;
     width: 100%;
     height: 100%;
@@ -94,9 +92,9 @@ color: rgb(153, 224, 221); }
     color: #fff;
     position: fixed;
     top: 0;
-    right: -100%;  
-    transition: right 0.8s ease; 
-    z-index: 1000; 
+    right: -100%;
+    transition: right 0.8s ease;
+    z-index: 1000;
 }
 
 .header-perfil {
@@ -106,26 +104,25 @@ color: rgb(153, 224, 221); }
     color: rgb(18, 159, 152);
     padding: 10px;
     border-bottom: 1px solid #746969;
-  }
-  
-  .header-perfil img {
+}
+
+.header-perfil img {
     border-radius: 50%;
     margin-right: 20px;
-  }
-  
-  .header-perfil h2 {
+}
+
+.header-perfil h2 {
     margin: 0;
     flex-grow: 1;
     text-align: center;
-  }
-  
-  .header-perfil .cerrar {
+}
+
+.header-perfil .cerrar {
     margin-left: 20px;
-  }
-  
+}
+
 .cerrar {
     position: absolute;
-    float: left;
     top: 26px;
     left: 30px;
     width: 30px;
@@ -135,47 +132,43 @@ color: rgb(153, 224, 221); }
     border-radius: 50%;
     border: 1px solid #fff;
     cursor: pointer;
-    display: block;
     background-color: transparent;
-    z-index: 20;
     color: #fff;
 }
 
-
-
-.contenido-perfil{
+.contenido-perfil {
     display: flex;
     justify-content: start;
     margin: 15px 0 0 30px;
     font-size: 18px;
 }
 
-.contenido-perfil ul li{
+.contenido-perfil ul li {
     font-family: 'Times New Roman', Times, serif;
     padding: 10px;
     cursor: pointer;
 }
 
-.contenido-perfil ul li:hover{
+.contenido-perfil ul li:hover {
     text-decoration: underline;
 }
 
-.contenido-perfil ul li a{
+.contenido-perfil ul li a {
     color: #fff;
 }
 
-
-/* Estilos al footer */
-
+/* Estilos del footer */
 footer {
     height: 300px;
     margin-top: 40px;
 }
-.redes{
+
+.redes {
     color: #fff;
     text-align: center;
 }
-.social{
+
+.social {
     display: flex;
     justify-content: center;
     margin: 16px 0 20px 0;
@@ -192,25 +185,22 @@ footer {
     background-repeat: no-repeat;
 }
 
-.social a:hover{
+.social a:hover {
     background-color: #eee;
     background-size: 48px;
 }
 
-.instagram{
+.instagram {
     background-image: url('/static/img/instagram.svg');
 }
 
-
-.twitter{
+.twitter {
     background-image: url('/static/img/twitter.svg');
 }
 
-.github{
+.github {
     background-image: url('/static/img/github.svg');
 }
-
-
 
 .footer-contacto {
     margin-left: 26px;
@@ -257,85 +247,51 @@ footer {
     font-size: 14px;
 }
 
-/* Maquetado tablet */
+/* Media Queries */
 
-@media (min-width:768px) {
+/* Estilos para tablet */
+@media (min-width: 768px) {
 
     #menu-perfil {
-        width: 400px; 
-        height: 600px; 
+        width: 400px;
+        height: 600px;
         right: -400px;
         border-radius: 5px;
     }
 
-    .header-perfil h2{
+    .header-perfil h2 {
         text-align: center;
         margin-left: 70px;
     }
 
-    .header-perfil img{
+    .header-perfil img {
         width: 55px;
         height: 55px;
         margin-right: 10px;
     }
 
-
-    .social{
+    .social {
         display: flex;
         justify-content: center;
         margin: 16px;
         gap: 16px;
     }
-    
-    .social a {
-        width: 64px;
-        height: 64px;
-        border-radius: 8px;
-        background-color: #080000;
-        background-position: center;
-        background-size: 36px;
-        background-repeat: no-repeat;
-    }
-    
-    .social a:hover{
-        background-color: #eee;
-        background-size: 48px;
-    }
-    
-    .redes{
-        display: inline-block;
-        margin-top: 40px;
-        text-align: center;
-        color: #fff;
-    }
-    .instagram{
-        background-image: url('/static/img/instagram.svg');
-    }
-    
-    
-    .twitter{
-        background-image: url('/static/img/twitter.svg');
-    }
-    
-    .github{
-        background-image: url('/static/img/github.svg');
-    }
-    
-    footer{
+
+    footer {
         max-width: 1000px;
         display: flex;
         justify-content: space-evenly;
         margin: auto;
     }
-    
-    .container{
+
+    .container {
         display: flex;
         justify-content: center;
     }
-    .container-footer{
+
+    .container-footer {
         display: inline-block;
     }
-
 
     .footer-contacto {
         display: flex;
@@ -353,61 +309,50 @@ footer {
     }
 
     .language-selector {
-        position: relative;
-        background-color: #1a1919;
-        color: white;
-        border: 1px solid #555;
-        border-radius: 4px;
-        padding: 6px 14px;
-        cursor: pointer;
         font-size: 14px;
     }
-
-  
-    
 }
 
+/* Estilos para pantallas grandes */
+@media (min-width: 1200px) {
 
-@media (min-width:1200px) {
-
-    #navbar{
-        top:0;
+    #navbar {
+        top: 0;
         height: 80px;
     }
 
-    #cont-nav{
+    #cont-nav {
         justify-content: flex-start;
         gap: 30px;
         height: 85px;
         line-height: 85px;
     }
 
-    #cont-nav #logo{
+    #cont-nav #logo {
         height: 80px;
     }
 
-    #logo img{
+    #logo img {
         width: 300px;
         height: 75px;
     }
 
-    #perfil img{
+    #perfil img {
         width: 55px;
         height: 55px;
     }
-    
-    
-   #contenedor-perfil{
-    margin: 10px 30px 0 auto;
-    height: 70px;
-   }
 
-    #logo{
+    #contenedor-perfil {
+        margin: 10px 30px 0 auto;
+        height: 70px;
+    }
+
+    #logo {
         display: flex;
         height: 60px;
     }
 
-    #mi-perfil{
+    #mi-perfil {
         margin: 3px 20px 0 0;
         position: absolute;
         right: 80px;
@@ -416,28 +361,30 @@ footer {
         display: block;
     }
 
-    #peliculas{
+    #peliculas {
         display: flex;
     }
 
-    #peliculas a{
+    #peliculas a {
         font-size: 18px;
         color: #fff;
     }
 
-    #peliculas a:hover{
+    #peliculas a:hover {
         text-decoration: underline;
     }
-    .logo{
+
+    .logo {
         display: none;
     }
+
     .contenido-links {
         justify-content: center;
         row-gap: 16px;
         column-gap: 16px;
     }
 
-    .principales h4{
+    .principales h4 {
         font-size: 24px;
     }
 
@@ -447,7 +394,50 @@ footer {
 
     .footer-lenguaje {
         text-align: center;
-        margin: 20px 0 0 -250px; 
-
+        margin: 20px 0 0 -250px;
     }
 }
+
+/* Estilos para dispositivos pequeños (menores a 768px) */
+@media (max-width: 768px) {
+    .header-perfil {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-perfil img {
+        margin-right: 0;
+    }
+
+    .header-perfil .cerrar {
+        margin-left: 0;
+        position: absolute;
+        top: 8px;
+        left: 10px;
+    }
+
+    .social {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .contenido-perfil {
+        flex-direction: column;
+        margin: 10px 0 0 0;
+    }
+
+    .contenido-perfil ul li {
+        text-align: center;
+    }
+
+    footer {
+        height: auto;
+        margin: 20px 0;
+    }
+
+    .footer-lenguaje {
+        margin: 20px 0 0 0;
+    }
+}
+
