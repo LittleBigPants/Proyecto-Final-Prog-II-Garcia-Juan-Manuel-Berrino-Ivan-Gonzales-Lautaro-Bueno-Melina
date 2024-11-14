@@ -144,7 +144,7 @@ html {
 }
 
 .contenido-perfil ul li {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
     padding: 10px;
     cursor: pointer;
 }

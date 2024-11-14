@@ -31,6 +31,7 @@ h2,h3,h4 {
 #mi-perfil{
     display: none;
 }
+
 .cerrar-buscador{
     display: none;
 }
@@ -422,7 +423,7 @@ simulador de celular no se puede */
 .proximamente h3 {
 	margin-left: 16px;
 	margin-bottom: 20px;
-	color: rgb(18, 159, 152);
+	color: rgb(153, 224, 221);
 	font-weight: 800;
 }
 
