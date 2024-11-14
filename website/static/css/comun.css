@@ -166,6 +166,10 @@ footer {
 .redes {
     color: #fff;
     text-align: center;
+    display: flex; /* Flexbox para centrar */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    flex-direction: column; /* Opcional: Alinea los elementos en una columna */
 }
 
 .social {
@@ -290,7 +294,12 @@ footer {
     }
 
     .container-footer {
-        display: inline-block;
+        display: flex; /* Activamos Flexbox */
+        justify-content: center; /* Centra horizontalmente */
+        align-items: center; /* Centra verticalmente */
+        flex-direction: column; /* Si deseas que los elementos se apilen verticalmente, puedes usar esta propiedad */
+        width: 100%; /* Asegúrate de que el ancho sea el 100% del contenedor */
+        max-width: 500px;
     }
 
     .footer-contacto {
@@ -440,4 +449,5 @@ footer {
         margin: 20px 0 0 0;
     }
 }
+
 
