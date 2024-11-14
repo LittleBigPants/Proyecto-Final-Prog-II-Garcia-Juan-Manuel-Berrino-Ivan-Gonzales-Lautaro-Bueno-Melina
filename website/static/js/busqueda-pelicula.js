@@ -1,4 +1,7 @@
-function searchBar() {
+import { movies, inicializarData } from "./api.js"; 
+
+async function searchBar(callback) {
+    await inicializarData();
     const searchIcon = document.getElementById('search-icon');
     const searchContainer = document.getElementById('search-container');
     const searchInput = document.getElementById('search-input');
@@ -7,7 +10,6 @@ function searchBar() {
 
     let debounceTimer;
 
-    // Alternar la visibilidad del buscador
     searchIcon.addEventListener('click', function(event) {
         event.preventDefault();
         const isVisible = searchContainer.style.display === 'block';
@@ -30,25 +32,28 @@ function searchBar() {
     // Función para realizar la búsqueda de películas
     function searchMovies(query) {
         if (!query) {
-            moviesContainer.innerHTML = ''; // Limpiar si no hay query
+            moviesContainer.innerHTML = '';
             return;
         }
 
-        fetch(`/api/movies?q=${query}`)
-            .then(response => response.json())
-            .then(displayMovies)
-            .catch(console.error);
+        // Filtrar las películas que coincidan con el query
+        const filteredMovies = movies.filter(movie => 
+            movie.title.toLowerCase().includes(query.toLowerCase())
+        );
+
+        displayMovies(filteredMovies);
     }
 
-    // Mostrar las películas
-    function displayMovies(movies) {
-        moviesContainer.innerHTML = movies.length ? 
-            movies.map(movie => `
+    function displayMovies(filteredMovies) {
+        moviesContainer.innerHTML = filteredMovies.length ? 
+            filteredMovies.map(movie => `
                 <div class="movie-card">
                     <img src="${movie.image_url}" alt="${movie.title}" class="movie-image" id="${movie.id}">
                     <h3 class="movie-title">${movie.title}</h3>
                 </div>
-            `).join('') : '';
+            `).join('') : '<p>No se encontraron resultados</p>';
+
+        callback(filteredMovies);
     }
 
     // Detectar cambios en el input y ejecutar la búsqueda (con debounce)
@@ -68,4 +73,4 @@ function searchBar() {
     });
 };
 
-export {searchBar}
+export { searchBar };
