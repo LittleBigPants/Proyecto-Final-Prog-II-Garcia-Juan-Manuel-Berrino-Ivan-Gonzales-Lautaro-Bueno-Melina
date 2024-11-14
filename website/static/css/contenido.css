@@ -49,6 +49,7 @@ h2,h3,h4 {
     align-items: center;
 }
 
+
 /* Busqueda menu */
 #search-container {
     position: fixed;
@@ -148,6 +149,7 @@ h2,h3,h4 {
 .contenedor_carrito img{
     width: 30px;
     margin: 20px 0 0 10px;
+    z-index: 1000;
 }
 /* Estilos para que las imagenes vayan pasando. Maquetado por
 ahora solo en celular */
@@ -488,7 +490,7 @@ simulador de celular no se puede */
         display: flex;
         justify-content: center;
         align-items: center;
-        z-index: 1000;
+        z-index: 1001;
     }
 
     #menu_carrito {
@@ -569,7 +571,7 @@ simulador de celular no se puede */
         position: absolute;
         width: 40px;
         right: 250px;
-        z-index: 100;
+        z-index: 1000;
     }
     
     .contenedor_carrito:hover{
