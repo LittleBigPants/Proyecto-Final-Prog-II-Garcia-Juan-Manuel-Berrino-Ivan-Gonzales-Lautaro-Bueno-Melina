@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 		console.log(movies);
 		let movieCard = document.querySelectorAll(".movie-image");
 		const moviesContainer = document.getElementById("movies-container");
-        const searchContainer = document.getElementById('search-container');
+		const searchContainer = document.getElementById("search-container");
 		console.log(movieCard);
 		movieCard.forEach((img) => {
 			img.addEventListener("click", (e) => {
@@ -115,6 +115,13 @@ document.addEventListener("DOMContentLoaded", async () => {
 								);
 								addMovieToCart(choosenMovie);
 								renderCart();
+
+								flechasDerechas.forEach((e) => {
+									e.style.visibility = "visible";
+								});
+								flechasIzquierdas.forEach((e) => {
+									e.style.visibility = "visible";
+								});
 							}
 						});
 					});
